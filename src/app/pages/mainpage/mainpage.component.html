@@ -1,0 +1,204 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>
+      BookLab
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+ <ion-card class="cardpage">
+  <div class="divtext">
+    <h2 class="h2">Find Nearest Lab.</h2>
+    <h4 class="h4">Amet consectetur adipisicing elit sed do eiusmod.</h4>
+  </div>
+  <div>
+    <ion-card class="locationCard">
+      <ion-item lines="none">
+        <ion-label>Select Location</ion-label>
+        <ion-label (click)="locationShow()">
+          <p class="ion-text-wrap" *ngIf="selectedReligion">:&nbsp;&nbsp; {{selectedReligion}}</p>
+          <ion-icon class="dropIcon" slot="end" name="chevron-down-outline" *ngIf="!selectedReligion"></ion-icon>
+        </ion-label>
+      </ion-item>
+      </ion-card>
+      <ion-card class="locationCard2">
+        <ion-input class="spelizationInput" placeholder="Ex. Name,Specilization.."></ion-input>
+      </ion-card>
+      <ion-button style="margin: 5px 15% 20px 15%;" expand="block" shape="round" type="submit"><ion-icon name="arrow-forward-circle-outline"></ion-icon></ion-button>
+  </div>
+ </ion-card>
+
+ <div class="item-slider">
+   <div class="appoint">
+    <h2>Appointment Process</h2>
+    <img style="width: 145px;" src="../../assets/img/heading.svg">
+   </div>
+  <ion-slides #slides pager="true" [options]="slideOpts" >
+    <ion-slide *ngFor="let x of firstSlide">  
+      <ion-card class="slidecard">
+        <img src="{{x.img}}" />
+        <ion-card-content class="appointH2">
+        <h2 class="appointH2"></h2> {{x.name}}
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</div>
+<div class="servicepoint">
+  <div class="appoint">
+    <h2>Services</h2>
+    <img style="width: 145px;" src="../../assets/img/heading.svg">
+   </div>
+   <ion-grid>
+    <ion-row style="margin-right: 10px;">
+      <ion-col *ngFor='let r of serviceList' size='6'  style="text-align: center;padding: 0;">
+        <ion-card class="servicecard">
+          <img src="{{r.img}}" />
+        </ion-card>
+        <span style="font-size: 13px;">{{r.name}}</span> 
+      </ion-col> 
+    </ion-row>
+  </ion-grid>
+</div>
+
+<div class="item-slider">
+  <div class="appoint">
+   <h2>OUR SPECIALIST DOCTORS</h2>
+   <img style="width: 145px;" src="../../assets/img/heading.svg">
+  </div>
+ <ion-slides #slides pager="true" [options]="slideOpts" >
+   <ion-slide *ngFor='let r of spelistList' [autoplay]="3000">  
+     <ion-grid>
+      <ion-row style="margin-right: 10px;">
+        <ion-col  size='12'  style="text-align: center;padding: 0;">
+          <ion-card class="servicecard1">
+            <img src="{{r.img}}" />          
+          </ion-card>
+          <div class="myOverlay1"><h3>{{r.name}}</h3>
+            <span style="font-size: 13px;">{{r.text}}</span> 
+          </div>         
+        </ion-col> 
+      </ion-row>
+    </ion-grid>
+   </ion-slide>
+ </ion-slides>
+</div>
+<div class="item-slider">
+  <div class="appoint">
+   <h2>FEATURED LABS</h2>
+   <img style="width: 145px;" src="../../assets/img/heading.svg">
+  </div>
+ <ion-slides #slides pager="true" [options]="slideOpts" >
+   <ion-slide *ngFor="let x of featureList">  
+     <ion-card class="slidecardfeature cardrad">
+       <img style="min-width: 316px;" src="{{x.img}}" />
+         <div class="appointH2">
+           <ion-row>
+             <ion-col> <h2 class="appointH2">{{x.name}}</h2> </ion-col>
+             <ion-col style="padding-top:18px"><ion-button expand="round" size="small"><ion-icon name="arrow-forward-outline"></ion-icon></ion-button></ion-col>
+           </ion-row>         
+         </div>
+     </ion-card>
+   </ion-slide>
+ </ion-slides>
+</div>
+
+<div class="item-slider">
+  <div class="appoint">
+   <h2>Digital Pharmacy</h2>
+   <img style="width: 145px;" src="../../assets/img/heading.svg">
+  </div>
+ <ion-slides #slides pager="true" [options]="slideOpts" >
+   <ion-slide *ngFor="let x of pharmacyList">  
+     <ion-card class="slidecardfeature cardrad">
+       <img style="min-width: 316px;" src="{{x.img}}" />
+     </ion-card>
+     <div class="pharmacyOverlap">
+      <span style="font-size: 23px;">{{x.name}}</span> 
+    </div>  
+    <div class="pharmacyOverlapbutton">
+<ion-button shape="round" fill="outline">Order Now</ion-button>
+    </div> 
+   </ion-slide>
+ </ion-slides>
+</div>
+<div class="item-slider">
+  <div class="appoint">
+   <h2>Health Checks &amp; Lab Tests</h2>
+   <img style="width: 145px;" src="../../assets/img/heading.svg">
+  </div>
+ <ion-slides #slides pager="true" [options]="slideOpts" >
+   <ion-slide *ngFor="let x of pharmacyList">  
+     <ion-card class="healthcard slidecardfeature cardrad">
+      <img src="../../assets/img/package-bg.svg">
+     </ion-card>
+     <div class="healthlefttext">
+      <span style="font-size: 23px;">{{x.name}}</span> 
+    </div>  
+    <div class="healthlefttext2">
+      <h1 style="font-size: 23px;margin-bottom: -5px;">Rs.125</h1> 
+      <del style="font-size: 13px;">Rs.75</del> 
+    </div>  
+    <div class="healthlefttextoff">
+      <p style="font-size: 23px;">80%</p> 
+      <h6 style="font-size: 13px;margin-top: -21px;">OFF</h6> 
+    </div>  
+    <div class="healthtextmore">
+      <h2>Includes</h2>
+      <h6><ion-icon class="checkIcon" name="checkmark-circle-outline"></ion-icon>&nbsp;Blood Clucose fasting</h6>
+      <h6 class="h6more"><ion-icon class="checkIcon" name="checkmark-circle-outline"></ion-icon>&nbsp;Complete homogram</h6>
+      <h6><ion-icon class="checkIcon" name="checkmark-circle-outline"></ion-icon>&nbsp;Complete homogram</h6>
+    </div> 
+    <div class="healthOverlapbutton">
+      <ion-button shape="round" fill="outline">Order Now</ion-button>
+          </div> 
+   </ion-slide>
+ </ion-slides>
+</div>
+
+
+
+
+
+
+
+ <ion-card *ngIf="locationcard" class="countrycard">
+  <div class="crossCut" (click)="locationcard =! locationcard">
+    <ion-icon name="close-outline" class="crossIcon"></ion-icon>
+  </div>
+  <ion-radio-group (ionChange)="selectReligion($event)">
+    <ion-item *ngFor="let i of locationList">
+      <ion-label>{{i.name}}</ion-label>
+      <ion-radio slot="start" [value]="i"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+</ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="secondary">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button class="home">
+          <ion-icon name="home-outline"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+        <ion-tab-button class="specilist" (click)='specilist()'>
+          <ion-icon name="people-outline"></ion-icon>
+          <ion-label>Specilist</ion-label>
+        </ion-tab-button>
+        <ion-tab-button (click)="hospitals()" class="hospitals">
+          <ion-icon name="storefront-outline"></ion-icon>
+          <ion-label>Hospitals</ion-label>
+        </ion-tab-button>
+        <ion-tab-button class="clinics" (click)="clinics()">
+          <ion-icon name="thermometer-outline"></ion-icon>
+          <ion-label>Clinics</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

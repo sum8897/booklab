@@ -1,0 +1,42 @@
+<ion-content>
+ 
+  <div class="heading ion-padding">
+    <img class="loginlogo" src="../../../assets/img/login/logo.png">
+    <img class="img" src="../../../assets/img/login/signup_graphic_xhdpi.png">
+  </div>
+  <div class="login-form ion-padding" id="loginForm" style="padding-left: 0;">
+    <div class="healthlefttext">
+      <div class="form-input" id="form">
+        <ion-item lines="none">
+          <ion-input type="text" placeholder="Name"></ion-input>
+        </ion-item>
+      </div>
+      <div class="form-input" id="form">
+        <ion-item lines="none">
+          <ion-input type="mail" placeholder="Email Address"></ion-input>
+        </ion-item>
+      </div>
+      <div class="form-input" id="form">
+        <ion-item lines="none">
+          <ion-input type="mail" placeholder="Phone No"></ion-input>
+        </ion-item>
+      </div>
+      <div class="form-input">
+        <ion-item lines="none">
+          <ion-input [type]="passwordType" placeholder="Password" #password></ion-input>
+          <ion-icon [name]="eyename"  slot="end" (click)="passToggle()" style="position: relative;"></ion-icon>
+        </ion-item>
+        <ion-button size="large" class="login-button" (click)="submit()">Login</ion-button>
+      </div>
+      <div>
+        <ion-row class="roww">
+          <ion-col class="signupbtn" (click)="logIn()"><p>Already Registered? LogIn</p></ion-col>
+        </ion-row>   
+      </div>
+    
+    </div>
+  
+
+  </div>
+
+</ion-content>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { IonSlides, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
-
+  constructor(private navCtrl: NavController) {}
+  registerIn(){
+    this.navCtrl.navigateRoot('/register')
+  }
+  submit(){
+    this.navCtrl.navigateRoot('/login')
+  }
+  mainpge(){
+    this.navCtrl.navigateRoot('/mainpage')
+  }
 }

@@ -1,5 +1,11 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ContactusComponent } from './pages/contactus/contactus.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { DoctorslistComponent } from './pages/doctorslist/doctorslist.component';
+import { LoginComponent } from './pages/login/login.component';
+import { MainpageComponent } from './pages/mainpage/mainpage.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 const routes: Routes = [
   {
@@ -8,8 +14,36 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'mainpage',
     pathMatch: 'full'
+  },
+  {
+    path:'login',
+    component: LoginComponent
+  },
+  {
+    path:'register',
+    component: RegisterComponent
+  },
+  {
+    path:'contact',
+    component:ContactusComponent
+  },
+  {
+    path:'doctorlist',
+    component: DoctorslistComponent
+  },
+  {
+    path:'home/doctorlist',
+    component: DoctorslistComponent
+  },
+  {
+    path:'dashboard',
+    component: DashboardComponent
+  },
+  {
+    path:'mainpage',
+    component: MainpageComponent
   },
 ];
 

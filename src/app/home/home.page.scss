@@ -1,27 +1,35 @@
-#container {
+ion-content{
+  --background:linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.1)),
+  url("../../assets/img/icons/1_bg.png") no-repeat center center / cover;
+  // --background: #ececec;
+}
+.tool{
+  --background: #060b46;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.action-button{
+  margin-top: 60%;
+  text-align: center;
+  p{
+    // text-decoration: underline;
+    color: white;
+  }
 }
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+ion-button{
+  --background: #060b46;
+    width: 85%;
+    --border-radius: 50px;
+    height: 40px;
+    margin: 10px 0px;
 }
-
-#container a {
-  text-decoration: none;
+// .reg-button{
+//   --background: #060b46;
+// }
+.login-button{
+  // --background:white;
+  // --color:#060b46;
+  margin-top: 2px;
+}
+.footrImg{
+  width: 30px;
 }

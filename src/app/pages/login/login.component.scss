@@ -1,0 +1,280 @@
+ion-content{
+    // --background:linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.1)),
+    // url("../../../assets/img/register_img.jpg") no-repeat center center / cover;
+    // --background: #f4b401;
+}
+.heading{
+    --background:linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.1)),
+url("../../../assets/img/login/signup_graphic_xhdpi.png") no-repeat center center / cover;
+   text-align: center;
+   background: #0e223e;
+   h1{
+       font-size: 1.6rem;
+       text-align: center;
+   }
+}
+.login-section{
+    height: 98%;
+    width: 100%;
+    max-width: 500px;
+    // background-color: rgba(255, 255, 255, 0.78);
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    margin: auto;
+    border-top-left-radius: 46px;
+    border-top-right-radius: 46px;
+    opacity: 0.9;
+
+   #loginForm{
+       padding-left: 0;
+   }
+.login-form{
+      background: url('../../../assets/img/login/signup_newbg.png');
+      background-position: center center;
+      background-size:contain;
+      background-repeat: no-repeat;
+    
+    }
+}
+.form-input{
+    position: relative;
+    margin-bottom: 10px;
+    ion-item::part(native) {
+        padding-left: 0;
+        width: 80%;
+    margin: 0 auto;
+    }
+.action-button{
+    text-align: center;
+    margin-top: -9px;
+    .login-button{
+        -o-object-position: #f9b801;
+        background-color: #213360;
+        color: white;
+        opacity: 9999;
+    }
+}
+}
+ion-item{
+    --border-radius: 50px;
+    // --background: #21cdc1;
+      margin: 8px 0;
+      ion-input{
+        font-size: 14px;
+        --padding-start: 6%;
+        background: #21cdc1;
+        border-radius: 50px;
+        height: 48px;
+        color: #000;
+        box-shadow: inset 3px 3px 5px #0e223e;
+        z-index: 9999999;
+        opacity: 1;
+    }
+}
+.eyeIcon{
+    position: absolute;
+    margin-left: 88%;
+    height: 30px;
+    font-size: 19px;
+}
+.forgetText{
+    margin-top: -8%;
+    text-align: left;
+    color: #1897a0;
+    font-size: 19px;
+    padding-left: 3%;
+}
+a{
+    color: #21cdc1;
+    font-weight: bold;
+    text-transform: uppercase;
+   }
+   h3{
+    padding-left: 3%;
+    font-size: 15px;
+    margin-bottom: 5px;
+   }
+   .forgot{
+       padding-left: 10%;
+       p{
+        // text-decoration: underline;
+        font-size: 18px;
+       }
+       ion-label{
+        font-size: 14px;
+        padding-left: 5px;
+       }
+   }
+   .signupbtn{
+    //    text-align: end;
+       margin-right: 10%;
+       p{
+        // text-decoration: underline;
+        font-size: 14px;
+        margin-top: 5px;
+       }
+   }
+   ion-button{
+    height: 48px;
+    margin: 2px 0px;
+    --border-radius: 50px;
+    width: 80%;
+    --background: #0e223e;
+    margin: 0 10%;
+  }
+  .healthcard{
+    background-image: url(../../../assets/img/login/signup_bg.png);
+      background-size: 100%, cover;
+      font-weight: 200;
+      background-position: bottom center, center center;
+      // height: 100%;
+      background-repeat: no-repeat;
+    width: 100%;
+    margin-left: 0;
+  }
+  .healthlefttext{
+    background-image: url(../../../assets/img/login/signup_bg.png);
+    background-size: 100%, cover;
+    font-weight: 200;
+    background-position: bottom center, center center;
+    // height: 100%;
+    background-repeat: no-repeat;
+  width: 100%;
+    position: absolute;
+    z-index: 99;
+    // bottom: 2%;
+    color: white;
+    opacity: 999;
+  }
+  @media (min-width: 690px) and (max-width: 960px){
+    .healthlefttext{
+        height: 46%;
+        // bottom: -15%;
+    }
+    #form{
+        margin-top: 9%;
+    }
+    .heading{
+        display: grid;
+        height: 538px;
+        padding-top: 5%;
+        img{
+            margin: 0 auto;
+        }
+    }
+    .forgot{
+        padding-left: 10%;
+        p{
+         // text-decoration: underline;
+         font-size: 30px;
+        }
+    }
+    .signupbtn{
+        text-align: end;
+        margin-right: 10%;
+        p{
+         // text-decoration: underline;
+         font-size: 30px;
+        }
+    }
+    .forgetText1{
+        color: black;
+        text-align: end;
+        margin-right: 10%;
+        font-size: 30px;
+    }
+    ion-item{
+        ion-input{
+            font-size: 1.8rem;
+            height: 75px;
+        }
+    }
+  }
+  .loginlogo{
+    width: 63%;
+  }
+  @media (min-width: 260px) and (max-width: 320px){
+    .healthlefttext{
+        height: 60%;
+    }
+    
+  }
+  @media (min-width: 320px) and (max-width: 460px){
+    .healthlefttext{
+        height: 60%;
+    }
+    .img{
+        height: 145px;
+    }
+  }
+  @media (min-width: 1020px) and (max-width: 1360px){
+    .healthlefttext{
+        height: 60%;
+    }
+    .heading{
+        display: grid;
+        height: 560px;
+        padding-top: 5%;
+        img{
+            margin: 0 auto;
+        }
+    }
+    #form{
+        margin-top: 13%;
+    }
+    .forgot{
+        padding-left: 10%;
+        p{
+         // text-decoration: underline;
+         font-size: 30px;
+        }
+    }
+    .signupbtn{
+        text-align: end;
+        margin-right: 10%;
+        p{
+         // text-decoration: underline;
+         font-size: 30px;
+        }
+    }
+    .forgetText1{
+        color: black;
+        text-align: end;
+        margin-right: 10%;
+        font-size: 30px;
+    }
+    ion-item{
+        ion-input{
+            font-size: 1.8rem;
+            height: 75px;
+        }
+    }
+  }
+  .forgetText1{
+    color: black;
+    text-align: end;
+    margin-right: 18%;
+    font-size: 14px;
+  }
+  .roww{
+    color: black;
+    font-size: 12px;
+  }
+  .fb{
+    height: 45px;
+    margin: 2px 0px;
+    --border-radius: 50px;
+    width: 80%;
+    --background: #3171e0;
+    margin: 0 10%;
+  }
+  .google{
+    height: 45px;
+    margin: 2px 0px;
+    --border-radius: 50px;
+    width: 80%;
+    --background: #ee0e21;
+    margin: 0 10%;
+  }
