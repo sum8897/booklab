@@ -9,16 +9,64 @@ import { IonSlides, NavController } from '@ionic/angular';
 export class MainpageComponent implements OnInit {
 
   @ViewChild('slides', {static: true}) slides: IonSlides;
+  slideOpts1 = {
+    initialSlide: 0,
+    speed: 1000,
+    spaceBetween: 10,
+    slidesPerView: 3.0,
+    centeredSlide:true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+      stopOnLastSlide: true
+},
+    pager:true,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      // clickable: true
+    }
+    // slidesPerColumn: 1,
+  };
+  slideOpts2 = {
+    initialSlide: 0,
+    speed: 400,
+    spaceBetween: 10,
+    slidesPerView: 2.0,
+    centeredSlide:true,
+    autoplay: false
+    // slidesPerColumn: 1,
+  };
+  slideOpts4 = {
+    initialSlide: 0,
+    speed: 400,
+    spaceBetween: 5,
+    slidesPerView: 2.0,
+    centeredSlide:true,
+    autoplay: false
+    // slidesPerColumn: 1,
+  };
   slideOpts = {
     initialSlide: 0,
     speed: 400,
     spaceBetween: 10,
-    slidesPerView: 1.0,
+    slidesPerView: 3.0,
     centeredSlide:true,
     autoplay:true
     // slidesPerColumn: 1,
   };
-  ngOnInit() {}
+  slideOpts3 = {
+    initialSlide: 0,
+    speed: 1000,
+    spaceBetween: 0,
+    slidesPerView: 2.0,
+    centeredSlide:true,
+    // autoplay:true
+    // slidesPerColumn: 1,
+  };
+
+  ngOnInit() {
+  }
   constructor(private navCtrl: NavController) {}
   locationcard = false;
   locationShow() {
@@ -32,6 +80,84 @@ export class MainpageComponent implements OnInit {
     this.selectedReligionId = e.currentTarget.value.id;
     this.locationcard = false;
   }
+ 
+  appointment=[
+    {
+      id:1,
+      img:'../../assets/homepage/Search-dr.png',
+      name:'Search Best Online Professional'
+    },
+    {
+      id:2,
+      img:'../../assets/homepage/profile.png',
+      name:'View Professional Profile'
+    },
+    {
+      id:3,
+      img:'../../assets/homepage/Instant-dr.png',
+      name:'Get Intance Doctor Appointment'
+    },
+    {
+      id:4,
+      img:'../../assets/homepage/Search-dr.png',
+      name:'Search Best Online Professional'
+    },
+    {
+      id:5,
+      img:'../../assets/homepage/profile.png',
+      name:'View Professional Profile'
+    },
+    {
+      id:6,
+      img:'../../assets/homepage/Instant-dr.png',
+      name:'Get Intance Doctor Appointment'
+    },
+  ]
+
+    digitalData=[
+    {
+      id:1,
+      img:'../../assets/icon/MEDICINE-IMAGE.png',
+      name:'Search Best Online Professional'
+    },
+    {
+      id:2,
+      img:'../../assets/icon/MEDICINE-IMAGE.png',
+      name:'View Professional Profile'
+    },
+    {
+      id:3,
+      img:'../../assets/icon/MEDICINE-IMAGE.png',
+      name:'Get Intance Doctor Appointment'
+    },
+    {
+      id:4,
+      img:'../../assets/icon/MEDICINE-IMAGE.png',
+      name:'Search Best Online Professional'
+    },
+    {
+      id:5,
+      img:'../../assets/icon/MEDICINE-IMAGE.png',
+      name:'View Professional Profile'
+    },
+    {
+      id:6,
+      img:'../../assets/icon/MEDICINE-IMAGE.png',
+      name:'Get Intance Doctor Appointment'
+    },
+  ]
+  orderappointment=[
+    {
+      id:1,
+      img:'../../assets/homepage/profile.png',
+      name:'View Professional Profile'
+    },
+    {
+      id:2,
+      img:'../../assets/homepage/Instant-dr.png',
+      name:'Get Intance Doctor Appointment'
+    },
+  ]
 
   locationList=[
     {id:1,name:'Mirzapur'},
@@ -81,36 +207,57 @@ export class MainpageComponent implements OnInit {
   serviceList=[
     {
       id:1,
-      img:'../../assets/img/services/hospitals.jpg',
+      img:'../../assets/homepage/Hospitals_image.png',
       name:'Hospitals (1000+)'
     },
     {
       id:2,
-      img:'../../assets/img/services/doctors.jpg',
+      img:'../../assets/homepage/Pharmacies_image.png',
       name:'Doctors (50000+)'
     },
-    {
+    {  
       id:3,
-      img:'../../assets/img/services/pharmacies.jpg',
+      img:'../../assets/homepage/Hospitals_image.png',
       name:'Pharmacies (700+)'
     },
     {
       id:4,
-      img:'../../assets/img/services/clinics.jpg',
+      img:'../../assets/homepage/Pharmacies_image.png',
       name:'Clinics (1450+)'
     },
     {
       id:5,
-      img:'../../assets/img/services/laboratories.jpg',
+      img:'../../assets/homepage/Hospitals_image.png',
       name:'Laboratories (6000+)'
     },
     {
       id:6,
-      img:'../../assets/img/services/surgery-rooms.jpg',
+      img:'../../assets/homepage/Pharmacies_image.png',
       name:'Surgery Rooms (2600+)'
     },
   ]
-
+number=[
+  {
+    id:1,
+   number:'2k+',
+   text:'Experience Doctors'
+  },
+  {
+    id:2,
+   number:'4k+',
+   text:'Satisfied labs',
+  },
+  {
+    id:3,
+   number:'6k+',
+   text:'Total Calls'
+  },
+  {
+    id:4,
+   number:'30k+',
+   text:'Total Clients'
+  },
+]
   // Psychotherapist
   spelistList=[
     {
@@ -187,6 +334,9 @@ export class MainpageComponent implements OnInit {
 
   specilist(){
     this.navCtrl.navigateRoot('/doctorlist')
+  }
+  labs(){
+    this.navCtrl.navigateRoot('/lablist')
   }
 
 }

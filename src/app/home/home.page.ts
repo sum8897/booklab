@@ -15,7 +15,10 @@ export class HomePage {
   submit(){
     this.navCtrl.navigateRoot('/login')
   }
-  mainpge(){
+  specilist(){
+    this.navCtrl.navigateRoot('/doctorlist')
+  }
+  home(){
     this.navCtrl.navigateRoot('/mainpage')
   }
 }

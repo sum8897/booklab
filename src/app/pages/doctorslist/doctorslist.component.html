@@ -1,103 +1,166 @@
 <ion-header>
   <ion-toolbar>
-      <ion-buttons slot="start">
+    <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
-      </ion-buttons>
+    </ion-buttons>
     <ion-title>
-      Available doctors
+      <img class="headerimg" style="margin: 5px 0;" src="../../../assets/img/login/logo1.png">
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  <ion-list>
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="../../../assets/img/logo.png">
-      </ion-avatar>
-      <ion-label class="text-wrap">
-        <h2 class="ion-text-wrap h2Text">Dr. Ashish Kumar Chaurasiya</h2>
-        <h3 class="ion-text-wrap">Senior Dr. at Delamnt (Pediatrics)</h3>
-        <p class="ion-text-wrap">MBBS,MD,MS(US)</p>
-        <ion-button expand="round" class="bookButton">Book Appointment</ion-button>
-      </ion-label>
+<ion-content style="background: white;">
+  <ion-card class="searchCard">
+    <ion-item lines="none" class="searchitem">
+      <ion-input type="mail" placeholder="Search doctor" class="searchInput">
+        <ion-icon class="searchIcon" slot="start" name="search-outline"></ion-icon>
+      </ion-input>
     </ion-item>
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="../../../assets/img/logo.png">
-      </ion-avatar>
-      <ion-label class="text-wrap">
-        <h2 class="ion-text-wrap h2Text">Dr. Ashish Kumar Chaurasiya</h2>
-        <h3 class="ion-text-wrap">Senior Dr. at Delamnt (Pediatrics)</h3>
-        <p class="ion-text-wrap">MBBS,MD,MS(US)</p>
-       <ion-button expand="round" class="bookButton">Book Appointment</ion-button>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="../../../assets/img/logo.png">
-      </ion-avatar>
-      <ion-label class="text-wrap">
-        <h2 class="ion-text-wrap h2Text">Dr. Ashish Kumar Chaurasiya</h2>
-        <h3 class="ion-text-wrap">Senior Dr. at Delamnt (Pediatrics)</h3>
-        <p class="ion-text-wrap">MBBS,MD,MS(US)</p>
-        <ion-button expand="round" class="bookButton">Book Appointment</ion-button>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="../../../assets/img/logo.png">
-      </ion-avatar>
-      <ion-label class="text-wrap">
-        <h2 class="ion-text-wrap h2Text">Dr. Ashish Kumar Chaurasiya</h2>
-        <h3 class="ion-text-wrap">Senior Dr. at Delamnt (Pediatrics)</h3>
-        <p class="ion-text-wrap">MBBS,MD,MS(US)</p>
-        <ion-button expand="round" class="bookButton">Book Appointment</ion-button>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="../../../assets/img/logo.png">
-      </ion-avatar>
-      <ion-label class="text-wrap">
-        <h2 class="ion-text-wrap h2Text">Dr. Ashish Kumar Chaurasiya</h2>
-        <h3 class="ion-text-wrap">Senior Dr. at Delamnt (Pediatrics)</h3>
-        <p class="ion-text-wrap">MBBS,MD,MS(US)</p>
-        <ion-button expand="round" class="bookButton">Book Appointment</ion-button>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="../../../assets/img/logo.png">
-      </ion-avatar>
-      <ion-label class="text-wrap">
-        <h2 class="ion-text-wrap h2Text">Dr. Ashish Kumar Chaurasiya</h2>
-        <h3 class="ion-text-wrap">Senior Dr. at Delamnt (Pediatrics)</h3>
-        <p class="ion-text-wrap">MBBS,MD,MS(US)</p>
-        <ion-button expand="round" class="bookButton">Book Appointment</ion-button>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+    <ion-grid>
+      <ion-row class="filterrow">
+        <ion-col size="4">
+          <div class="deepdiv">
+            <ion-row class="insidediv">
+              <ion-col size="2" class="insidefirstcol">
+                <ion-icon name="logo-usd"></ion-icon>
+              </ion-col>
+              <ion-col size="8" class="insidesecondcol">Price</ion-col>
+              <ion-col size="2" class="insidelastcol">
+                <ion-icon name="caret-down-outline" class="selecticon"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-col>
+        <ion-col size="4">
+          <div class="deepdiv">
+            <ion-row class="insidediv">
+              <ion-col size="2" class="insidefirstcol">
+                <ion-icon name="location-outline"></ion-icon>
+              </ion-col>
+              <ion-col size="8" class="insidesecondcol">Location</ion-col>
+              <ion-col size="2" class="insidelastcol">
+                <ion-icon name="caret-down-outline" class="selecticon"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-col>
+        <ion-col size="4">
+          <div class="deepdiv">
+            <ion-row class="insidediv">
+              <ion-col size="2" class="insidefirstcol">
+                <ion-icon name="git-branch-outline"></ion-icon>
+              </ion-col>
+              <ion-col size="8" class="insidesecondcol">Specialist</ion-col>
+              <ion-col size="2" class="insidelastcol">
+                <ion-icon name="caret-down-outline" class="selecticon"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-card class="doctorCard">
+    <ion-card style="background: white;border-radius: 7px;">
+      <ion-grid>
+        <ion-row class="row">
+          <ion-col size="5">
+            <ion-card class="doctorimgCard">
+              <img style="width:100%;" src="../../assets/icon/dr1.png">
+              <span>30 Years Exp</span>
+            </ion-card>
+          </ion-col>
+          <ion-col size="7" class="detailsNameCol">
+            <div class="doctordetails">
+              <div class="ion-text-wrap doctName">Dr. Ajay Sharma</div>
+              <div class="icon-detail"*ngFor="let x of pharmacyList">
+                <div class="icon2"><img src="{{x.img}}"></div>
+               <div class="doctorCol"> <span>{{x.name}}</span></div>
+              </div>
+            </div>
+            <div class="price-doctor">
+              <div class="price-cut">549</div>
+              <div class="price-per"><img src="../../../assets/icon/dr_off.png"><span>20% off</span><ion-icon name="caret-forward-outline">
+              </ion-icon></div>
+              <div class="price-right"><img src="../../../assets/icon/dr_rs.png"><span>299</span></div>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="5">
+            <ion-button shape="round" fill="outline" class="viewbtn">View Profile</ion-button>
+          </ion-col>
+          <ion-col size="7">
+            <ion-button shape="round" class="consultbtn">Book Now</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </ion-card>
+
+
+  <ion-card class="doctorCard">
+    <ion-card style="background: white;border-radius: 7px;">
+      <ion-grid>
+        <ion-row class="row">
+          <ion-col size="5">
+            <ion-card class="doctorimgCard">
+              <img style="width:100%;" src="../../assets/icon/dr2.png">
+              <span>30 Years Exp</span>
+            </ion-card>
+          </ion-col>
+          <ion-col size="7" class="detailsNameCol">
+            <div class="doctordetails">
+              <div class="ion-text-wrap doctName">Dr. Vineeta Singh Tandon</div>
+              <div class="icon-detail"*ngFor="let x of pharmacyList">
+                <div class="icon2"><img src="{{x.img}}"></div>
+               <div class="doctorCol"> <span>{{x.name}}</span></div>
+              </div>
+            </div>
+            <div class="price-doctor">
+              <div class="price-cut">549</div>
+              <div class="price-per"><img src="../../../assets/icon/dr_off.png"><span>20% off</span><ion-icon name="caret-forward-outline">
+              </ion-icon></div>
+              <div class="price-right"><img src="../../../assets/icon/dr_rs.png"><span>299</span></div>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="5">
+            <ion-button shape="round" fill="outline" class="viewbtn">View Profile</ion-button>
+          </ion-col>
+          <ion-col size="7">
+            <ion-button shape="round" class="consultbtn">Book Now</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </ion-card>
 </ion-content>
 
 <ion-footer>
   <ion-toolbar color="secondary">
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button class="home" (click)="homeClick()">
-          <ion-icon name="home-outline"></ion-icon>
+        <ion-tab-button class="home" (click)="home()">
+          <img class="footrImg" src="../../assets/img/icons/home.png">
           <ion-label>Home</ion-label>
         </ion-tab-button>
         <ion-tab-button class="specilist" (click)='specilist()'>
-          <ion-icon name="people-outline"></ion-icon>
+          <img class="footrImg" src="../../assets/img/icons/specilist.png">
           <ion-label>Specilist</ion-label>
         </ion-tab-button>
         <ion-tab-button (click)="hospitals()" class="hospitals">
-          <ion-icon name="storefront-outline"></ion-icon>
+          <img class="footrImg" src="../../assets/img/icons/Hospitals.png">
           <ion-label>Hospitals</ion-label>
         </ion-tab-button>
         <ion-tab-button class="clinics" (click)="clinics()">
-          <ion-icon name="thermometer-outline"></ion-icon>
+          <img class="footrImg" src="../../assets/img/icons/clinics.png">
           <ion-label>Clinics</ion-label>
+        </ion-tab-button>
+        <ion-tab-button class="labs" (click)="labs()">
+          <img class="footrImg" src="../../assets/img/icons/lab.png">
+          <ion-label>Labs</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>

@@ -10,7 +10,27 @@ export class DoctorslistComponent implements OnInit {
   constructor(private navCtrl: NavController) { }
 
   ngOnInit() {}
-  homeClick(){
-    this.navCtrl.navigateRoot('/home')
+  home(){
+    this.navCtrl.navigateRoot('/mainpage')
   }
+  labs(){
+    this.navCtrl.navigateRoot('/lablist')
+  }
+  pharmacyList=[
+    {
+      id:1,
+      img:'../../assets/icon/dr_Specialist.png',
+      name:'MBBS, MD(General Medicine) Physician etc',
+    },
+    {
+      id:2,
+      img:'../../assets/icon/dr_location.png',
+      name:'Kailash Hospital, Noida',
+    },
+    {
+      id:3,
+      img:'../../assets/icon/dr_lang.png',
+      name:'English,Hindi,Tamil',
+    },
+]
 }

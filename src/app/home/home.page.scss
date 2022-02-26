@@ -1,18 +1,19 @@
 ion-content{
-  --background:linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.1)),
-  url("../../assets/img/icons/1_bg.png") no-repeat center center / cover;
-  // --background: #ececec;
+  // --background:linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.1)),
+  // url("../../assets/img/icons/1_bg.png") no-repeat center center / cover;
+
+  --background: url('../../assets/img/icons/1_bg.png') center center / cover;
 }
 .tool{
   --background: #060b46;
   text-align: center;
 }
 .action-button{
-  margin-top: 60%;
+  margin-top: 180px;
   text-align: center;
   p{
-    // text-decoration: underline;
-    color: white;
+    color: black;
+    font-family: RobotoCondensed !important;
   }
 }
 ion-button{
@@ -21,15 +22,17 @@ ion-button{
     --border-radius: 50px;
     height: 40px;
     margin: 10px 0px;
+    color: #21cdc0;
+    font-family: RobotoCondensed !important;
 }
-// .reg-button{
-//   --background: #060b46;
-// }
 .login-button{
-  // --background:white;
-  // --color:#060b46;
   margin-top: 2px;
 }
 .footrImg{
   width: 30px;
+}
+@media (min-width: 690px) and (max-width: 960px){
+  .action-button{
+
+  }
 }

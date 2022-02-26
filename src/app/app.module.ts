@@ -19,6 +19,7 @@ import { DoctorslistComponent } from './pages/doctorslist/doctorslist.component'
 import { RegisterComponent } from './pages/register/register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MainpageComponent } from './pages/mainpage/mainpage.component';
+import { LabListComponent } from './pages/lab-list/lab-list.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MainpageComponent } from './pages/mainpage/mainpage.component';
               ContactusComponent,
               DoctorslistComponent,
               DashboardComponent,
-              MainpageComponent
+              MainpageComponent,
+              LabListComponent,
             ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],

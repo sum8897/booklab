@@ -3,6 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { ContactusComponent } from './pages/contactus/contactus.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DoctorslistComponent } from './pages/doctorslist/doctorslist.component';
+import { LabListComponent } from './pages/lab-list/lab-list.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MainpageComponent } from './pages/mainpage/mainpage.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -44,6 +45,10 @@ const routes: Routes = [
   {
     path:'mainpage',
     component: MainpageComponent
+  },
+  {
+    path:'lablist',
+    component: LabListComponent
   },
 ];
 

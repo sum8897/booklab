@@ -2,6 +2,10 @@ ion-content{
     // --background:linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.1)),
     // url("../../../assets/img/register_img.jpg") no-repeat center center / cover;
     // --background: #f4b401;
+    ion-input{
+        font-family: RobotoCondensed !important;
+        color: #0e223e;
+    }
 }
 .heading{
     --background:linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.1)),
@@ -59,12 +63,18 @@ url("../../../assets/img/login/signup_graphic_xhdpi.png") no-repeat center cente
 }
 ion-item{
     --border-radius: 50px;
-    --background: #21cdc1;
+    // --background: #21cdc1;
       margin: 8px 0;
       ion-input{
-        font-size: 14px;
+        font-size: 18px;
         --padding-start: 6%;
+        background: #21cdc1;
+        border-radius: 50px;
+        height: 48px;
         color: #000;
+        box-shadow: inset 3px 3px 5px #0e223e;
+        z-index: 9999999;
+        opacity: 1;
     }
 }
 .forgetText{
@@ -99,15 +109,19 @@ a{
         // text-decoration: underline;
         font-size: 14px;
         margin-right: 10%;
+        font-family: RobotoCondensed !important;
        }
    }
-   ion-button{
+   .ion-button{
     height: 48px;
     margin: 2px 0px;
     --border-radius: 50px;
-    width: 80%;
+    width: 75%;
     --background: #0e223e;
     margin: 5px 10% 0 10%;
+    color: #21cdc1;
+    margin-top: 5%;
+    font-family: RobotoBold !important;
   }
   .healthcard{
     background-image: url(../../../assets/img/login/signup_bg.png);
@@ -142,12 +156,18 @@ a{
         // bottom: -15%;
     }
     #form{
-        margin-top: 9%;
+        margin-top: 1%;
+    }
+    .loginlogo{
+        width: 300px;
+    }
+    .img{
+        width: 310px;
     }
     .heading{
         display: grid;
-        height: 538px;
-        padding-top: 5%;
+        // height: 538px;
+        // padding-top: 5%;
         img{
             margin: 0 auto;
         }
@@ -182,13 +202,13 @@ a{
   }
   @media (min-width: 260px) and (max-width: 320px){
     .healthlefttext{
-        height: 60%;
+        height: auto;
     }
     
   }
   @media (min-width: 320px) and (max-width: 460px){
     .healthlefttext{
-        height: 56%;
+        height: auto;
     }
     .img{
         height: 160px;

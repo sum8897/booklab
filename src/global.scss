@@ -24,9 +24,99 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+ion-toolbar{
+  background: white;
+}
+
+@font-face {   
+  font-family: 'RobotoCondensed';  //This is what we are going to call  
+  src: url('../src/assets/fonts/RobotoCondensed/RobotoCondensedRegular.ttf');
+}
+@font-face {   
+  font-family: 'RobotoLight';  
+  src: url('../src/assets/fonts/RobotoCondensed/RobotoCondensed-Light.ttf');
+}
+@font-face {   
+  font-family: 'RobotoLightItalic';  
+  src: url('../src/assets/fonts/RobotoCondensed/RobotoCondensed-LightItalic.ttf');
+}
+@font-face {   
+  font-family: 'RobotoBold';   
+  src: url('../src/assets/fonts/RobotoCondensed/RobotoCondensed-Bold.ttf');
+}
+@font-face {   
+  font-family: 'RobotoBoldItalic';   
+  src: url('../src/assets/fonts/RobotoCondensed/RobotoCondensed-BoldItalic.ttf');
+}
+
+@font-face {   
+  font-family: 'EczarBold';  
+  src: url('../src/assets/fonts/Eczar/EczarBold.ttf');
+}
+@font-face {   
+  font-family: 'EczarExtraBold';
+  src: url('../src/assets/fonts/Eczar/EczarExtraBold.ttf');
+}
+@font-face {   
+  font-family: 'EczarMedium';
+  src: url('../src/assets/fonts/Eczar/EczarMedium.ttf');
+}
+@font-face {   
+  font-family: 'EczarRegular';
+  src: url('../src/assets/fonts/Eczar/EczarRegular.ttf');
+}
+@font-face {   
+  font-family: 'EczarSemiBold';
+  src: url('../src/assets/fonts/Eczar/EczarSemiBold.ttf');
+}
 
 
   .swiper-pagination {
     position: relative;
-    padding-top: 7%;
+    padding-top: 1px;
+}
+.swiper-pagination-bullet {
+  background: #21cdc0;
+  opacity: 0.8;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #0e223e;
+}
+.slider-pager-page
+{
+  color: #21cdc0;
+  fill: #21cdc0;
+  stroke: #21cdc0;
+  background-color: #21cdc0;
+}
+.slider-pager-page.active
+{
+  fill: #0e223e;
+  stroke: #0e223e;
+  color: #0e223e;
+  background-color: #0e223e;
+}
+
+ion-menu-button{
+  color: #21cdc0;
+  font-size: 32px;
+}
+ion-toolbar{
+  --background: #0e223e;
+
+}
+.headerimg{
+  width: 145px;
+  margin: 5px 0;
+}
+.footrImg{
+  width: 30px;
+}
+ion-tab-button{
+  height: 55px;
+ 
+}
+.swiper-container-horizontal>.swiper-pagination-bullets {
+  bottom: 0;
 }

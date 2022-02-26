@@ -2,6 +2,7 @@ ion-content{
     // --background:linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.1)),
     // url("../../../assets/img/register_img.jpg") no-repeat center center / cover;
     // --background: #f4b401;
+    // --background: url('../../assets/img/icons/1_bg.png') center center / cover;
 }
 .heading{
     --background:linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.1)),
@@ -50,10 +51,10 @@ url("../../../assets/img/login/signup_graphic_xhdpi.png") no-repeat center cente
     text-align: center;
     margin-top: -9px;
     .login-button{
-        -o-object-position: #f9b801;
         background-color: #213360;
         color: white;
         opacity: 9999;
+        font-family: RobotoCondensed !important;
     }
 }
 }
@@ -62,7 +63,7 @@ ion-item{
     // --background: #21cdc1;
       margin: 8px 0;
       ion-input{
-        font-size: 14px;
+        font-size: 18px;
         --padding-start: 6%;
         background: #21cdc1;
         border-radius: 50px;
@@ -71,6 +72,7 @@ ion-item{
         box-shadow: inset 3px 3px 5px #0e223e;
         z-index: 9999999;
         opacity: 1;
+        font-family: RobotoCondensed !important;
     }
 }
 .eyeIcon{
@@ -85,6 +87,7 @@ ion-item{
     color: #1897a0;
     font-size: 19px;
     padding-left: 3%;
+    font-family: RobotoCondensed !important;
 }
 a{
     color: #21cdc1;
@@ -98,6 +101,7 @@ a{
    }
    .forgot{
        padding-left: 10%;
+       font-family: RobotoCondensed !important;
        p{
         // text-decoration: underline;
         font-size: 18px;
@@ -114,16 +118,21 @@ a{
         // text-decoration: underline;
         font-size: 14px;
         margin-top: 5px;
+        font-family: RobotoCondensed !important;
        }
    }
    ion-button{
     height: 48px;
     margin: 2px 0px;
     --border-radius: 50px;
-    width: 80%;
+    width: 75%;
     --background: #0e223e;
     margin: 0 10%;
+    font-family: RobotoBold !important;
   }
+  .login-button{
+    color: #21cdc1;
+}
   .healthcard{
     background-image: url(../../../assets/img/login/signup_bg.png);
       background-size: 100%, cover;
@@ -147,6 +156,13 @@ a{
     // bottom: 2%;
     color: white;
     opacity: 999;
+  }
+  ion-checkbox{
+    --background-checked: #21cdc1;
+    box-shadow: inset 3px 3px 5px #0e223e;
+    --checkmark-color: black;
+    --border-color-checked: black;
+    --border-color: black;
   }
   @media (min-width: 690px) and (max-width: 960px){
     .healthlefttext{
@@ -199,14 +215,33 @@ a{
     .healthlefttext{
         height: 60%;
     }
-    
+    ion-content{
+        --overflow: hidden;
+    }
+    .heading{
+        height: 233px;
+    }
+    .img{
+        width: 165px;
+    }
   }
   @media (min-width: 320px) and (max-width: 460px){
     .healthlefttext{
-        height: 60%;
+        height: 62%;
     }
     .img{
-        height: 145px;
+        height: 128px;
+    }
+    ion-content{
+        --overflow: hidden;
+    }
+  }
+  @media (min-width: 461px) and (max-width: 689px){
+    .healthlefttext{
+        height: 62%;
+    }
+    .img{
+        height: 128px;
     }
   }
   @media (min-width: 1020px) and (max-width: 1360px){
@@ -244,6 +279,7 @@ a{
         text-align: end;
         margin-right: 10%;
         font-size: 30px;
+        font-family: RobotoCondensed !important;
     }
     ion-item{
         ion-input{
@@ -257,6 +293,7 @@ a{
     text-align: end;
     margin-right: 18%;
     font-size: 14px;
+    font-family: RobotoCondensed !important;
   }
   .roww{
     color: black;
@@ -268,7 +305,7 @@ a{
     --border-radius: 50px;
     width: 80%;
     --background: #3171e0;
-    margin: 0 10%;
+    margin: 0;
   }
   .google{
     height: 45px;

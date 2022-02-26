@@ -1,18 +1,329 @@
-.h2Text{
-    font-size: 19px;
-    font-weight: bold;
+.searchCard {
+  --background: #ededed;
+  margin-top: 0;
+  box-shadow: none;
 }
-ion-avatar{
-    border: 1px solid #21cdc1;
-    width: 70px;
-    height: 70px;
+
+.searchList {
+  background: #21cdc0;
+
+  .searchItem {
+    --background: #21cdc0;
+  }
 }
-.bookButton{
-    text-align: right;
-    color: #ffffff;
-    --background: #21cdc1;
-    --border: 1px solid #21cdc1;
+
+.searchInput {
+  font-family: RobotoCondensed !important;
+  color: #0e223e;
 }
-.specilist{
-    color: #21cdc0;
-  } 
+
+.searchitem {
+  --border-radius: 50px;
+  margin: 20px -5px;
+  --background: #ededed;
+
+  ion-input {
+    // font-size: 18px;
+    --padding-start: 6%;
+    --background: white;
+    border-radius: 50px;
+    height: 48px;
+    color: #0e223e !important;
+    box-shadow: inset 3px 3px 5px #0e223e;
+    z-index: 9999999;
+    opacity: 1;
+  }
+
+  .searchIcon {
+    margin-left: 5%;
+    font-size: 24px;
+  }
+}
+
+.filterrow {
+  margin: 0px 2px 15px 2px;
+  font-size: 10px;
+}
+
+.deepdiv {
+  height: 28px;
+  width: 100%;
+  color: #0e223e !important;
+  box-shadow: inset 2px 2px 2px #0e223e;
+  z-index: 9999999;
+  opacity: 1;
+  background: white;
+  padding: 8px;
+  display: inline-flex;
+
+  .insidediv {
+    width: 100%;
+    font-size: 10px;
+
+    .insidefirstcol {
+      margin-left: -9px;
+    }
+
+    .insidesecondcol {
+      font-size: 9px;
+      // margin-top: 2px;
+      font-family: RobotoLight;
+    }
+
+    .insidelastcol {
+      ion-icon {
+        margin-left: 7px;
+      }
+    }
+  }
+}
+
+.doctorCard {
+  --background: #ededed;
+  box-shadow: none;
+  background: #ededed;
+  .row {
+    margin: 5px 0;
+  }
+}
+
+.doctorimgCard {
+  background: #0e223e;
+  color: white;
+  text-align: center;
+  padding-bottom: 7px;
+  border-radius: 0;
+  margin: 0;
+  box-shadow: 1px 1px 1px 1px #828d9c;
+
+  span {
+    font-size: 10px;
+    font-family: RobotoCondensed !important;
+  }
+
+  img {
+    // height: 175px;
+    width: 100%;
+  }
+}
+
+.priceright {
+  color: #0e223e;
+  font-family: RobotoCondensed-Light !important;
+}
+
+.levelText {
+  width: 100%;
+  font-size: 13px;
+  font-family: RobotoCondensed !important;
+}
+
+.doctodetails {
+  font-family: RobotoCondensed !important;
+  margin-left: 0px;
+  font-size: 11px;
+  line-height: 1.2;
+  margin-top: -20px;
+
+}
+
+.detailsNameCol {
+  margin-top: -14px;
+
+  .doctName {
+    font-family: RobotoBold !important;
+    margin: 0 0 3px 20px;
+    color: #0e223e;
+    font-size: 16px;
+  }
+
+  small {
+    font-size: 10px;
+    font-family: RobotoCondensed !important;
+    font-weight: 500;
+  }
+
+  .doctordetails {
+    margin-top: 15px;
+  }
+
+  .icon-detail {
+    display: inline-flex;
+    margin-left: 5px;
+
+    .icon2 {
+      img {
+        width: 10px;
+        opacity: 999;
+        z-index: 99999;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  .doctorCol {
+    margin-left: 5px;
+
+    span {
+      color: #0e223e !important;
+      font-family: RobotoCondensed !important;
+      font-size: 10px;
+      text-align: left;
+    }
+  }
+}
+
+.icon2 {
+  color: #0e223e;
+  opacity: 11;
+  // font-size: 17px;
+  // margin-top: 5px;
+}
+
+.discol {
+  color: #b20e0d;
+}
+
+.price-doctor {
+  background: #21cdc0;
+  margin-left: 5px;
+  font-size: 10px;
+  margin-top: 15px;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 6px 5px;
+
+  .price-cut {
+    color: #0e223e;
+    font-size: 13px;
+    font-family: EczarRegular !important;
+    padding-left: 3px;
+  }
+
+  .price-per {
+    display: flex;
+    justify-content: space-between;
+    color: #b20e0d;
+    font-family: EczarRegular !important;
+    img {
+      width: 15px;
+      height: 15px;
+      margin-top: 3px;
+    }
+
+    span {
+      font-size: 10px;
+      padding: 5px 3px 0 3px;
+    }
+
+    ion-icon {
+      margin-top: 3px;
+    font-size: 15px;
+    }
+  }
+
+  .price-right {
+    margin-top: 3px;
+    text-align: left;
+    img {
+      width: 7px;
+    }
+    span {
+      color: #0e223e;
+      font-size: 12px;
+      padding-left: 3px;
+      font-family: EczarRegular !important;
+    }
+  }
+}
+
+.viewbtn {
+  width: 97%;
+  text-transform: capitalize;
+  --background: white;
+  font-family: RobotoCondensed !important;
+  color: #0e223e;
+  --border-color: #0e223e;
+  height: 30px;
+  font-size: 12px;
+  opacity: 1;
+}
+
+.consultbtn {
+  width: 96%;
+  font-family: RobotoCondensed !important;
+  margin: 0 5px;
+  text-transform: capitalize;
+  margin-top: 4px;
+  --background: #0e223e;
+  color: white;
+  height: 30px;
+  font-size: 12px;
+  opacity: 1;
+}
+
+// @media (min-width: 220px) and (max-width: 320px){
+//   .discount{
+//     display: inline-flex;
+//     font-size: 10px;
+//   }
+// }
+// @media (min-width: 321px) and (max-width: 360px){
+//   .discount{
+//     display: inline-flex;
+//     font-size: 13px;
+//   }
+// }
+
+.home {
+  border-bottom: 5px;
+}
+
+.specilist {
+  border-bottom: 5px solid #21cdc0;
+}
+
+.clinics {
+  margin-bottom: 5px;
+}
+
+.hospitals {
+  margin-bottom: 5px;
+}
+
+.labs {
+  margin-bottom: 5px;
+}
+
+// .h2Text{
+//     font-size: 19px;
+//     font-weight: bold;
+// }
+// ion-avatar{
+//     border: 1px solid #21cdc1;
+//     width: 70px;
+//     height: 70px;
+// }
+// .bookButton{
+//     text-align: right;
+//     color: #ffffff;
+//     --background: #21cdc1;
+//     --border: 1px solid #21cdc1;
+// }
+
+//   .home{
+//     margin-bottom: 5px;
+//   }
+//   .specilist{
+//     border-bottom: 5px solid #21cdc0;
+//   }
+//   .clinics{
+//     margin-bottom: 5px;
+//   }
+//   .hospitals{
+//     margin-bottom: 5px;
+//   }
+//   .labs{
+//     margin-bottom: 5px;
+//   }

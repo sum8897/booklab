@@ -1,0 +1,234 @@
+.searchCard {
+  --background: #ededed;
+  margin-top: 0;
+  box-shadow: none;
+}
+
+.searchList {
+  background: #21cdc0;
+
+  .searchItem {
+    --background: #21cdc0;
+  }
+}
+
+.searchInput {
+  font-family: RobotoCondensed !important;
+  color: #0e223e;
+}
+
+.searchitem {
+  --border-radius: 50px;
+  margin: 20px -5px;
+  --background: #ededed;
+
+  ion-input {
+    // font-size: 18px;
+    --padding-start: 6%;
+    --background: white;
+    border-radius: 50px;
+    height: 48px;
+    color: #0e223e !important;
+    box-shadow: inset 3px 3px 5px #0e223e;
+    z-index: 9999999;
+    opacity: 1;
+  }
+
+  .searchIcon {
+    margin-left: 5%;
+    font-size: 24px;
+  }
+}
+
+.filterrow {
+  margin: 0px 2px 15px 2px;
+  font-size: 10px;
+}
+
+.name-icon {
+  display: flex;
+  justify-content: space-between;
+
+  .right {
+    margin-left: 10px;
+    font-size: 20px;
+    color: #21cdc0;
+    width: 20px;
+    height: 20px;
+  }
+
+  .right-check {
+    margin-left: 10px;
+    font-size: 20px;
+    color: #21cdc0;
+    width: 25px;
+    height: 25px;
+    --background-checked: white;
+    --border-radius: 50px;
+    --size: 20px;
+    --checkmark-color: #21cdc0;
+    --border-color: #21cdc0;
+    --border-color-checked: #21cdc0;
+  }
+
+  .left-2 {
+    margin-top: 2px;
+    font-size: 12px;
+    font-family: RobotoCondensed !important;
+  }
+
+  .lab-name {
+    color: #0e223e;
+    font-family: RobotoBold !important;
+    font-size: 15px;
+  }
+}
+
+.price-off {
+  color: red;
+  display: inline-flex;
+  padding-top: 15px;
+  justify-content: space-between;
+  font-family: RobotoCondensed !important;
+
+  span {
+    margin: 3px 0 0 3px;
+    font-family: RobotoCondensed !important;
+    font-size: 12px;
+  }
+
+  .left {
+    color: red;
+    font-family: RobotoCondensed !important;
+    font-size: 12px;
+  }
+}
+
+.price-cross {
+  color: #0e223e;
+  font-family: RobotoCondensed !important;
+
+  img {
+    width: 8px;
+  }
+}
+
+.right-price {
+  background: #21cdc0;
+  color: #0e223e;
+  padding: 5px;
+  font-size: 15px;
+  font-family: EczarRegular !important;
+
+  img {
+    width: 8px;
+  }
+}
+
+.viewbtn {
+  width: 97%;
+  text-transform: capitalize;
+  --background: white;
+  font-family: RobotoCondensed !important;
+  color: #0e223e;
+  height: 27px;
+  --border-color: #0e223e;
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.deepdiv {
+  height: 28px;
+  width: 100%;
+  color: #0e223e !important;
+  box-shadow: inset 2px 2px 2px #0e223e;
+  z-index: 9999999;
+  opacity: 1;
+  background: white;
+  padding: 8px;
+  display: inline-flex;
+
+  .insidediv {
+    width: 100%;
+    font-size: 10px;
+
+    .insidefirstcol {
+      margin-left: -9px;
+    }
+
+    .insidesecondcol {
+      font-size: 9px;
+      // margin-top: 2px;
+      font-family: RobotoLight;
+    }
+
+    .insidelastcol {
+      ion-icon {
+        margin-left: 7px;
+      }
+    }
+  }
+}
+
+.doctorCard {
+  --background: #ededed;
+  box-shadow: none;
+  border: 1px solid #ededed;
+  background: #ededed;
+}
+
+.segment-button-checked {
+  color: #0e223e;
+  --indicator-color: #21cdc0;
+  --background-checked: #ededed;
+}
+
+ion-segment-button {
+  color: #0e223e;
+  --indicator-color: #21cdc0;
+  --background: white;
+  --background-checked: #ededed;
+  text-transform: capitalize;
+  font-family: RobotoBold !important;
+}
+
+.list-card {
+  box-shadow: 1px 2px 2px #828d9c;
+  border-radius: 10px;
+  background: white;
+  .detailsNameCol{
+    padding-left: 10px;
+  }
+  .img{
+    box-shadow: 1px 1px 1px 1px #828d9c;
+  }
+}
+
+.book-button {
+  height: 40px;
+  --border-radius: 50px;
+  width: 75%;
+  --background: #0e223e;
+  margin: 25px 10%;
+  font-family: RobotoCondensed !important;
+}
+
+.home {
+  border-bottom: 5px;
+}
+
+.specilist {
+  border-bottom: 5px;
+}
+
+.clinics {
+  margin-bottom: 5px;
+}
+
+.hospitals {
+  margin-bottom: 5px;
+}
+
+.labs {
+  border-bottom: 5px solid #21cdc0;
+}

@@ -14,4 +14,10 @@ export class RegisterComponent implements OnInit {
   logIn(){
     this.navCtrl.navigateRoot('/login')
   }
+  specilist(){
+    this.navCtrl.navigateRoot('/doctorlist')
+  }
+  home(){
+    this.navCtrl.navigateRoot('/mainpage')
+  }
 }

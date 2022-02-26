@@ -1,0 +1,183 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img class="headerimg" style="margin: 5px 0;" src="../../../assets/img/login/logo1.png">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content style="background: white;">
+  <ion-card class="searchCard">
+    <ion-item lines="none" class="searchitem">
+      <ion-input type="mail" placeholder="Search doctor" class="searchInput">
+        <ion-icon class="searchIcon" slot="start" name="search-outline"></ion-icon>
+      </ion-input>
+    </ion-item>
+    <ion-grid>
+      <ion-row class="filterrow">
+        <ion-col size="4">
+          <div class="deepdiv">
+            <ion-row class="insidediv">
+              <ion-col size="2" class="insidefirstcol">
+                <ion-icon name="logo-usd"></ion-icon>
+              </ion-col>
+              <ion-col size="8" class="insidesecondcol">Test Type</ion-col>
+              <ion-col size="2" class="insidelastcol">
+                <ion-icon name="caret-down-outline" class="selecticon"></ion-icon>
+                <!-- <img class="selecticon" src="../../../assets/icon/lab_test.png"> -->
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-col>
+        <ion-col size="4">
+          <div class="deepdiv">
+            <ion-row class="insidediv">
+              <ion-col size="2" class="insidefirstcol">
+                <ion-icon name="location-outline"></ion-icon>
+              </ion-col>
+              <ion-col size="8" class="insidesecondcol">Distance</ion-col>
+              <ion-col size="2" class="insidelastcol">
+                <ion-icon name="caret-down-outline" class="selecticon"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-col>
+        <ion-col size="4">
+          <div class="deepdiv">
+            <ion-row class="insidediv">
+              <ion-col size="2" class="insidefirstcol">
+                <ion-icon name="git-branch-outline"></ion-icon>
+              </ion-col>
+              <ion-col size="8" class="insidesecondcol">Lab</ion-col>
+              <ion-col size="2" class="insidelastcol">
+                <!-- <img class="selecticon" src="../../../assets/icon/lab_lab.png"> -->
+                <ion-icon name="caret-down-outline" class="selecticon"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <ion-card class="doctorCard" >
+    <ion-segment mode="md" (ionChange)="segmentChanged($event)">
+      <ion-segment-button   *ngFor="let categoria of categorias" [value]="categoria.name"> 
+        <ion-label>{{ categoria.name }}</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  
+    <div *ngIf="homepick">
+    <ion-card *ngFor="let hp of labdata" class="list-card">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="5" class="doctorimgCard">
+              <img class="img" src="{{hp.img}}">
+          </ion-col>
+          <ion-col size="7" class="detailsNameCol">
+          <div class="lab-list-main">
+            <div class="name-icon">
+              <div class="name-text">
+                <span class="lab-name">{{hp.name}}</span>
+                <h6 class="left-2">{{hp.test}}</h6>
+              </div>
+              <!-- <ion-icon class="right" name="checkmark-circle-outline"></ion-icon> -->
+              <ion-checkbox  class="right-check" value="hp" (ionChange)="checkedValue(hp,$event)"></ion-checkbox>
+            </div>
+          </div>
+          <div class="price-cross"><del><img src="../../../assets/icon/dr_rs.png"> {{hp.offprice}}</del></div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="5">
+            <ion-button shape="round" fill="outline" class="viewbtn">
+               <!-- <ion-icon slot="end" name="chevron-down-outline"></ion-icon> -->
+              View More Details
+              <ion-icon slot="end" name="star"></ion-icon>
+            </ion-button>
+          </ion-col>
+          <ion-col size="7">
+            <div class="name-text name-icon">
+              <div class="price-off">
+                <img class="right" src="../../../assets/icon/dr_off.png" />
+                <!-- <ion-icon class="right" name="checkmark-circle-outline" slot="left"></ion-icon> -->
+                <span class="left">{{hp.dis}}% off</span>
+              </div>
+              
+              <h6 class="right-price"><img src="../../../assets/icon/dr_rs.png"> {{hp.price}}</h6>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+    <ion-button size="large" class="book-button" (click)="book(hp)">Book now</ion-button>
+  </div>
+    <div *ngIf="centerpick">
+    <ion-card *ngFor="let cd of centerdata" class="list-card">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="5" class="doctorimgCard">
+              <img class="img" src="{{cd.img}}">
+          </ion-col>
+          <ion-col size="7" class="detailsNameCol">
+          <div class="lab-list-main">
+            <div class="name-icon">
+              <div class="name-text">
+                <span class="lab-name">{{cd.name}}</span>
+                <h6 class="left-2">{{cd.test}}</h6>
+              </div>
+              <ion-checkbox  class="right-check" [value]="cd" (ionChange)="checkedValue(cd,$event)"></ion-checkbox>
+            </div>
+          </div>
+          <div class="price-cross"><del><img src="../../../assets/icon/dr_rs.png"> {{cd.offprice}}</del></div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="5">
+            <ion-button shape="round" fill="outline" class="viewbtn"> <ion-icon slot="end" name="chevron-down-outline"></ion-icon>View More Profile</ion-button>
+          </ion-col>
+          <ion-col size="7">
+            <div class="name-text name-icon">
+              <div class="price-off">
+                <img class="right" src="../../../assets/icon/dr_off.png" />
+                <span class="left">{{cd.dis}}% off</span>
+              </div>             
+              <h6 class="right-price"><img src="../../../assets/icon/dr_rs.png"> {{cd.price}}</h6>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-card>
+  <ion-button size="large" class="book-button" (click)="book(cd)">Book now</ion-button>
+</div>
+</ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="secondary">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button class="home" (click)="home()">
+          <img class="footrImg" src="../../assets/img/icons/home.png">
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+        <ion-tab-button class="specilist" (click)='specilist()'>
+          <img class="footrImg" src="../../assets/img/icons/specilist.png">
+          <ion-label>Specilist</ion-label>
+        </ion-tab-button>
+        <ion-tab-button (click)="hospitals()" class="hospitals">
+          <img class="footrImg" src="../../assets/img/icons/Hospitals.png">
+          <ion-label>Hospitals</ion-label>
+        </ion-tab-button>
+        <ion-tab-button class="clinics" (click)="clinics()">
+          <img class="footrImg" src="../../assets/img/icons/clinics.png">
+          <ion-label>Clinics</ion-label>
+        </ion-tab-button>
+        <ion-tab-button class="labs" (click)="labs()">
+          <img class="footrImg" src="../../assets/img/icons/lab.png">
+          <ion-label>Labs</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

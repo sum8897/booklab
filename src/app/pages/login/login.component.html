@@ -1,8 +1,8 @@
 <ion-content>
  
     <div class="heading ion-padding">
-      <img class="loginlogo" src="../../../assets/img/login/logo.png">
-      <img class="img" src="../../../assets/img/login/signup_graphic_xhdpi.png">
+      <img class="loginlogo" src="../../../assets/img/login/logo.jpg"><br>
+      <img class="img" src="../../../assets/img/login/login.png">
     </div>
     <div class="login-form ion-padding" id="loginForm" style="padding-left: 0;">
      <!-- <div class="healthcard">
@@ -11,29 +11,25 @@
       <div class="healthlefttext">
         <div class="form-input" id="form">
           <ion-item lines="none">
-            <ion-input type="mail" placeholder="Email Address"></ion-input>
+            <ion-input type="mail" placeholder="Email Address" ></ion-input>
           </ion-item>
         </div>
         <div class="form-input">
           <ion-item lines="none">
-            <ion-input [type]="passwordType" placeholder="Password" #password>  <ion-icon [name]="eyename"  slot="end" (click)="passToggle()" class="eyeIcon"></ion-icon></ion-input>
-          
+            <ion-input type='text' placeholder="Password" (keypress)="keyPressNumbers($event)"> </ion-input>
+            <!-- <ion-icon [name]="eyename"  slot="end" (click)="passToggle()" class="eyeIcon"></ion-icon> -->
           </ion-item>
           <p class="forgetText1">Forgot Password</p>
           <ion-button size="large" class="login-button" (click)="submit()">Login</ion-button>
         </div>
-        <!-- <div class="action-button ion-padding">
-
-          
-        </div> -->
         <div>
           <ion-row class="roww">
             <ion-col class="forgot"> 
               <div>
-                <ion-checkbox checked="true" mode='md'></ion-checkbox>  
+                <ion-checkbox type="checkbox" mode='md' [checked]="isChecked" (ionChange)="checkClick($event)"></ion-checkbox>  
               <ion-label>Remember Me</ion-label>
               </div>  </ion-col>
-            <ion-col class="signupbtn" (click)="registerIn()"><p>New User?SignUp</p></ion-col>
+            <ion-col class="signupbtn" (click)="registerIn()"><p>New User?<b> SIGNUP</b></p></ion-col>
           </ion-row> 
           <div>
             <ion-row style="margin: -9px 4%;">
@@ -49,3 +45,31 @@
     </div>
 
 </ion-content>
+<ion-footer>
+  <ion-toolbar color="secondary">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button class="home" (click)='home()'>
+          <img class="footrImg" src="../../assets/img/icons/home.png">
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+        <ion-tab-button class="specilist" (click)='specilist()'>
+          <img class="footrImg" src="../../assets/img/icons/specilist.png">
+          <ion-label>Specilist</ion-label>
+        </ion-tab-button>
+        <ion-tab-button (click)="hospitals()" class="hospitals">
+          <img class="footrImg" src="../../assets/img/icons/Hospitals.png">
+          <ion-label>Hospitals</ion-label>
+        </ion-tab-button>
+        <ion-tab-button class="clinics" (click)="clinics()">
+          <img class="footrImg" src="../../assets/img/icons/clinics.png">
+          <ion-label>Clinics</ion-label>
+        </ion-tab-button>
+        <ion-tab-button class="labs" (click)="labss()">
+          <img class="footrImg" src="../../assets/img/icons/lab.png">
+          <ion-label>Labs</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

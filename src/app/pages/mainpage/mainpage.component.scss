@@ -1,13 +1,326 @@
+ion-content{
+  --background: #edefee;
+  --background: rgba(237,239,238,255);
+  font-family: RobotoCondensed !important;
+  h6{
+    font-family: RobotoCondensed !important;
+
+  }
+  p,h4{ 
+    font-family: RobotoCondensed !important;
+  }
+}
+.ionContent{
+  min-height: 60px;
+  .serviceText{
+    font-size: 14px;
+    text-align: center;
+  }
+}
+.border{
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
+    border-left: 4px solid white;
+    #appointImg{
+      height: 86px;
+    }
+}
+.appoint11{
+  box-shadow: none;
+  background: white;
+}
+.h4heading{
+  font-family: RobotoCondensed !important;
+  color: #0e223e !important;
+  font-weight: 500;
+  margin: 5px 0;
+  text-align: center;
+}
+.appointmentImg{
+  margin: -7%;
+  box-shadow: none;
+}
+ion-card{
+  border-radius: 0;
+  #appointImg{
+    height: 90px;
+    margin-bottom: -4px;
+  }
+  img{
+    border-radius: 0;
+    width: 100%;
+  }
+}
+.gridlist1{
+  background: #0e223e;
+    color: white;
+}
 .h2{
     font-size: 30px;
     text-transform: uppercase;
     color: #21cdc0;
+    font-family: RobotoBold !important;
+    margin-top: 0;
   }
-  .h4{
-    font-size: 18px;
+  .appointcardlist{
+    width: 93%;
+    
+    box-shadow: 2px 2px 2px #828d9c;
+    .ionContent{
+      color: white;
+      background: #0e223e;
+    }
+  }
+  #h4{
+    color: white;
+    font-family: RobotoCondensed !important;
+    margin-top: -6px;
+  }
+  ion-item{
+    --border-radius: 50px;
+      margin: 8px 0;
+      ion-input{
+        // font-size: 18px;
+        --padding-start: 6%;
+        --background: white;
+        border-radius: 50px;
+        height: 48px;
+        color: #0e223e !important;
+        box-shadow: inset 3px 3px 5px #0e223e;
+        z-index: 9999999;
+        opacity: 1;  
+    }
+    .searchIcon{
+      margin-left: 5%;
+      font-size: 24px;
+    }
+}
+.searchList{
+  background: #21cdc0;
+  .searchItem{
+    --background: #21cdc0;
+  }
+}
+.featuretext{
+  padding-left: 7px;
+  padding-right: 7px;
+  margin-top: 5px;
+}
+.healthcheckcardLab{
+  margin: 0;
+  box-shadow: 2px 2px 2px #828d9c;
+  background: white;
+  border-radius: 5px;
+}
+.searchbtn{
+  background: #0e223e;
+    color: white;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+}
+  .searchCard{
+    --background: #21cdc0;
+    margin-top: 15%;
+  }
+  .ionContent{
+    font-size: 13px;
+  }
+  .grid{
+    margin-top: -15px;
+  }
+ 
+  .servicecardlist{
+    width: 95%;
+    color: #0e223e;
+    background: white;
+    box-shadow: 2px 2px 2px #828d9c;
+    margin-left: 5px;
+    border-radius: 7px;
+    .serviceText{
+      font-size: 15px;
+      color: #0e223e;
+      min-height: 40px;
+      font-family: RobotoCondensed !important;
+    }
+    .servieImg{
+      min-height: 140px;
+    }
+  }
+  .searchInput{
+    font-family: RobotoCondensed !important;
+    color: #0e223e;
+  }
+  small{
+    font-family: RobotoCondensed !important;
+  }
+  .popupicon{
+    position: absolute;
+    z-index: 99;
+    bottom: 25%;
+    opacity: 999;
+    /* margin-bottom: 33%; */
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30%;
+    .popupImg{
+      min-width: 93px;
+    }
+  }
+  .health1div{
+    width: 100%;
+    background: #21cdc0;
+    color: #0e223e;
+    margin-top: -12%;
+    text-align: left;
+    padding-left: 12px;
+  }
+  .numberbg{
+    min-height: 160px;
+    width: 100%;
+    border-radius: 0;
+    border: 3px solid white;
+    margin-bottom: -2px;
+  }
+  .healthprice{
+    margin-top: -11px;
+    font-family: RobotoCondensed !important;
+  }
+  .imgcol{
+    text-align: left;
+    font-family: RobotoCondensed !important;
+  }
+  .svg{
+    margin-top: -25px;
+    margin-bottom: -4px;
+  }
+  .include{
+    margin: 0;
+    text-align: left;
+    padding-left: 15px;
+    font-family: RobotoBold !important;
+    color: #0e223e;
+  }
+  .pricediv{
+    background: #0e223e;
+    color: white;
+    margin-top: -10px;
+  }
+  .know{
+    --background: #0e223e;
+    color: #22cdc0;
+    text-transform: capitalize;
+    font-size: 10px;
+    padding-right: 7px;
+  }
+  .includeP{
+    font-size: 16px;
+    text-align: left;
+    padding-left: 0;
+    margin-top: -3px;
+    color: #0e223e !important;
+    font-family: RobotoCondensed !important;
+  }
+  .featurecardText{
+    position: absolute;
+    z-index: 99;
+    bottom: 73%;
+    height: 25px;
+    opacity: 999;
+    background: black;
+    text-align: left;
+    color: white;
+    text-transform: capitalize;
+  }
+  .numberCount{
+    position: absolute;
+    z-index: 99;
+    bottom: 2%;
+    opacity: 999;
+    width: 100%;
+    text-align: center;
+  }
+  .numbertext{
+    margin-top: -67%;
+    color: black;
+    opacity: 99999;
+    font-weight: 600;
+    z-index: 1;
+  }
+  .txtnumber{
+    margin-top: 37%;
+    color: #f5f6f9;
+    font-size: 13px;
+    opacity: 999;
+    background: rgb(0 0 0 / 20%);
+  }
+  .childphysic{
+    height: 80px;
+    width: 100%;
+  }
+  .specialCard{
+    width: 100%;
+    margin-left: 0;
+    box-shadow: 2px 2px 2px #828d9c;
+    background: #edefee;
+    border-radius: 7px;
+    .img1{
+      height: 215px;
+      width: 100%;
+    }
+  }
+  .specialization{
+    font-size: 12px;
+    margin-bottom: 0;
+    text-align: center;
+    color: #0e223e;
+    margin-top: 5px;
+    font-weight: 700;
+    font-family: RobotoCondensed !important;
+  }
+  .specialDetails{
+    font-size: 8px;
+    text-align: center;
+    margin: 0 5px;
+    font-family: RobotoBold !important;
+    color: black;
+  }
+  .helpButton{
+    text-align: right;
+    margin-bottom: 13px;
+  }
+  .divMore{
+    min-height: 40px;
+    text-align: center;
+    font-family: RobotoCondensed !important;
+    line-height: 0.5em;
+  }
+
+  .twocol{
+    padding: 0;
+  }
+  .threecol{
+    padding: 0;
+    margin-top: -10px;
+  }
+  .labs1{
+    min-height: 90px;
+  }
+  ion-title{
+    margin-left: -7%;
+  }
+  @media (min-width: 220px) and (max-width: 319px){
+    .cardpage{
+      min-height: 45%;
+    margin-bottom: -35%;
+    margin-top: -1px;
+    }
+    .orderBtn{
+      margin-bottom: 0%;
+    }
   }
   .cardpage{
-      background-image: url(../../../assets/img/banner.jpg) , url(../../../assets/img/banner.jpg);
+      background-image: url(../../../assets/homepage/top_image1.png);
       background-size: 100%, cover;
       font-weight: 200;
       background-position: bottom center, center center;
@@ -15,10 +328,14 @@
       background-repeat: no-repeat;
     width: 100%;
     margin-left: 0;
+    min-height: 200px;
+    margin-bottom: -35%;
+    margin-top: -1px;
   }
   .divtext{
     text-align: center;
     opacity: 99;
+    padding-top: 10px;
   }
   .countrycard{
     position: fixed;
@@ -50,6 +367,7 @@
       border: 1px solid;
       margin-left: 4%;
       margin-right: 8%;
+      background: #21cdc0;
   }
   .locationCard2{
     border-radius: 20px;
@@ -74,46 +392,95 @@
     // margin-right: 30%;
     min-width: 64%;
     min-height: 190px;
-    border-radius: 10px;
+    // border-radius: 10px;
     img{
       margin-top: 20px;
+    }
+  }
+  .noshadow{
+    box-shadow: none;
+    background: white;
+  }
+  .appoint1{
+    display: block;
+    text-align: center;
+    background: white;
+    margin: -5px 3% -10px 3%;
+    h2{
+      color: #0e223e;
+      padding: 7px 0;
     }
   }
   .appoint{
     display: block;
     text-align: center;
-  }
-  ion-card-content{
-      font-size: 20px;
-      font-weight: 600;
-      color: #213360!important;
-      margin-bottom: 10px;
-      text-decoration: none;
-    .appointH2{
-      font-size: 20px;
-      font-weight: 600;
-      color: #213360!important;
-      margin-bottom: 10px;
-      text-decoration: none;
+    background: white;
+    margin: -10px 4%;
+    h2{
+      color: #0e223e;
+      padding: 5px 0;
     }
   }
+  .appointDigital{
+    display: block;
+    text-align: center;
+    background: white;
+    margin: 10px 3%;
+    h2{
+      color: #0e223e;
+      padding: 5px 0;
+    }
+  }
+  .digitalSlider{
+    margin:0 3% 17px 3%;
+  }
+  .helpcheckdiv{
+    display: block;
+    text-align: center;
+    background: white;
+    margin: -10px 4% 3% 4%;
+    h2{
+      color: #0e223e;
+      padding: 3px 0;
+    }
+  }
+  // ion-card-content{
+  //     font-size: 20px;
+  //     font-weight: 600;
+  //     color: #213360!important;
+  //     margin-bottom: 10px;
+  //     text-decoration: none;
+  //   .appointH2{
+  //     font-size: 20px;
+  //     font-weight: 600;
+  //     color: #213360!important;
+  //     margin-bottom: 10px;
+  //     text-decoration: none;
+  //   }
+  // }
   .servicepoint{
     background: #f4f4f4;
       padding-top: 3px;
   }
+  .servicecard{
+    // border-radius: 10px;
+    width: 100%;
+    background: #0e223e;
+    box-shadow: 3px 2px 2px #828d9c;
+    img{
+     
+    }
+  }
   .servicecard1{
-    border-radius: 10px;
+    // border-radius: 10px;
     width: 95%;
     img{
       margin-bottom: -3px;
       min-height: 380px;
     }
   }
-  .home{
-    color: #21cdc0;
-  } 
   .cardrad{
-    border-radius: 21px;
+    // border-radius: 21px;
   }
   
   .myOverlay1{
@@ -130,7 +497,7 @@
     background: #ffffff;
     text-align: center;
     margin-bottom: -7px;
-    border-radius: 10px;
+    // border-radius: 10px;
     padding-bottom: 15px;
   }
   .pharmacyOverlap{
@@ -144,7 +511,7 @@
     margin-left: 20%;
     text-align: left;
     margin-bottom: 200px;
-    border-radius: 10px;
+    // border-radius: 10px;
     padding-bottom: 15px;
   }
   
@@ -159,10 +526,46 @@
     margin-left: 12%;
     text-align: left;
     margin-bottom: 12%;
-    border-radius: 10px;
+    // border-radius: 10px;
     padding-bottom: 15px;
   }
+  .orderCard{
+    margin: 0 auto;
+    margin-bottom: 17px;
+    background: white;
+    border-radius: 7px;
+    .orderImg{
+    border-radius: 10px;
+    text-align: left;
+    height: 89px;
+    // margin-top: 45px;
+    width: 100%;
+    }
   
+  }
+  .orderBtn{
+    --background: #0e223e;
+    font-size: 9px;
+    color: #21cdc0;
+    font-family: RobotoLight !important;
+    text-transform: capitalize;
+  }
+  .offerdiv{
+    width: 100%;
+    height: 60%;
+    display: table-caption;
+    text-align: center;
+    padding-left: 15px;
+  }
+  .featurecard{
+    width: 100%;
+    margin: 0;
+    box-shadow: 2px 2px 2px #828d9c;
+    .img1{
+      min-height: 260px;
+    }
+    
+  }
   .healthcard{
     background-image: url(../../../assets/img/package-bg.png);
       background-size: 100%, cover;
@@ -183,7 +586,7 @@
       opacity: 999;
       margin-left: 10%;
       text-align: left;
-      border-radius: 10px;
+      // border-radius: 10px;
       padding-bottom: 15px;
       margin-bottom: 440px;
   }
@@ -197,7 +600,7 @@
       opacity: 999;
       margin-right: 20%;
       text-align: right;
-      border-radius: 10px;
+      // border-radius: 10px;
       padding-bottom: 15px;
       margin-bottom: 390px;
   }
@@ -212,7 +615,7 @@
       opacity: 999;
       margin-right: 12%;
       text-align: right;
-      border-radius: 10px;
+      // border-radius: 10px;
       padding-bottom: 15px;
       margin-bottom: 275px;
   }
@@ -228,7 +631,7 @@
     margin-left: 5%;
     text-align: left;
     margin-bottom: 165PX;
-    border-radius: 10px;
+    // border-radius: 10px;
     padding-bottom: 15px;
     h6{
       color:#878788;
@@ -256,10 +659,28 @@
     margin-left: 12%;
     text-align: left;
     margin-bottom: 80px;
-    border-radius: 10px;
+    // border-radius: 10px;
     padding-bottom: 15px;
   }
   img{
     margin-bottom: -3%;
   }
   
+  ion-tab-button{
+    height: 55px;
+  }
+  .home{
+    border-bottom: 5px solid #21cdc0;
+  }
+  .specilist{
+    margin-bottom: 5px;
+  }
+  .clinics{
+    margin-bottom: 5px;
+  }
+  .hospitals{
+    margin-bottom: 5px;
+  }
+  .labs{
+    margin-bottom: 5px;
+  }
