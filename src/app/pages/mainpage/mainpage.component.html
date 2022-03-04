@@ -1,8 +1,8 @@
 <ion-header>
   <ion-toolbar>
-      <ion-buttons slot="start">
+    <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
-      </ion-buttons>
+    </ion-buttons>
     <ion-title>
       <img class="headerimg" style="margin: 5px 0;" src="../../../assets/img/login/logo1.png">
     </ion-title>
@@ -10,33 +10,33 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" style="--background: white;">
- <ion-card class="cardpage">
-  <div class="divtext">
-    <h2 class="h2">Find Nearest Lab and Doctor.</h2>
-    <h4 id="h4">Find Lab and Doctors at the best prices</h4>
-  </div>
- </ion-card>
- <ion-card class="searchCard">
-      <ion-list class="searchList">
-        <ion-item lines="none" class="searchItem">         
-          <ion-input type="mail" placeholder="Select Location" class="searchInput">
-            <ion-icon class="searchIcon" slot="start" name="location-outline"></ion-icon>
-           
-          </ion-input>
-          <!-- <ion-icon slot="end" name="chevron-down-outline" *ngIf="!selectedReligion"></ion-icon> -->
-        </ion-item>
-        <ion-item lines="none" class="searchItem">
-          <ion-input type='text' placeholder="Ex. Name,Specilization.." #password> </ion-input>
-          <ion-icon name="chevron-forward-circle-outline" slot="end" class="searchbtn"></ion-icon>
-        </ion-item>
-      </ion-list>
-</ion-card>
+  <ion-card class="cardpage">
+    <div class="divtext">
+      <h2 class="h2">Find Nearest Lab and Doctor.</h2>
+      <h4 id="h4">Find Lab and Doctors at the best prices</h4>
+    </div>
+  </ion-card>
+  <ion-card class="searchCard">
+    <ion-list class="searchList">
+      <ion-item lines="none" class="searchItem">
+        <ion-input type="mail" placeholder="Select Location" class="searchInput">
+          <ion-icon class="searchIcon" slot="start" name="location-outline"></ion-icon>
 
- <div class="item-slider">
-   <ion-card class="appoint11">
-    <h2 class="h4heading">Appointment Process</h2>
-   </ion-card>
-   <!-- <ion-slides #slides pager="true" [options]="slideOpts" class="digitalSlider">
+        </ion-input>
+        <!-- <ion-icon slot="end" name="chevron-down-outline" *ngIf="!selectedReligion"></ion-icon> -->
+      </ion-item>
+      <ion-item lines="none" class="searchItem">
+        <ion-input type='text' placeholder="Ex. Name,Specilization.." #password> </ion-input>
+        <ion-icon name="chevron-forward-circle-outline" slot="end" class="searchbtn"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <div class="item-slider">
+    <ion-card class="appoint11">
+      <h2 class="h4heading">Appointment Process</h2>
+    </ion-card>
+    <!-- <ion-slides #slides pager="true" [options]="slideOpts" class="digitalSlider">
     <ion-slide *ngFor="let r of appointment">  
      <ion-card class="orderCard">
        <ion-grid class="grid">
@@ -54,171 +54,179 @@
       
     </ion-slide>
   </ion-slides> -->
-  <ion-slides #slides pager="true" [options]="slideOpts1" style="margin: 0px 10px 0 8px;">
-    <ion-slide *ngFor="let r of appointment;let i = index" style="width: 35%;margin: 0;">  
-      <ion-card style="width: 97%;margin: 0;">
-        <ion-grid class="gridlist1" [ngClass]="i=='0'?'border':'noborder'">
-          <ion-row style="margin-right: 0px;">
-            <ion-col  style="text-align: center;padding: 0;" size="12">
-              <!-- <ion-card class="appointcardlist"> -->
+    <ion-slides #slides pager="true" [options]="slideOpts1" style="margin: 0px 10px 0 8px;">
+      <ion-slide *ngFor="let r of appointment;let i = index" style="width: 35%;margin: 0;">
+        <ion-card style="width: 97%;margin: 0;">
+          <ion-grid class="gridlist1" [ngClass]="i=='0'?'border':'noborder'">
+            <ion-row style="margin-right: 0px;">
+              <ion-col style="text-align: center;padding: 0;" size="12">
+                <!-- <ion-card class="appointcardlist"> -->
                 <ion-card class="appointmentImg">
                   <img class="servieImg" id="appointImg" src="{{r.img}}" />
                 </ion-card>
                 <div class="ionContent">
                   <h6 class="serviceText">{{r.name}}</h6>
                 </div>
-               
-              <!-- </ion-card> -->
-             
-            </ion-col> 
-          </ion-row>
-        </ion-grid>
-        </ion-card>
-    
-    </ion-slide>
-  </ion-slides>
-</div>
-<div class="servicepoint">
-   <ion-grid class="gridlist">
-    <ion-row style="margin-right: 10px;">
-      <ion-col  style="text-align: center;padding: 0;" *ngFor="let r of serviceList" size="4">
-        <ion-card class="servicecardlist">
-          <img class="servieImg" src="{{r.img}}" />
-          <h6 class="serviceText">{{r.name}}</h6>
-          <div class="popupicon">
-            <img class="popupImg" style="width: 90px;" src="../../../assets/homepage/hospital_icon.png">
-          </div>
-        </ion-card>
-       
-      </ion-col> 
-    </ion-row>
-  </ion-grid>
-</div>
 
-<div>
-  <ion-card>
-    <img class="numberbg" src="../../../assets/homepage/number_bg.png">
-    <div class="numberCount">
-     <ion-row>
-       <ion-col size='3' *ngFor='let n of number'>
-        <img src="../../../assets/homepage/number_circle.png">
-        <h3 class="numbertext">{{n.number}}</h3>
-        <h6 class="txtnumber">{{n.text}}</h6>
-       </ion-col>
-     </ion-row>
+                <!-- </ion-card> -->
+
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div class="servicepoint">
+    <ion-grid class="gridlist">
+      <ion-row style="margin-right: 10px;">
+        <ion-col style="text-align: center;padding: 0;" *ngFor="let r of serviceList" size="4">
+          <ion-card class="servicecardlist">
+            <img class="servieImg" src="{{r.img}}" />
+            <h6 class="serviceText">{{r.name}}</h6>
+            <div class="popupicon">
+              <img class="popupImg" style="width: 90px;" src="../../../assets/homepage/hospital_icon.png">
+            </div>
+          </ion-card>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div>
+    <ion-card>
+      <img class="numberbg" src="../../../assets/homepage/number_bg.png">
+      <div class="numberCount">
+        <ion-row>
+          <ion-col size='3' *ngFor='let n of number'>
+            <img src="../../../assets/homepage/number_circle.png">
+            <h3 class="numbertext">{{n.number}}</h3>
+            <h6 class="txtnumber">{{n.text}}</h6>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-card>
+  </div>
+
+  <ion-card class="noshadow">
+    <div class="specilistCard">
+      <h2 class="h4heading">Our Specialist Doctors</h2>
     </div>
+    <ion-grid class="grid">
+      <ion-row>
+        <ion-col size='4' class="onecol">
+          <ion-card class="specialCard">
+            <img class="img1" src="../../../assets/homepage/Psychotherapist.png" />
+            <div class="divMore">
+              <h3 class="specialization">Psychotherapist</h3>
+              <span class="specialDetails">Depresion,Anxiety,OCD,Eating Disorders</span>
+            </div>
+
+          </ion-card>
+        </ion-col>
+        <ion-col size='4'>
+          <ion-row>
+            <ion-col size='12' class="twocol">
+              <ion-card class="specialCard">
+                <img class="childphysic" src="../../../assets/homepage/child_spl.png" />
+                <div class="divMore">
+                  <h3 class="specialization">Child Specialist</h3>
+                  <span class="specialDetails">Vomiting,Cough,Stomach,Issues for your child</span>
+                </div>
+
+              </ion-card>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size='12' class="threecol">
+              <ion-card class="specialCard">
+                <img class="childphysic" src="../../../assets/homepage/child_spl.png" />
+                <div class="divMore">
+                  <h3 class="specialization">Physician</h3>
+                  <span class="specialDetails">Seasonal Fluss,Stomach Issues,Headache</span>
+                </div>
+
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col size='4' class="fourcol">
+          <ion-card class="specialCard">
+            <img class="img1" src="../../../assets/homepage/Gynaecologist.png" />
+            <div class="divMore">
+              <h3 class="specialization">Gynaeologist</h3>
+              <span class="specialDetails">PCOD,Period Issues,Pregnancy</span>
+            </div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-card>
-</div>
 
-<ion-card class="noshadow">
-  <div class="specilistCard">
-    <h2 class="h4heading">Our Specialist Doctors</h2>
-  </div>
-   <ion-grid class="grid">
-     <ion-row>
-       <ion-col size='4' class="onecol">
-        <ion-card class="specialCard">
-          <img class="img1" src="../../../assets/homepage/Psychotherapist.png" />
-          <div class="divMore">
-            <h3 class="specialization">Psychotherapist</h3>
-            <span class="specialDetails">Depresion,Anxiety,OCD,Eating Disorders</span>
-          </div>
-         
-        </ion-card>
-       </ion-col>
-       <ion-col size='4'>
-         <ion-row>
-          <ion-col size='12' class="twocol">
-            <ion-card class="specialCard">
-              <img class="childphysic" src="../../../assets/homepage/child_spl.png" /> 
-              <div class="divMore">
-                <h3 class="specialization">Child Specialist</h3>   
-                <span class="specialDetails">Vomiting,Cough,Stomach,Issues for your child</span>   
-              </div>
-          
-            </ion-card>
-          </ion-col>
-         </ion-row>
-         <ion-row>
-          <ion-col size='12' class="threecol">
-            <ion-card class="specialCard">
-              <img class="childphysic" src="../../../assets/homepage/child_spl.png" />  
-              <div class="divMore">
-                <h3 class="specialization">Physician</h3>    
-                <span class="specialDetails">Seasonal Fluss,Stomach Issues,Headache</span>
-              </div>  
-
-            </ion-card>
-          </ion-col>
-         </ion-row>
-       </ion-col>
-       <ion-col size='4' class="fourcol">
-        <ion-card class="specialCard">
-          <img class="img1" src="../../../assets/homepage/Gynaecologist.png" />
-         <div class="divMore">
-          <h3 class="specialization">Gynaeologist</h3>   
-          <span class="specialDetails">PCOD,Period Issues,Pregnancy</span>
-         </div>
-        </ion-card>
-       </ion-col>
-     </ion-row>
-   </ion-grid>
-</ion-card>
-
-<ion-card class="noshadow">
-  <div class="featurecardCard">
-    <h2 class="h4heading" style="margin:7px 0 12px 0;">Featured Labs</h2>
-  </div>
-   <ion-grid class="grid">
-     <ion-row>
-         <ion-col size="5">
+  <ion-card class="noshadow">
+    <div class="featurecardCard">
+      <h2 class="h4heading" style="margin:7px 0 12px 0;">Featured Labs</h2>
+    </div>
+    <ion-grid class="grid">
+      <ion-row>
+        <ion-col size="5">
           <ion-card class="featurecard">
-            <img class="labs1" src="../../../assets/homepage/mri.png" /> 
+            <img class="labs1" src="../../../assets/homepage/mri.png" />
             <div class="featurecardText">
               <p class="featuretext">MRI</p>
             </div>
-            </ion-card>
-         </ion-col>
-         <ion-col size="7">
+          </ion-card>
+        </ion-col>
+        <ion-col size="7">
           <ion-card class="featurecard">
-            <img class="labs1" src="../../../assets/homepage/ct_scan.png" /> 
+            <img class="labs1" src="../../../assets/homepage/ct_scan.png" />
             <div class="featurecardText">
               <p class="featuretext">CT Scan</p>
             </div>
-            </ion-card>
-         </ion-col>
-       </ion-row>
-       <ion-row>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
         <ion-col size="7">
           <ion-card class="featurecard">
-            <img class="labs1" src="../../../assets/homepage/xray.png" /> 
+            <img class="labs1" src="../../../assets/homepage/xray.png" />
             <div class="featurecardText">
               <p class="featuretext">X Ray</p>
             </div>
-            </ion-card>
+          </ion-card>
         </ion-col>
         <ion-col size="5">
           <ion-card class="featurecard">
-            <img class="labs1" src="../../../assets/homepage/Ultrasound.png" /> 
+            <img class="labs1" src="../../../assets/homepage/Ultrasound.png" />
             <div class="featurecardText">
               <p class="featuretext">Ultrasound</p>
             </div>
-            </ion-card>
+          </ion-card>
         </ion-col>
       </ion-row>
-   </ion-grid>
-</ion-card>
-
-
-<div class="item-slider">
-  <ion-card class="appointDigital">
-   <h2 class="h4heading">Digital Pharmacy</h2>
+    </ion-grid>
   </ion-card>
- <ion-slides #slides pager="true" [options]="slideOpts2" class="digitalSlider">
-   <ion-slide *ngFor="let r of digitalData">  
-    <!-- <ion-card class="orderCard"> -->
-      <img class="orderImg" src="{{r.img}}" /> 
-      <!-- <ion-grid class="grid">
+
+
+  <div class="item-slider">
+    <ion-card class="appointDigital">
+      <h2 class="h4heading">Digital Pharmacy</h2>
+    </ion-card>
+    <ion-slides #slides pager="true" [options]="slideOpts2" class="digitalSlider">
+      <ion-slide *ngFor="let r of digitalData">
+        <!-- <ion-card class="orderCard"> -->
+        <ion-card class="digitalPharmacy">
+          <img class="orderImg" src="{{r.img}}" />
+          <div class="digital-card">
+            <div class="digital-off">Flat 15% OFF</div>
+            <div class="digital-button">
+              <ion-button size="small" style="font-size: 7px;">Order Now</ion-button>
+            </div>
+          </div>
+        </ion-card>
+        <!-- <ion-grid class="grid">
       <ion-row style="margin-right: 10px;">
         <h4 style="margin-left: 3%;width: 100%;text-align: left;color: #0e223e;">Order Medicine</h4>
         <ion-col size='6' class="imgcol">    
@@ -235,56 +243,68 @@
         </ion-col>
       </ion-row>
     </ion-grid> -->
-    <!-- </ion-card> -->
-     
-   </ion-slide>
- </ion-slides>
-</div>
+        <!-- </ion-card> -->
+
+      </ion-slide>
+    </ion-slides>
+  </div>
 
 
-<div class="item-slider">
-  <ion-card class="helpcheckdiv">
-   <h2 class="h4heading">Help Checks & Lab Tests</h2>
-  </ion-card>
- <div style="margin: 0 9px;">
-  <ion-slides #slides pager="true" [options]="slideOpts4" >
-    <ion-slide *ngFor="let r of appointment">  
-      <!-- <ion-card class="orderCard"> -->
-      <ion-grid>
-        <ion-row style="margin-right: 0px;" >
-          <ion-col  style="text-align: center;padding: 0;">
-            <ion-card class="healthcheckcardLab">
-              <div class="health1div">
-                <h6 style="padding: 17% 0 5% 0;">Vitamin Screening</h6> 
-              </div>
-              <div class="pricediv">
-                <ion-row>
-                  <ion-col><h4>Rs850</h4><p class="healthprice">RS130</p></ion-col>
-                  <ion-col><h4>50%</h4><p class="healthprice">OFF</p></ion-col>
-                </ion-row>
-                <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,32L60,58.7C120,85,240,139,360,144C480,149,600,107,720,96C840,85,960,107,1080,144C1200,181,1320,235,1380,261.3L1440,288L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
-              </div>
-             <div>
-               <h6 class="include">Includes</h6>
-               <ion-grid class="helpcheckGrid">
-                <ion-row *ngFor="let x of pharmacyList" class="helpcheckRow"> 
-                  <ion-col size="2"><ion-icon name="ellipse-outline" class="round-icon"></ion-icon></ion-col>
-                  <ion-col size="10" class="includeP"><small>{{x.name}}</small></ion-col>
-                </ion-row>
-               </ion-grid>
-       <div class="helpButton">
-        <ion-button expand="round" class="know" size="small">+ Know More</ion-button>
-       </div>
-             </div>
-            </ion-card>          
-          </ion-col> 
-        </ion-row> 
-      </ion-grid>
-    <!-- </ion-card> -->
-    </ion-slide>
-  </ion-slides>
- </div>
-</div>
+  <div class="item-slider">
+    <ion-card class="helpcheckdiv">
+      <h2 class="h4heading">Help Checks & Lab Tests</h2>
+    </ion-card>
+    <div style="margin: 0 9px;">
+      <ion-slides #slides pager="true" [options]="slideOpts4">
+        <ion-slide *ngFor="let r of appointment">
+          <!-- <ion-card class="orderCard"> -->
+          <ion-grid>
+            <ion-row style="margin-right: 0px;">
+              <ion-col style="text-align: center;padding: 0;">
+                <ion-card class="healthcheckcardLab">
+                  <div class="health1div">
+                    <h6 style="padding: 17% 0 5% 0;">Vitamin Screening</h6>
+                  </div>
+                  <div class="pricediv">
+                    <ion-row>
+                      <ion-col>
+                        <h4>Rs850</h4>
+                        <p class="healthprice line-text">RS130</p>
+                      </ion-col>
+                      <ion-col class="helpcheckOff">
+                        <h4>50%</h4>
+                        <p class="healthprice">OFF</p>
+                      </ion-col>
+                    </ion-row>
+                    <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                      <path fill="#ffffff" fill-opacity="1"
+                        d="M0,32L60,58.7C120,85,240,139,360,144C480,149,600,107,720,96C840,85,960,107,1080,144C1200,181,1320,235,1380,261.3L1440,288L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="include">Includes</div>
+                    <ion-grid class="helpcheckGrid">
+                      <ion-row *ngFor="let x of pharmacyList" class="helpcheckRow">
+                        <ion-col size="2">
+                          <ion-icon name="ellipse-outline" class="round-icon"></ion-icon>
+                        </ion-col>
+                        <ion-col size="10" class="includeP"><small>{{x.name}}</small></ion-col>
+                      </ion-row>
+                    </ion-grid>
+                    <div class="helpButton">
+                      <ion-button expand="round" class="know" size="small">+ Know More</ion-button>
+                    </div>
+                  </div>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <!-- </ion-card> -->
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
 
 
 </ion-content>
