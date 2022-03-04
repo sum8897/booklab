@@ -9,7 +9,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" >
+<ion-content [fullscreen]="true" style="--background: white;">
  <ion-card class="cardpage">
   <div class="divtext">
     <h2 class="h2">Find Nearest Lab and Doctor.</h2>
@@ -216,7 +216,7 @@
   </ion-card>
  <ion-slides #slides pager="true" [options]="slideOpts2" class="digitalSlider">
    <ion-slide *ngFor="let r of digitalData">  
-    <ion-card class="orderCard">
+    <!-- <ion-card class="orderCard"> -->
       <img class="orderImg" src="{{r.img}}" /> 
       <!-- <ion-grid class="grid">
       <ion-row style="margin-right: 10px;">
@@ -235,7 +235,7 @@
         </ion-col>
       </ion-row>
     </ion-grid> -->
-    </ion-card>
+    <!-- </ion-card> -->
      
    </ion-slide>
  </ion-slides>
@@ -266,9 +266,9 @@
               </div>
              <div>
                <h6 class="include">Includes</h6>
-               <ion-grid>
-                <ion-row *ngFor="let x of pharmacyList"> 
-                  <ion-col size="2"><ion-icon name="duplicate-outline" style="color: #22cdc0;opacity: 11;"></ion-icon></ion-col>
+               <ion-grid class="helpcheckGrid">
+                <ion-row *ngFor="let x of pharmacyList" class="helpcheckRow"> 
+                  <ion-col size="2"><ion-icon name="ellipse-outline" class="round-icon"></ion-icon></ion-col>
                   <ion-col size="10" class="includeP"><small>{{x.name}}</small></ion-col>
                 </ion-row>
                </ion-grid>

@@ -39,7 +39,7 @@ const routes: Routes = [
     component: DoctorslistComponent
   },
   {
-    path:'dashboard',
+    path:'hospitallist',
     component: DashboardComponent
   },
   {

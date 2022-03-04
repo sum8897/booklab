@@ -20,4 +20,10 @@ export class RegisterComponent implements OnInit {
   home(){
     this.navCtrl.navigateRoot('/mainpage')
   }
+  hospitals(){
+    this.navCtrl.navigateRoot('/hospitallist')
+  }
+  labs(){
+    this.navCtrl.navigateRoot('/lablist')
+  }
 }

@@ -69,6 +69,7 @@
     --checkmark-color: #21cdc0;
     --border-color: #21cdc0;
     --border-color-checked: #21cdc0;
+    --background: white;
   }
 
   .left-2 {
@@ -194,16 +195,18 @@ ion-segment-button {
 
 .list-card {
   box-shadow: 1px 2px 2px #828d9c;
-  border-radius: 10px;
+  border-radius: 0;
   background: white;
   .detailsNameCol{
-    padding-left: 10px;
+    padding-left: 0;
   }
   .img{
     box-shadow: 1px 1px 1px 1px #828d9c;
   }
 }
-
+ion-tab-bar{
+  --background: white;
+}
 .book-button {
   height: 40px;
   --border-radius: 50px;

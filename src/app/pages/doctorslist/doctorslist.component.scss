@@ -86,7 +86,9 @@
     margin: 5px 0;
   }
 }
-
+ion-tab-bar{
+  --background: white;
+}
 .doctorimgCard {
   background: #0e223e;
   color: white;
@@ -281,7 +283,7 @@
 }
 
 .specilist {
-  border-bottom: 5px solid #21cdc0;
+  margin-bottom: 5px;
 }
 
 .clinics {
@@ -289,7 +291,7 @@
 }
 
 .hospitals {
-  margin-bottom: 5px;
+  border-bottom: 5px solid #21cdc0;
 }
 
 .labs {

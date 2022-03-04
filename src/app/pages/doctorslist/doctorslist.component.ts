@@ -13,9 +13,13 @@ export class DoctorslistComponent implements OnInit {
   home(){
     this.navCtrl.navigateRoot('/mainpage')
   }
+  specilist(){
+    this.navCtrl.navigateRoot('/doctorlist')
+  }
   labs(){
     this.navCtrl.navigateRoot('/lablist')
   }
+
   pharmacyList=[
     {
       id:1,

@@ -117,32 +117,32 @@ export class MainpageComponent implements OnInit {
     digitalData=[
     {
       id:1,
-      img:'../../assets/icon/MEDICINE-IMAGE.png',
+      img:'../../assets/icon/1.jpg',
       name:'Search Best Online Professional'
     },
     {
       id:2,
-      img:'../../assets/icon/MEDICINE-IMAGE.png',
+      img:'../../assets/icon/2.jpg',
       name:'View Professional Profile'
     },
     {
       id:3,
-      img:'../../assets/icon/MEDICINE-IMAGE.png',
+      img:'../../assets/icon/1.jpg',
       name:'Get Intance Doctor Appointment'
     },
     {
       id:4,
-      img:'../../assets/icon/MEDICINE-IMAGE.png',
+      img:'../../assets/icon/2.jpg',
       name:'Search Best Online Professional'
     },
     {
       id:5,
-      img:'../../assets/icon/MEDICINE-IMAGE.png',
+      img:'../../assets/icon/1.jpg',
       name:'View Professional Profile'
     },
     {
       id:6,
-      img:'../../assets/icon/MEDICINE-IMAGE.png',
+      img:'../../assets/icon/2.jpg',
       name:'Get Intance Doctor Appointment'
     },
   ]
@@ -337,6 +337,9 @@ number=[
   }
   labs(){
     this.navCtrl.navigateRoot('/lablist')
+  }
+  hospitals(){
+    this.navCtrl.navigateRoot('/hospitallist')
   }
 
 }

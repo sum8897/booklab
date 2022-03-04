@@ -61,6 +61,7 @@ url("../../../assets/img/login/signup_graphic_xhdpi.png") no-repeat center cente
 ion-item{
     --border-radius: 50px;
     // --background: #21cdc1;
+    background: white;
       margin: 8px 0;
       ion-input{
         font-size: 18px;
@@ -122,7 +123,7 @@ a{
        }
    }
    ion-button{
-    height: 48px;
+    height: 40px;
     margin: 2px 0px;
     --border-radius: 50px;
     width: 75%;
@@ -216,7 +217,7 @@ a{
         height: 60%;
     }
     ion-content{
-        --overflow: hidden;
+        // --overflow: hidden;
     }
     .heading{
         height: 233px;
@@ -233,7 +234,7 @@ a{
         height: 128px;
     }
     ion-content{
-        --overflow: hidden;
+        // --overflow: hidden;
     }
   }
   @media (min-width: 461px) and (max-width: 689px){
@@ -300,7 +301,7 @@ a{
     font-size: 12px;
   }
   .fb{
-    height: 45px;
+    height: 40px;
     margin: 2px 0px;
     --border-radius: 50px;
     width: 80%;
@@ -308,7 +309,7 @@ a{
     margin: 0;
   }
   .google{
-    height: 45px;
+    height: 40px;
     margin: 2px 0px;
     --border-radius: 50px;
     width: 80%;

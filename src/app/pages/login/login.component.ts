@@ -41,6 +41,12 @@ passwordType='password';
   home(){
     this.navCtrl.navigateRoot('/mainpage')
   }
+  hospitals(){
+    this.navCtrl.navigateRoot('/hospitallist')
+  }
+  labs(){
+    this.navCtrl.navigateRoot('/lablist')
+  }
   checkClick(e){
     console.log(e.detail.checked);
     let checked=e.detail.checked;
