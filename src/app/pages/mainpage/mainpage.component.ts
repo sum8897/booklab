@@ -208,31 +208,37 @@ export class MainpageComponent implements OnInit {
     {
       id:1,
       img:'../../assets/homepage/Hospitals_image.png',
+      icon:'../../assets/homepage/hospital_icon.png',
       name:'Hospitals (1000+)'
     },
     {
       id:2,
       img:'../../assets/homepage/Pharmacies_image.png',
+      icon:'../../assets/homepage/doctors_icon.png',
       name:'Doctors (50000+)'
     },
     {  
       id:3,
       img:'../../assets/homepage/Hospitals_image.png',
+      icon:'../../assets/homepage/Pharmacies_icon.png',
       name:'Pharmacies (700+)'
     },
     {
       id:4,
       img:'../../assets/homepage/Pharmacies_image.png',
+      icon:'../../assets/homepage/clinic_icon.png',
       name:'Clinics (1450+)'
     },
     {
       id:5,
       img:'../../assets/homepage/Hospitals_image.png',
+      icon:'../../assets/homepage/Laboratories_icon.png',
       name:'Laboratories (6000+)'
     },
     {
       id:6,
       img:'../../assets/homepage/Pharmacies_image.png',
+      icon:'../../assets/homepage/Surgery_icon.png',
       name:'Surgery Rooms (2600+)'
     },
   ]
