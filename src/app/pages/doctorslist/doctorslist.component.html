@@ -71,18 +71,24 @@
             </ion-card>
           </ion-col>
           <ion-col size="7" class="detailsNameCol">
-            <div class="doctordetails">
-              <div class="ion-text-wrap doctName">Dr. Ajay Sharma</div>
-              <div class="icon-detail"*ngFor="let x of pharmacyList">
-                <div class="icon2"><img src="{{x.img}}"></div>
-               <div class="doctorCol"> <span>{{x.name}}</span></div>
+            <div class="doctor-parent-div">
+              <div class="doctordetails">
+                <div class="ion-text-wrap doctName">Dr. Ajay Sharma</div>
+                <div class="icon-detail" *ngFor="let x of pharmacyList">
+                  <div class="icon2"><img src="{{x.img}}"></div>
+                  <div class="doctorCol"> <span>{{x.name}}</span></div>
+                </div>
               </div>
-            </div>
-            <div class="price-doctor">
-              <div class="price-cut">549</div>
-              <div class="price-per"><img src="../../../assets/icon/dr_off.png"><span>20% off</span><ion-icon name="caret-forward-outline">
-              </ion-icon></div>
-              <div class="price-right"><img src="../../../assets/icon/dr_rs.png"><span>299</span></div>
+              <div>
+                <div class="price-doctor">
+                  <div class="price-cut">549</div>
+                  <div class="price-per"><img src="../../../assets/icon/dr_off.png"><span>20% off</span>
+                    <ion-icon name="caret-forward-outline">
+                    </ion-icon>
+                  </div>
+                  <div class="price-right"><img src="../../../assets/icon/dr_rs.png"><span>299</span></div>
+                </div>
+              </div>
             </div>
           </ion-col>
         </ion-row>
@@ -112,15 +118,17 @@
           <ion-col size="7" class="detailsNameCol">
             <div class="doctordetails">
               <div class="ion-text-wrap doctName">Dr. Vineeta Singh Tandon</div>
-              <div class="icon-detail"*ngFor="let x of pharmacyList">
+              <div class="icon-detail" *ngFor="let x of pharmacyList">
                 <div class="icon2"><img src="{{x.img}}"></div>
-               <div class="doctorCol"> <span>{{x.name}}</span></div>
+                <div class="doctorCol"> <span>{{x.name}}</span></div>
               </div>
             </div>
             <div class="price-doctor">
               <div class="price-cut">549</div>
-              <div class="price-per"><img src="../../../assets/icon/dr_off.png"><span>20% off</span><ion-icon name="caret-forward-outline">
-              </ion-icon></div>
+              <div class="price-per"><img src="../../../assets/icon/dr_off.png"><span>20% off</span>
+                <ion-icon name="caret-forward-outline">
+                </ion-icon>
+              </div>
               <div class="price-right"><img src="../../../assets/icon/dr_rs.png"><span>299</span></div>
             </div>
           </ion-col>

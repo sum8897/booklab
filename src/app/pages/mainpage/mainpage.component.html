@@ -9,13 +9,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" style="--background: white;">
+<ion-content [fullscreen]="true" style="background: #f4f4f4;--background: #f4f4f4;">
   <ion-card class="cardpage">
     <div class="divtext">
       <h2 class="h2">Find Nearest Lab and Doctor.</h2>
       <h4 id="h4">Find Lab and Doctors at the best prices</h4>
     </div>
   </ion-card>
+
   <ion-card class="searchCard">
     <ion-list class="searchList">
       <ion-item lines="none" class="searchItem">
@@ -27,7 +28,11 @@
       </ion-item>
       <ion-item lines="none" class="searchItem">
         <ion-input type='text' placeholder="Ex. Name,Specilization.." #password> </ion-input>
-        <ion-icon name="chevron-forward-circle-outline" slot="end" class="searchbtn"></ion-icon>
+        <!-- <ion-icon name="chevron-forward-circle-outline" slot="end" class="searchbtn"></ion-icon> -->
+        <ion-avatar slot="end" class="searchbtn">
+          <img src="../../../assets/icon/home_arrow.png" class="searchbtn" style="border-radius: 50%;">
+        </ion-avatar>
+
       </ion-item>
     </ion-list>
   </ion-card>
@@ -38,7 +43,7 @@
     </ion-card>
     <ion-slides #slides pager="true" [options]="slideOpts1" style="margin: 0px 10px 0 8px;">
       <ion-slide *ngFor="let r of appointment;let i = index" style="width: 35%;margin: 0;">
-        <ion-card style="width: 97%;margin: 0;">
+        <ion-card style="width: 97%;margin: 0;box-shadow: 2px 2px 2px 2px #828d9c;" class="appointment-First-cart">
           <ion-grid class="gridlist1" [ngClass]="i=='0'?'border':'noborder'">
             <ion-row style="margin-right: 0px;">
               <ion-col style="text-align: center;padding: 0;" size="12">
@@ -48,17 +53,14 @@
                 <div class="ionContent">
                   <h6 class="serviceText">{{r.name}}</h6>
                 </div>
-
-                <!-- </ion-card> -->
-
               </ion-col>
             </ion-row>
           </ion-grid>
         </ion-card>
-
       </ion-slide>
     </ion-slides>
   </div>
+
   <div class="servicepoint">
     <ion-grid class="gridlist">
       <ion-row style="margin-right: 10px;">
@@ -67,10 +69,9 @@
             <img class="servieImg" src="{{r.img}}" />
             <h6 class="serviceText">{{r.name}}</h6>
             <div class="popupicon">
-              <img class="popupImg" style="width: 90px;"  src="{{r.icon}}">
+              <img class="popupImg" style="width: 90px;" src="{{r.icon}}">
             </div>
           </ion-card>
-
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -104,7 +105,6 @@
               <h3 class="specialization">Psychotherapist</h3>
               <span class="specialDetails">Depresion,Anxiety,OCD,Eating Disorders</span>
             </div>
-
           </ion-card>
         </ion-col>
         <ion-col size='4'>
@@ -116,7 +116,6 @@
                   <h3 class="specialization">Child Specialist</h3>
                   <span class="specialDetails">Vomiting,Cough,Stomach,Issues for your child</span>
                 </div>
-
               </ion-card>
             </ion-col>
           </ion-row>
@@ -128,7 +127,6 @@
                   <h3 class="specialization">Physician</h3>
                   <span class="specialDetails">Seasonal Fluss,Stomach Issues,Headache</span>
                 </div>
-
               </ion-card>
             </ion-col>
           </ion-row>
@@ -190,7 +188,6 @@
     </ion-grid>
   </ion-card>
 
-
   <div class="item-slider">
     <ion-card class="appointDigital">
       <h2 class="h4heading">Digital Pharmacy</h2>
@@ -203,7 +200,7 @@
           <div class="digital-card">
             <div class="digital-off">Flat 15% OFF</div>
             <div class="digital-button">
-              <ion-button size="small" style="font-size: 7px;">Order Now</ion-button>
+              <ion-button size="small">Order Now</ion-button>
             </div>
           </div>
         </ion-card>
@@ -230,7 +227,6 @@
     </ion-slides>
   </div>
 
-
   <div class="item-slider">
     <ion-card class="helpcheckdiv">
       <h2 class="h4heading">Help Checks & Lab Tests</h2>
@@ -244,7 +240,7 @@
               <ion-col style="text-align: center;padding: 0;">
                 <ion-card class="healthcheckcardLab">
                   <div class="health1div">
-                    <h6 style="padding: 17% 0 5% 0;">Vitamin Screening</h6>
+                    <h6>Vitamin Screening</h6>
                   </div>
                   <div class="pricediv">
                     <ion-row>
@@ -286,7 +282,6 @@
       </ion-slides>
     </div>
   </div>
-
 
 </ion-content>
 <ion-footer>

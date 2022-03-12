@@ -92,6 +92,7 @@
   justify-content: space-between;
   font-family: RobotoCondensed !important;
   margin-left: -7px;
+
   span {
     margin: 3px 0 0 3px;
     font-family: RobotoCondensed !important;
@@ -144,7 +145,7 @@
   height: 28px;
   width: 100%;
   color: #0e223e !important;
-  box-shadow: inset 2px 2px 2px #0e223e;
+  box-shadow: inset 2px 2px 2px #afb2b7;
   z-index: 9999999;
   opacity: 1;
   background: white;
@@ -160,7 +161,7 @@
     }
 
     .insidesecondcol {
-      font-size: 9px;
+      font-size: 7px;
       // margin-top: 2px;
       font-family: RobotoLight;
     }
@@ -199,17 +200,21 @@ ion-segment-button {
   box-shadow: 1px 2px 2px #828d9c;
   border-radius: 0;
   background: white;
-  .detailsNameCol{
+
+  .detailsNameCol {
     padding-left: 10px;
   }
-  .img{
+
+  .img {
     box-shadow: 1px 1px 1px 1px #9fa4ab;
     border: 1px solid #f3eeee;
   }
 }
-ion-tab-bar{
+
+ion-tab-bar {
   --background: white;
 }
+
 .book-button {
   height: 40px;
   --border-radius: 50px;
