@@ -1,4 +1,5 @@
 ion-content {
+  //--background:#f4f4f4
   --background: #edefee;
   --background: rgba(237, 239, 238, 255);
   font-family: RobotoCondensed !important;
@@ -41,14 +42,15 @@ ion-content {
 .h4heading {
   font-family: RobotoCondensed !important;
   color: #0e223e !important;
-  font-weight: 500;
+  font-weight: 600;
   margin: 5px 0;
   text-align: center;
 }
 
 .appointmentImg {
   margin: -7%;
-  box-shadow: none;
+
+  box-shadow: 2px 2px 2px #828d9c;
 }
 
 ion-card {
@@ -210,7 +212,11 @@ small {
     min-width: 93px;
   }
 }
-
+@media screen and (min-width: 400px) {
+  .popupicon {
+    bottom: 22%;
+  }
+}
 .health1div {
   width: 100%;
   background: #21cdc0;
@@ -381,7 +387,7 @@ small {
 
 .threecol {
   padding: 0;
-  margin-top: -10px;
+  margin-top: -15px;
 }
 
 .labs1 {
@@ -402,10 +408,10 @@ ion-title {
   .digital-card {
     display: flex;
     justify-content: space-between;
-    margin: 5px 2px 5px 4px;
+    margin: 10px 2px 5px 4px;
 
     .digital-off {
-      font-size: 13px;
+      font-size: 15px;
       padding-top: 8px;
       font-family: RobotoCondensed !important;
     }
@@ -413,7 +419,7 @@ ion-title {
       ion-button {
         font-size: 10px;
         font-family: RobotoCondensed !important;
-        font-size: 7px;
+   
         --background: #0e223e;
         --border-radius: 21px;
         text-transform: capitalize;
