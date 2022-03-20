@@ -50,7 +50,7 @@ ion-content {
 .appointmentImg {
   margin: -7%;
 
-  box-shadow: 2px 2px 2px #828d9c;
+  box-shadow: 1px 1px 1px #828d9c;
 }
 
 ion-card {
@@ -154,6 +154,7 @@ ion-item {
   border-radius: 50px;
   width: 30px;
   height: 30px;
+  --border-radius: 50%;
 }
 
 .searchCard {
@@ -222,8 +223,12 @@ small {
   background: #21cdc0;
   color: #0e223e;
   margin-top: -12%;
-  text-align: left;
+  text-align: center;
   padding-left: 12px;
+  h6{
+    padding: 15% 0 10% 0;
+    font-weight: 600;
+  }
 }
 
 .numberbg {
@@ -239,7 +244,8 @@ small {
   font-family: RobotoCondensed !important;
 
 }
-.line-text{
+
+.line-text {
   text-decoration: line-through;
   text-decoration-color: #f4f4f4;
   text-decoration-thickness: initial;
@@ -268,11 +274,13 @@ small {
   background: #0e223e;
   color: white;
   margin-top: -10px;
-  .helpcheckOff{
+
+  .helpcheckOff {
     color: #22cdc0;
     text-align: right;
     padding-right: 7px;
-    h4{
+
+    h4 {
       font-family: RobotoBold !important;
     }
   }
@@ -293,6 +301,7 @@ small {
   color: #0e223e !important;
   font-family: RobotoCondensed !important;
   padding-left: 5px;
+  font-weight: 600;
 }
 
 .featurecardText {
@@ -329,6 +338,7 @@ small {
   color: #f5f6f9;
   font-size: 13px;
   opacity: 999;
+  text-shadow: 1px 1px #0e223e;
   // background: rgb(0 0 0 / 20%);
 }
 
@@ -398,13 +408,15 @@ ion-title {
   margin-left: -7%;
 }
 
-.digitalPharmacy{
+.digitalPharmacy {
   margin: 0;
   background: white;
-  --background:white;
+  --background: white;
+
   img {
     min-height: 85px;
   }
+
   .digital-card {
     display: flex;
     justify-content: space-between;
@@ -414,7 +426,11 @@ ion-title {
       font-size: 15px;
       padding-top: 8px;
       font-family: RobotoCondensed !important;
+      color: #0e223e;
+      font-weight: 600;
+      padding-left: 5px;
     }
+
     .digital-button {
       ion-button {
         font-size: 10px;
@@ -725,6 +741,7 @@ ion-input {
   margin: 0;
   box-shadow: 2px 2px 2px #828d9c;
   border: 2px solid white;
+
   .img1 {
     min-height: 260px;
   }
