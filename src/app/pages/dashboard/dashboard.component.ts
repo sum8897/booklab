@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {  NavController } from '@ionic/angular';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {}
   dashboard=[
@@ -72,5 +72,13 @@ export class DashboardComponent implements OnInit {
       img:'../../assets/img/icon-2.png',
     },
   ]
-
+  home(){
+    this.navCtrl.navigateRoot('/mainpage')
+  }
+  specilist(){
+    this.navCtrl.navigateRoot('/doctorlist')
+  }
+  labs(){
+    this.navCtrl.navigateRoot('/lablist')
+  }
 }

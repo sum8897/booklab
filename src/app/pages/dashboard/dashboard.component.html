@@ -23,3 +23,31 @@
     </ion-grid>
   </ion-card>
 </ion-content>
+<ion-footer>
+  <ion-toolbar color="secondary">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button class="home" (click)="home()">
+          <img class="footrImg" src="../../assets/img/icons/home.png">
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+        <ion-tab-button class="specilist" (click)='specilist()'>
+          <img class="footrImg" src="../../assets/img/icons/specilist.png">
+          <ion-label>Specilist</ion-label>
+        </ion-tab-button>
+        <ion-tab-button (click)="hospitals()" class="hospitals">
+          <img class="footrImg" src="../../assets/img/icons/Hospitals.png">
+          <ion-label>Hospitals</ion-label>
+        </ion-tab-button>
+        <ion-tab-button class="clinics" (click)="clinics()">
+          <img class="footrImg" src="../../assets/img/icons/clinics.png">
+          <ion-label>Clinics</ion-label>
+        </ion-tab-button>
+        <ion-tab-button class="labs" (click)="labs()">
+          <img class="footrImg" src="../../assets/img/icons/lab.png">
+          <ion-label>Labs</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

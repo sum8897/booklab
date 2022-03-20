@@ -1,38 +1,60 @@
-ion-content{
+ion-content {
   // --background:linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.1)),
   // url("../../assets/img/icons/1_bg.png") no-repeat center center / cover;
 
   --background: url('../../assets/img/icons/1_bg.png') center center / cover;
 }
-.tool{
+
+.tool {
   --background: #060b46;
   text-align: center;
 }
-.action-button{
-  margin-top: 180px;
+
+.action-button {
+  margin-top: 210px;
   text-align: center;
-  p{
+
+  p {
     color: black;
     font-family: RobotoCondensed !important;
   }
 }
-ion-button{
+
+ion-button {
   --background: #060b46;
-    width: 85%;
-    --border-radius: 50px;
-    height: 40px;
-    margin: 10px 0px;
-    color: #21cdc0;
-    font-family: RobotoCondensed !important;
+  width: 85%;
+  --border-radius: 50px;
+  height: 40px;
+  margin: 10px 0px;
+  color: #21cdc0;
+  font-family: RobotoCondensed !important;
 }
-.login-button{
+
+.login-button {
   margin-top: 2px;
 }
-.footrImg{
+
+.footrImg {
   width: 30px;
 }
-@media (min-width: 690px) and (max-width: 960px){
-  .action-button{
+@media (min-width: 320px) and (max-width: 389px) {
+  .action-button {
+    margin-top: 205px;
+  }
+}
+@media (min-width: 390px) and (max-width: 420px) {
+  .action-button {
+    margin-top: 350px;
+  }
+}
+@media (min-width: 410px) and (max-width: 460px) {
+  .action-button {
+    margin-top: 230px;
+  }
+}
 
+@media (min-width: 460px) and (max-width: 960px) {
+  .action-button {
+    margin-top: 180px;
   }
 }

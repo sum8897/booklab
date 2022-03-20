@@ -13,8 +13,8 @@ export class DoctorslistComponent implements OnInit {
   home(){
     this.navCtrl.navigateRoot('/mainpage')
   }
-  specilist(){
-    this.navCtrl.navigateRoot('/doctorlist')
+  hospitals(){
+    this.navCtrl.navigateRoot('/hospitallist')
   }
   labs(){
     this.navCtrl.navigateRoot('/lablist')

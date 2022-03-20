@@ -140,9 +140,9 @@ ion-item {
 
 .healthcheckcardLab {
   margin: 0;
-  box-shadow: 2px 2px 2px #828d9c;
+  box-shadow: 1px 1px 1px #a1a1a1;
   background: white;
-  border-radius: none;
+  --border-radius: none;
 }
 
 .searchbtn {
@@ -303,7 +303,7 @@ small {
   bottom: 73%;
   height: 25px;
   opacity: 999;
-  background: black;
+  background: #0e223e;
   text-align: left;
   color: white;
   text-transform: capitalize;
@@ -331,7 +331,7 @@ small {
   color: #f5f6f9;
   font-size: 13px;
   opacity: 999;
-  text-shadow: 1px 1px #0e223e;
+  text-shadow: 2px 1px #a1a1a1;
   // background: rgb(0 0 0 / 20%);
 }
 
@@ -400,7 +400,11 @@ small {
 ion-title {
   margin-left: -7%;
 }
-
+.counter-all-card{
+  background: white;
+  --background: white;
+  box-shadow: none;
+}
 .digitalPharmacy {
   margin: 0;
   background: white;
@@ -451,11 +455,9 @@ ion-title {
     margin-bottom: -35%;
     margin-top: -1px;
   }
-
-  .orderBtn {
-    margin-bottom: 0%;
-  }
 }
+
+
 
 .cardpage {
   background-image: url(../../../assets/homepage/top_image1.png);
@@ -582,7 +584,7 @@ ion-input {
   text-align: center;
   background: white;
   margin: 10px 3%;
-
+  box-shadow: none;
   h2 {
     color: #0e223e;
     padding: 5px 0;
@@ -598,7 +600,7 @@ ion-input {
   text-align: center;
   background: white;
   margin: -10px 4% 3% 4%;
-
+  box-shadow: none;
   h2 {
     color: #0e223e;
     padding: 3px 0;
@@ -701,7 +703,6 @@ ion-input {
   margin-bottom: 17px;
   background: white;
   border-radius: 0px;
-
   .orderImg {
     border-radius: 0px;
     text-align: left;
@@ -709,7 +710,6 @@ ion-input {
     // margin-top: 45px;
     width: 100%;
   }
-
 }
 
 .orderBtn {
@@ -731,7 +731,7 @@ ion-input {
 .featurecard {
   width: 100%;
   margin: 0;
-  box-shadow: 2px 2px 2px #828d9c;
+  box-shadow: 1px 1px 1px 1px #828d9c;
   border: 2px solid white;
 
   .img1 {

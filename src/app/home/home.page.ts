@@ -21,4 +21,7 @@ export class HomePage {
   home(){
     this.navCtrl.navigateRoot('/mainpage')
   }
+  hospitals(){
+    this.navCtrl.navigateRoot('/hospitallist')
+  }
 }
