@@ -20,6 +20,13 @@ import { RegisterComponent } from './pages/register/register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MainpageComponent } from './pages/mainpage/mainpage.component';
 import { LabListComponent } from './pages/lab-list/lab-list.component';
+import { BookingLabComponent } from './pages/booking-lab/booking-lab.component';
+import { BookingWhenComponent } from './pages/booking-when/booking-when.component';
+import { BookingWhoomComponent } from './pages/booking-whoom/booking-whoom.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 
 @NgModule({
   declarations: [
@@ -32,13 +39,25 @@ import { LabListComponent } from './pages/lab-list/lab-list.component';
               DashboardComponent,
               MainpageComponent,
               LabListComponent,
+              BookingLabComponent,
+              BookingWhenComponent,
+              BookingWhoomComponent
             ],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [Platform,
+  imports: [BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule],
+  providers: [
+    Platform,
     StatusBar,
     SplashScreen,
     Network,
+    Geolocation,
+    NativeGeocoder,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

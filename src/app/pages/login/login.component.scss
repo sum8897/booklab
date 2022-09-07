@@ -47,11 +47,12 @@ ion-content {
 .form-input {
   position: relative;
   margin-bottom: 10px;
-
+  background: white;
   ion-item::part(native) {
     padding-left: 0;
     width: 80%;
     margin: 0 auto;
+    background: white;
   }
 
   .action-button {
@@ -70,7 +71,7 @@ ion-content {
 ion-item {
   --border-radius: 50px;
   // --background: #21cdc1;
-  background: white;
+  --background: white;
   margin: 8px 0;
 
   ion-input {
@@ -78,7 +79,7 @@ ion-item {
     --padding-start: 6%;
     background: #21cdc1;
     border-radius: 50px;
-    height: 48px;
+    height: 46px;
     color: #000;
     box-shadow: inset 3px 3px 5px #0e223e;
     z-index: 9999999;
@@ -188,6 +189,7 @@ ion-checkbox {
   --checkmark-color: black;
   --border-color-checked: black;
   --border-color: black;
+  --background: white;
 }
 
 @media (min-width: 690px) and (max-width: 960px) {

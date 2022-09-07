@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonSlides, NavController } from '@ionic/angular';
+import { AuthService } from 'src/app/services/auth.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-mainpage',
@@ -11,7 +13,7 @@ export class MainpageComponent implements OnInit {
   @ViewChild('slides', {static: true}) slides: IonSlides;
   slideOpts1 = {
     initialSlide: 0,
-    speed: 1000,
+    speed: 500000,
     spaceBetween: 10,
     slidesPerView: 3.0,
     centeredSlide:true,
@@ -67,7 +69,99 @@ export class MainpageComponent implements OnInit {
 
   ngOnInit() {
   }
-  constructor(private navCtrl: NavController) {}
+  constructor(private navCtrl: NavController,
+              public auth:AuthService,
+              public user: UserService) {
+                this.bannerImage();
+                this.specialistDoctor();
+                this.labList(); 
+              }
+bannerImageres:any;
+bannerImageData:any;
+  bannerImage(){
+    this.user.present('');
+   this.auth.getBannerImageApi().subscribe((data)=>{
+    this.bannerImageres=data;
+    this.bannerImageData=this.bannerImageres.slider_image
+    console.log(data)
+  this.user.dismiss();
+   },err=>{
+    this.user.dismiss();
+    console.log(err);
+   })
+  }
+
+  specialistRes;
+  specialistData:any;
+  psy_name:any;
+  psy_image:any;
+  psy_desc:any;
+
+  child_name:any;
+  child_image:any;
+  child_desc:any;
+
+  phy_name:any;
+  phy_image:any;
+  phy_desc:any;
+
+  gyn_name:any;
+  gyn_image:any;
+  gyn_desc:any;
+  specialistDoctor(){
+    this.auth.getDoctorHomelistApi().subscribe((doctor)=>{
+   this.specialistRes=doctor;
+   this.specialistData=this.specialistRes.data;
+   this.psy_name=this.specialistData[0].doctor_cat_slug;
+   this.psy_image=this.specialistData[0].doctor_cat_image;
+   this.psy_desc=this.specialistData[0].doctor_cat_desc;
+
+   this.child_name=this.specialistData[1].doctor_cat_slug;
+   this.child_image=this.specialistData[1].doctor_cat_image;
+   this.child_desc=this.specialistData[1].doctor_cat_desc;
+
+   this.phy_name=this.specialistData[2].doctor_cat_slug;
+   this.phy_image=this.specialistData[2].doctor_cat_image;
+   this.phy_desc=this.specialistData[2].doctor_cat_desc;
+
+   this.gyn_name=this.specialistData[3].doctor_cat_slug;
+   this.gyn_image=this.specialistData[3].doctor_cat_image;
+   this.gyn_desc=this.specialistData[3].doctor_cat_desc;
+
+   console.log(this.specialistRes);
+    },err=>{
+      console.log(err)
+    })
+  }
+
+  labRes:any;
+  labData:any;
+  mri_lab_cat_slug:any;
+  mri_image:any;
+  ctscan_lab_cat_slug:any;
+  ctscan_image:any;
+  xray_lab_cat_slug:any;
+  xray_image:any;
+  ultrasound_lab_cat_slug:any;
+  ultrasound_image:any;
+  labList(){
+    this.auth.getLabHomelistApi().subscribe((lab)=>{
+   this.labRes=lab;
+   this.labData=this.labRes;
+   this.mri_lab_cat_slug=this.labData.data[0].lab_cat_slug;
+   this.mri_image=this.labData.data[0].lab_cat_image;
+   this.ctscan_lab_cat_slug=this.labData.data[1].lab_cat_slug;
+   this.ctscan_image=this.labData.data[1].lab_cat_image;
+   this.xray_lab_cat_slug=this.labData.data[2].lab_cat_slug;
+   this.xray_image=this.labData.data[2].lab_cat_image;
+   this.ultrasound_lab_cat_slug=this.labData.data[3].lab_cat_slug;
+   this.ultrasound_image=this.labData.data[3].lab_cat_image;
+   console.log(this.labData)
+    },err=>{
+      console.log(err)
+    })
+  }
+
   locationcard = false;
   locationShow() {
     this.locationcard = true;
@@ -213,31 +307,31 @@ export class MainpageComponent implements OnInit {
     },
     {
       id:2,
-      img:'../../assets/homepage/Pharmacies_image.png',
+      img:'../../assets/img/services/doctors.jpg',
       icon:'../../assets/homepage/doctors_icon.png',
       name:'Doctors (50000+)'
     },
     {  
       id:3,
-      img:'../../assets/homepage/Hospitals_image.png',
+      img:'../../assets/homepage/Pharmacies_image.png',
       icon:'../../assets/homepage/Pharmacies_icon.png',
       name:'Pharmacies (700+)'
     },
     {
       id:4,
-      img:'../../assets/homepage/Pharmacies_image.png',
+      img:'../../assets/img/services/clinics.jpg',
       icon:'../../assets/homepage/clinic_icon.png',
       name:'Clinics (1450+)'
     },
     {
       id:5,
-      img:'../../assets/homepage/Hospitals_image.png',
+      img:'../../assets/img/services/laboratories.jpg',
       icon:'../../assets/homepage/Laboratories_icon.png',
       name:'Laboratories (6000+)'
     },
     {
       id:6,
-      img:'../../assets/homepage/Pharmacies_image.png',
+      img:'../../assets/img/services/surgery-rooms.jpg',
       icon:'../../assets/homepage/Surgery_icon.png',
       name:'Surgery Rooms (2600+)'
     },
@@ -245,22 +339,22 @@ export class MainpageComponent implements OnInit {
 number=[
   {
     id:1,
-   number:'2k+',
+   number:'2K+',
    text:'Experience Doctors'
   },
   {
     id:2,
-   number:'4k+',
+   number:'4K+',
    text:'Satisfied labs',
   },
   {
     id:3,
-   number:'6k+',
+   number:'6K+',
    text:'Total Calls'
   },
   {
     id:4,
-   number:'30k+',
+   number:'30+',
    text:'Total Clients'
   },
 ]

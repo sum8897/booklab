@@ -11,7 +11,7 @@
 <ion-content style="--background: white;">
   <ion-card class="searchCard">
     <ion-item lines="none" class="searchitem">
-      <ion-input type="mail" placeholder="Search doctor" class="searchInput">
+      <ion-input type="mail" placeholder="Search Doctor" class="searchInput">
         <ion-icon class="searchIcon" slot="start" name="search-outline"></ion-icon>
       </ion-input>
     </ion-item>
@@ -20,13 +20,13 @@
         <ion-col size="4">
           <div class="deepdiv">
             <ion-row class="insidediv">
-              <ion-col size="3" class="insidefirstcol" >
-                <ion-thumbnail style="--size:12px;background: black;">
-                  <ion-img class="selecticon" src="../../../assets/icon/home_card_-rs.png">
+              <ion-col size="2" class="insidefirstcol">
+                <ion-thumbnail style="--size:12px;">
+                  <ion-img class="selecticon" src="../../../assets/icon/rs.png">
                   </ion-img>
                 </ion-thumbnail>
               </ion-col>
-              <ion-col size="7" class="insidesecondcol">Price</ion-col>
+              <ion-col size="8" class="insidesecondcol"  (click)="selectPrice()">{{price}}</ion-col>
               <ion-col size="2" class="insidelastcol">
                 <ion-icon name="caret-down-outline" class="selecticon"></ion-icon>
               </ion-col>
@@ -37,22 +37,32 @@
           <div class="deepdiv">
             <ion-row class="insidediv">
               <ion-col size="2" class="insidefirstcol">
-                <ion-icon name="location-outline"></ion-icon>
+                <ion-thumbnail style="--size:12px;">
+                  <ion-img class="selecticon" src="../../../assets/icon/location_icon.png">
+                  </ion-img>
+                </ion-thumbnail>
+
+                <!-- <ion-icon name="location-outline"></ion-icon> -->
               </ion-col>
-              <ion-col size="8" class="insidesecondcol">Location</ion-col>
+              <ion-col size="8" class="insidesecondcol" (click)="selectLocation()">{{location}}</ion-col>
               <ion-col size="2" class="insidelastcol">
+
                 <ion-icon name="caret-down-outline" class="selecticon"></ion-icon>
               </ion-col>
             </ion-row>
           </div>
         </ion-col>
-        <ion-col size="4">
+        <ion-col size="4" (click)="selectSpecialist()">
           <div class="deepdiv">
             <ion-row class="insidediv">
               <ion-col size="2" class="insidefirstcol">
-                <ion-icon name="git-branch-outline"></ion-icon>
+                <ion-thumbnail style="--size:12px;">
+                  <ion-img class="selecticon" src="../../../assets/icon/dr_Specialis.png">
+                  </ion-img>
+                </ion-thumbnail>
+                <!-- <ion-icon name="git-branch-outline"></ion-icon> -->
               </ion-col>
-              <ion-col size="8" class="insidesecondcol">Specialist</ion-col>
+              <ion-col size="8" class="insidesecondcol">{{specialist}}</ion-col>
               <ion-col size="2" class="insidelastcol">
                 <ion-icon name="caret-down-outline" class="selecticon"></ion-icon>
               </ion-col>
@@ -62,34 +72,66 @@
       </ion-row>
     </ion-grid>
   </ion-card>
-
-  <ion-card class="doctorCard">
-    <ion-card style="background: white;border-radius: 7px;">
+  <!-- <div class="ion-padding">
+    <ion-button (click)="getCurrentCoordinates()" expand="block">
+      Get Location
+    </ion-button>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Location Coordinates</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>
+        Latitue
+      </ion-label>
+      <ion-badge color="danger" slot="end">{{latitude}}</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Longitude
+      </ion-label>
+      <ion-badge color="danger" slot="end">{{longitude}}</ion-badge>
+    </ion-item>
+    <p>{{address}}</p>
+    </ion-list>    
+  </div> -->
+  <ion-card class="doctorCard" *ngFor="let d of doctorListData">
+    <ion-card style="background: white;border-radius: 0;box-shadow: 2px 1px 1px #cdc9c9;">
       <ion-grid>
         <ion-row class="row">
           <ion-col size="5">
             <ion-card class="doctorimgCard">
-              <img style="width:100%;" src="../../assets/icon/dr1.png">
+              <img style="width:100%;" src="{{d.doctor_image}}">
               <span>30 Years Exp</span>
             </ion-card>
           </ion-col>
           <ion-col size="7" class="detailsNameCol">
             <div class="doctor-parent-div">
               <div class="doctordetails">
-                <div class="ion-text-wrap doctName">Dr. Ajay Sharma</div>
-                <div class="icon-detail" *ngFor="let x of pharmacyList">
-                  <div class="icon2"><img src="{{x.img}}"></div>
-                  <div class="doctorCol"> <span>{{x.name}}</span></div>
+                <div class="ion-text-wrap doctName">{{d.first_name}} {{d.last_name}}</div>
+                <div class="icon-detail" >
+                  <div class="icon2"><img src="../../assets/icon/dr_Specialis.png"></div>
+                  <div class="doctorCol"> <span>{{d.doctor_qualification}}</span></div>
+                </div>
+                <div class="icon-detail" >
+                  <div class="icon2"><img src="../../assets/icon/dr_Specialis.png"></div>
+                  <div class="doctorCol"> <span>{{d.address}}</span></div>
+                </div>
+                <div class="icon-detail" >
+                  <div class="icon2"><img src="../../assets/icon/dr_Specialis.png"></div>
+                  <div class="doctorCol"> <span>{{d.address}}</span></div>
                 </div>
               </div>
-              <div>
+              <div class="price-doctor-div">
                 <div class="price-doctor">
-                  <div class="price-cut">549</div>
+                  <div class="price-cut">
+                    <strike style='color:red'> <span style="color: #0e223e;">{{d.doctor_price}}</span></strike>
+                  </div>
                   <div class="price-per"><img src="../../../assets/icon/dr_off.png"><span>20% off</span>
                     <ion-icon name="caret-forward-outline">
                     </ion-icon>
                   </div>
-                  <div class="price-right"><img src="../../../assets/icon/dr_rs.png"><span>299</span></div>
+                  <div class="price-right"><img src="../../../assets/icon/rs.png"><span>{{d.doctor_price}}</span></div>
                 </div>
               </div>
             </div>
@@ -97,7 +139,7 @@
         </ion-row>
         <ion-row>
           <ion-col size="5">
-            <ion-button shape="round" fill="outline" class="viewbtn">View Profile</ion-button>
+            <ion-button class="viewbtn">View Profile</ion-button>
           </ion-col>
           <ion-col size="7">
             <ion-button shape="round" class="consultbtn">Book Now</ion-button>
@@ -108,45 +150,6 @@
   </ion-card>
 
 
-  <ion-card class="doctorCard">
-    <ion-card style="--background: white;">
-      <ion-grid>
-        <ion-row class="row">
-          <ion-col size="5">
-            <ion-card class="doctorimgCard">
-              <img style="width:100%;" src="../../assets/icon/dr2.png">
-              <span>30 Years Exp</span>
-            </ion-card>
-          </ion-col>
-          <ion-col size="7" class="detailsNameCol">
-            <div class="doctordetails">
-              <div class="ion-text-wrap doctName">Dr. Vineeta Singh Tandon</div>
-              <div class="icon-detail" *ngFor="let x of pharmacyList">
-                <div class="icon2"><img src="{{x.img}}"></div>
-                <div class="doctorCol"> <span>{{x.name}}</span></div>
-              </div>
-            </div>
-            <div class="price-doctor">
-              <div class="price-cut">549</div>
-              <div class="price-per"><img src="../../../assets/icon/dr_off.png"><span>20% off</span>
-                <ion-icon name="caret-forward-outline">
-                </ion-icon>
-              </div>
-              <div class="price-right"><img src="../../../assets/icon/dr_rs.png"><span>299</span></div>
-            </div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="5">
-            <ion-button shape="round" fill="outline" class="viewbtn">View Profile</ion-button>
-          </ion-col>
-          <ion-col size="7">
-            <ion-button shape="round" class="consultbtn">Book Now</ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card>
-  </ion-card>
 </ion-content>
 
 <ion-footer>

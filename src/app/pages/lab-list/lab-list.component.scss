@@ -23,20 +23,20 @@
   --background: #ededed;
 
   ion-input {
-    // font-size: 18px;
-    --padding-start: 6%;
+    --padding-start: 2%;
     --background: white;
-    border-radius: 50px;
-    height: 48px;
+    border-radius: 21px;
+    height: 35px;
     color: #0e223e !important;
-    box-shadow: inset 3px 3px 5px #0e223e;
+    box-shadow: inset 1px 2px 2px #a1a1a1;
     z-index: 9999999;
     opacity: 1;
+    font-size: 13px;
   }
 
   .searchIcon {
     margin-left: 5%;
-    font-size: 24px;
+    font-size: 15px;
   }
 }
 
@@ -109,22 +109,28 @@
 .price-cross {
   color: #0e223e;
   font-family: RobotoCondensed !important;
-
+  display: flex;
+  justify-content: flex-start;
   img {
-    width: 8px;
+    width: 17px;
+    height: 17px;
+  }
+  del{
+    // padding-top: 3px;
   }
 }
 
 .right-price {
   background: #21cdc0;
   color: #0e223e;
-  padding: 5px;
-  margin-top: 8px;
-  font-size: 15px;
+  padding: 4px;
+  margin-top: 10px;
+  font-size: 13px;
   font-family: RobotoCondensed !important;
-
+  display: inline-flex;
+  justify-content: space-around;
   img {
-    width: 8px;
+     height: 15px;
   }
 }
 
@@ -135,7 +141,7 @@
   font-family: RobotoCondensed !important;
   color: #0e223e;
   height: 27px;
-  --border-color: #0e223e;
+  --border-color: #a1a1a1;
   font-size: 10px;
   margin-top: 10px;
   letter-spacing: -0.2px;
@@ -149,7 +155,7 @@
   z-index: 9999999;
   opacity: 1;
   background: white;
-  padding: 8px;
+  padding: 5px 8px;
   display: inline-flex;
 
   .insidediv {
@@ -161,9 +167,10 @@
     }
 
     .insidesecondcol {
-      font-size: 7px;
-      // margin-top: 2px;
+      font-size: 8px;
       font-family: RobotoLight;
+      margin-top: 2px;
+      padding-left: 7px;
     }
 
     .insidelastcol {
@@ -206,8 +213,8 @@ ion-segment-button {
   }
 
   .img {
-    box-shadow: 1px 1px 1px 1px #9fa4ab;
-    border: 1px solid #f3eeee;
+    box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 18%);
+    border: 1px solid #ededed;
   }
 }
 

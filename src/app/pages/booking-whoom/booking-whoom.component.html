@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img class="headerimg" style="margin: 5px 0;" src="../../../assets/img/login/logo1.png">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content style="--background: #c9c9c9;">
+  <div class="lab-Booking-main-div">
+<div class="lab-booking-card-image">
+  <img src="../../../assets/homepage/number_bg.png">
+  <div class="top-right">
+    <span>4.5</span><img style="position: relative;width:10px;" src="../../../assets/booking _icons/star.png">
+  </div>
+  <div class="top-right2"><img class="booking-star" style="position: relative;width:17px;margin-right: 1px;" src="../../../assets/booking _icons/fav.png"></div>
+<div class="lab-booking-card-name">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="8" class="first-col-lab">
+      <div class="lab-name-price">
+      <h3>Dr. Amit Agrawal</h3>
+      <p>MBBS MD Physician  </p>
+      <h6>B-677, New Ashok nagar,Noida,Uttar Pradesh110096 </h6>
+      </div>
+     
+      </ion-col>
+      <ion-col size="4" class="second-col-lab">
+        <img src="../../../assets/icon/dr1.png">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+<div class="lab-fees-testing">
+  <div class="lab lab-fee">
+    <div class="lab-icon-text">
+    <img src="../.././../assets/booking _icons/rs_icon.png">
+    <span class="sapn-title">{{fees}}</span>
+  </div>
+  <span class="span-title-text">FEES</span>
+  </div>
+  <div class="lab lab-fee">
+    <div class="lab-icon-text">
+    <img src="../.././../assets/booking _icons/rs_icon.png"><span class="sapn-title">7</span>
+  </div>
+  <span class="span-title-text">EXPERIANCE</span>
+  </div>
+  <div class="lab lab-fee">
+    <div class="lab-icon-text">
+    <img src="../.././../assets/booking _icons/rs_icon.png"><span class="sapn-title">600</span>
+  </div>
+  <span class="span-title-text">PATIENTS</span>
+  </div>
+</div>
+</div>
+  </div>
+  <ion-card class="lab-about-card" style="background: white;">
+    <div class="lab-div-about">
+     <h6>Working Time</h6>
+       <span style="font-weight: 500;">Mon, Tue, Sat, sun 8AM - Night 8 PM
+     </span>
+    </div>
+    <div class="lab-div-about" style="margin-bottom: 15px;">
+     <h6>About</h6>
+     <span style="color: #0e223e;font-size: 1.6vh;font-weight: 500;">Dr Agrawal Clinic owned by Dr Amit Agrawal in sector 78 Noida. Dr Agrawal is senior consultant General Physician known for his expertise and skills,deals in all health ailments and emergency management. Clinic is well equipped and approachable.
+     </span>
+    </div>
+     </ion-card>
+
+    <ion-card class="lab-booking-card-form" style="background: white;">
+      <div class="chef-segment">
+        <ion-segment value="whom" class="register-segment" [(ngModel)]="type" (ionChange)="segmentChanged($event)"> 
+          <ion-segment-button value="whom" class="whom">
+            <div class="segment-text"> <img src="../../../assets/booking _icons/for-whom.png"><span>FOR WHOM</span></div>
+          </ion-segment-button>
+          <ion-segment-button value="when" class="when">
+            <div class="segment-text"> <img src="../../../assets/booking _icons/when.png"><span>WHEN</span></div>
+          </ion-segment-button>
+          <ion-segment-button value="where" class="where">
+            <div class="segment-text"> <img src="../../../assets/booking _icons/where.png"><span>WHERE</span></div>
+          </ion-segment-button>
+        </ion-segment>
+       </div>
+      <p class="paragraph-detail">Your Detail</p>
+      <!-- <form style="margin: 0 10px;" #contactAddressForm="ngForm" (ngSubmit)="onAddressSubmit(contactAddressForm)"> -->
+      <div class="form-name-mobile-div">
+          <ion-input type="text" required placeholder="name" class="form-input" [(ngModel)]="name" [ngModelOptions]="{standalone: true}"></ion-input>
+          <ion-input type="tel" required placeholder="phone" class="form-input" maxlength="10" [(ngModel)]="phone" [ngModelOptions]="{standalone: true}"></ion-input>      </div>
+     <div class="email-div">
+      <ion-input type="email" id="email" required placeholder="email" class="form-input" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"></ion-input>
+     </div>
+      <div class="form-name-mobile-div">
+          <ion-input type="number" required placeholder="age" class="form-input" [(ngModel)]="age" [ngModelOptions]="{standalone: true}"></ion-input>
+          <ion-item class="select-gender">
+            <ion-label>Select Your Gender</ion-label>
+            <ion-select okText="Okay" cancelText="Dismiss" [(ngModel)]="gender"  [ngModelOptions]="{standalone: true}">
+              <ion-select-option value="male">Male</ion-select-option>
+              <ion-select-option value="female">Female</ion-select-option>
+            </ion-select>
+          </ion-item>
+      </div>
+      <!-- </form> -->
+    </ion-card>
+    <div class="booking-whom-both-button">
+      <ion-button class="send-button">SEND MESSAGE</ion-button>
+      <ion-button class="booking-button" type="submit" (click)="submit()">BOOK NOW</ion-button>
+    </div>
+
+</ion-content>
+

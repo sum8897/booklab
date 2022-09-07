@@ -1,5 +1,7 @@
 import { Component, OnInit ,  ViewChild, } from '@angular/core';
-import { IonSegment, NavController } from '@ionic/angular';
+import { AlertController, IonSegment, NavController } from '@ionic/angular';
+import { AuthService } from 'src/app/services/auth.service';
+import { UserService } from 'src/app/services/user.service';
 @Component({
   selector: 'app-lab-list',
   templateUrl: './lab-list.component.html',
@@ -9,7 +11,28 @@ export class LabListComponent implements OnInit {
   @ViewChild(IonSegment) segment: IonSegment;
   homepick=true;
   centerpick=false;
-  constructor(private navCtrl: NavController) { 
+  test_type:any;
+location:any;
+lab:any;
+  constructor(private navCtrl: NavController,
+    public auth: AuthService,
+    public user:UserService,
+    private alertController: AlertController) { 
+      this.labdataget();
+    this.test_type="test Type";
+    this.location="location";
+    this.lab="specialist";
+  }
+  labRes;
+  labDataAll;
+  labdataget(){
+    this.user.present('');
+    this.auth.getLablistApi().subscribe((lab_data)=>{
+      this.user.dismiss();
+      console.log(lab_data)
+    },err=>{
+  this.user.dismiss();
+    })
   }
   categorias = [
     {
@@ -42,7 +65,136 @@ name:'Home Pickup',
   book(data){
     console.log(data)
   }
+  async selectTestType(){
+    const alert = await this.alertController.create({
+      header: 'Test Type',
+ 
+      inputs: [
+        {
+          label: 'test A',
+          type: 'radio',
+          value: 'text_a',
+        },
+        {
+          label: 'test B',
+          type: 'radio',
+          value: 'test_b',
+        },
+        {
+          label: 'test C',
+          type: 'radio',
+          value: 'test_c',
+        },
+        {
+          label: 'Test D',
+          type: 'radio',
+          value: 'test_d',
+        },
+        {
+          label: 'test E',
+          type: 'radio',
+          value: 'test_e',
+        },
+      ],
+      buttons: [
+     {
+      text:'ok',
+      role: 'confirm',
+     handler:(alert)=>{
+      this.test_type=alert;
+     console.log(alert)
+     },
+     }
+      ],
+    });
 
+    await alert.present();
+  }
+ async selectLocation(){
+  const alert = await this.alertController.create({
+    header: 'Select Location',
+
+    inputs: [
+      {
+        label: 'Noida',
+        type: 'radio',
+        value: 'noida',
+      },
+      {
+        label: 'Delhi',
+        type: 'radio',
+        value: 'Delhi',
+      },
+      {
+        label: 'Gr Noida',
+        type: 'radio',
+        value: 'gr noida',
+      },
+      {
+        label: 'Allahabad',
+        type: 'radio',
+        value: 'allahabad',
+      },
+      {
+        label: 'Naini',
+        type: 'radio',
+        value: 'Naini',
+      },
+    ],
+    buttons: [
+   {
+    text:'ok',
+    role: 'confirm',
+   handler:(alert)=>{
+    this.location=alert;
+   console.log(alert)
+   },
+   }
+    ],
+  });
+
+  await alert.present();
+ }
+async selectLab(){
+  const alert = await this.alertController.create({
+    header: 'Select Lab',
+
+    inputs: [
+      {
+        label: 'Lab A',
+        type: 'radio',
+        value: 'lab_a',
+      },
+      {
+        label: 'Lab B',
+        type: 'radio',
+        value: 'lab_b',
+      },
+      {
+        label: 'Lab C',
+        type: 'radio',
+        value: 'lab_c',
+      },
+      {
+        label: 'lab_d',
+        type: 'radio',
+        value: 'lab_d',
+      },
+    ],
+    buttons: [
+   {
+    text:'ok',
+    role: 'confirm',
+   handler:(alert)=>{
+    this.lab=alert;
+   console.log(alert)
+   },
+   }
+    ],
+  });
+
+  await alert.present();
+ }
   home(){
     this.navCtrl.navigateRoot('/mainpage')
   }

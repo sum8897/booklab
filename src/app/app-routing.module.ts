@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { BookingLabComponent } from './pages/booking-lab/booking-lab.component';
+import { BookingWhenComponent } from './pages/booking-when/booking-when.component';
+import { BookingWhoomComponent } from './pages/booking-whoom/booking-whoom.component';
 import { ContactusComponent } from './pages/contactus/contactus.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DoctorslistComponent } from './pages/doctorslist/doctorslist.component';
@@ -49,6 +52,18 @@ const routes: Routes = [
   {
     path:'lablist',
     component: LabListComponent
+  },
+  {
+    path: 'booking-lab',
+    component: BookingLabComponent
+  },
+  {
+    path: 'booking-when',
+    component: BookingWhenComponent
+  },
+  {
+    path: 'booking-whoom',
+    component: BookingWhoomComponent
   },
 ];
 

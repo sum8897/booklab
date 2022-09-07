@@ -24,102 +24,338 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
-ion-toolbar{
+
+ion-toolbar {
   background: white;
 }
-ion-tab-bar{
+
+ion-tab-bar {
   --background: white;
 }
 
-@font-face {   
-  font-family: 'RobotoCondensed';  //This is what we are going to call  
-  src: url('../src/assets/fonts/RobotoCondensed/RobotoCondensedRegular.ttf');
-}
-@font-face {   
-  font-family: 'RobotoLight';  
-  src: url('../src/assets/fonts/RobotoCondensed/RobotoCondensed-Light.ttf');
-}
-@font-face {   
-  font-family: 'RobotoLightItalic';  
-  src: url('../src/assets/fonts/RobotoCondensed/RobotoCondensed-LightItalic.ttf');
-}
-@font-face {   
-  font-family: 'RobotoBold';   
-  src: url('../src/assets/fonts/RobotoCondensed/RobotoCondensed-Bold.ttf');
-}
-@font-face {   
-  font-family: 'RobotoBoldItalic';   
-  src: url('../src/assets/fonts/RobotoCondensed/RobotoCondensed-BoldItalic.ttf');
+@font-face {
+  font-family: 'RobotoCondensed'; //This is what we are going to call  
+  src        : url('../src/assets/fonts/RobotoCondensed/RobotoCondensedRegular.ttf');
 }
 
-@font-face {   
-  font-family: 'EczarBold';  
-  src: url('../src/assets/fonts/Eczar/EczarBold.ttf');
+@font-face {
+  font-family: 'RobotoLight';
+  src        : url('../src/assets/fonts/RobotoCondensed/RobotoCondensed-Light.ttf');
 }
-@font-face {   
+
+@font-face {
+  font-family: 'RobotoLightItalic';
+  src        : url('../src/assets/fonts/RobotoCondensed/RobotoCondensed-LightItalic.ttf');
+}
+
+@font-face {
+  font-family: 'RobotoBold';
+  src        : url('../src/assets/fonts/RobotoCondensed/RobotoCondensed-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'RobotoBoldItalic';
+  src        : url('../src/assets/fonts/RobotoCondensed/RobotoCondensed-BoldItalic.ttf');
+}
+
+@font-face {
+  font-family: 'EczarBold';
+  src        : url('../src/assets/fonts/Eczar/EczarBold.ttf');
+}
+
+@font-face {
   font-family: 'EczarExtraBold';
-  src: url('../src/assets/fonts/Eczar/EczarExtraBold.ttf');
+  src        : url('../src/assets/fonts/Eczar/EczarExtraBold.ttf');
 }
-@font-face {   
+
+@font-face {
   font-family: 'EczarMedium';
-  src: url('../src/assets/fonts/Eczar/EczarMedium.ttf');
+  src        : url('../src/assets/fonts/Eczar/EczarMedium.ttf');
 }
-@font-face {   
+
+@font-face {
   font-family: 'EczarRegular';
-  src: url('../src/assets/fonts/Eczar/EczarRegular.ttf');
+  src        : url('../src/assets/fonts/Eczar/EczarRegular.ttf');
 }
-@font-face {   
+
+@font-face {
   font-family: 'EczarSemiBold';
-  src: url('../src/assets/fonts/Eczar/EczarSemiBold.ttf');
+  src        : url('../src/assets/fonts/Eczar/EczarSemiBold.ttf');
 }
 
 
-  .swiper-pagination {
-    position: relative;
-    padding-top: 1px;
+.swiper-pagination {
+  position   : relative;
+  padding-top: 1px;
 }
+
 .swiper-pagination-bullet {
   background: #21cdc0;
-  opacity: 0.8;
+  opacity   : 0.8;
 }
+
 .swiper-pagination-bullet-active {
-  opacity: 1;
+  opacity   : 1;
   background: #0e223e;
 }
-.slider-pager-page
-{
-  color: #21cdc0;
-  fill: #21cdc0;
-  stroke: #21cdc0;
+
+.slider-pager-page {
+  color           : #21cdc0;
+  fill            : #21cdc0;
+  stroke          : #21cdc0;
   background-color: #21cdc0;
 }
-.slider-pager-page.active
-{
-  fill: #0e223e;
-  stroke: #0e223e;
-  color: #0e223e;
+
+.slider-pager-page.active {
+  fill            : #0e223e;
+  stroke          : #0e223e;
+  color           : #0e223e;
   background-color: #0e223e;
 }
 
-ion-menu-button{
-  color: #21cdc0;
+ion-menu-button {
+  color    : #21cdc0;
   font-size: 32px;
 }
-ion-toolbar{
+
+ion-toolbar {
   --background: #0e223e;
 
 }
-.headerimg{
-  width: 145px;
+
+.headerimg {
+  width : 145px;
   margin: 5px 0;
 }
-.footrImg{
+
+.footrImg {
   width: 30px;
 }
-ion-tab-button{
+
+ion-tab-button {
   height: 55px;
- 
+
 }
+
 .swiper-container-horizontal>.swiper-pagination-bullets {
   bottom: 0;
+}
+
+.chef-segment {
+  margin                : 0 10px;
+  // .segment-button-checked{
+  //   background: white;
+  //   --indicator-color: none;
+  //   color: #0e223e;
+  //   letter-spacing: 0px;
+  // }
+}
+
+// .register-segment{
+//   background: #c9c9c9;
+//   color: #0e223e;
+//   ion-segment-button{
+//   border: 1px solid #aba8a8;
+//   font-size: 10px;
+//   }
+// }
+.lab-about-card {
+  padding-bottom: 10px;
+  margin-top    : 30px;
+
+  .lab-div-about {
+    padding-left: 20px;
+    font-size   : 10px;
+
+    h4 {
+      font-weight: 600;
+      font-family: RobotoCondensed !important;
+      font-size  : 10px;
+    }
+
+    span {
+      // font-family: RobotoCondensed !important;
+    }
+  }
+}
+
+.segment-text {
+  display: inline-flex;
+
+  img {
+    width: 20px;
+  }
+
+  span {
+    margin-top  : 3px;
+    padding-left: 7px;
+    font-family : RobotoCondensed !important;
+    font-size   : 12px;
+  }
+}
+
+.top-right {
+  position     : absolute;
+  top          : 15px;
+  right        : 16px;
+  background   : #3fc6b8;
+  border-radius: 7px;
+  padding      : 5px 6px;
+  font-family  : RobotoCondensed !important;
+
+  span {
+    padding    : 0 5px;
+    font-size  : 10px;
+    font-family: RobotoCondensed !important;
+  }
+}
+
+.top-right2 {
+  position   : absolute;
+  top        : 50px;
+  right      : 16px;
+  font-family: RobotoCondensed !important;
+
+  .booking-star {
+    position: relative;
+    width   : 12px;
+  }
+}
+
+.lab-booking-card-name {
+  .first-col-lab {
+    background               : white;
+    margin-left              : -2px;
+    border-bottom-left-radius: 21px;
+    border-top-left-radius   : 21px;
+
+  }
+
+  .second-col-lab {
+    margin                    : 0 -2px;
+    background                : white;
+    border-bottom-right-radius: 21px;
+    border-top-right-radius   : 21px;
+    img{
+      box-shadow: none;
+      height: 80px;
+      width: 85px;
+      border: 1px solid #f2f2f2;
+      margin: 5px 6px 0 0;
+    }
+  }
+}
+
+.lab-Booking-main-div {
+  margin: 0;
+
+  .lab-booking-card-image {
+    margin-top: -4px;
+    box-shadow: none;
+    position  : relative;
+    text-align: center;
+
+    img {
+      box-shadow: none;
+    }
+
+    .top-right {
+      position     : absolute;
+      top          : 15px;
+      right        : 16px;
+      background   : #3fc6b8;
+      border-radius: 7px;
+      padding      : 5px 6px;
+
+      span {
+        padding: 0 5px;
+        font-size: 13px;
+      }
+    }
+
+    .top-right2 {
+      position: absolute;
+      top     : 50px;
+      right   : 16px;
+
+      ion-icon {
+        color: red;
+      }
+    }
+
+    .lab-booking-card-name {
+      margin-top  : -50px;
+      margin-left : 10px;
+      margin-right: 9px;
+
+      .lab-name-price {
+        width        : 100%;
+        text-align   : left;
+        margin-top   : -10px;
+        padding-left : 10px;
+        margin-bottom: 35px;
+
+        h3 {
+          font-weight: 500;
+          font-family: RobotoCondensed !important;
+          color: #0e223e;
+          font-size: 3.6vh;
+        }
+
+        h6 {
+          font-size     : 10px;
+          margin-top    : -5px;
+          // font-family: RobotoCondensed !important;  
+          color         : #6a6a6a;
+        }
+
+        p {
+          margin-top : -5px;
+          font-family: RobotoCondensed !important;
+          color      : black;
+          opacity    : 9;
+          font-size  : 12px;
+        }
+
+      }
+
+    }
+
+    .lab-fees-testing {
+      display    : inline-flex;
+      text-align : left;
+      margin-top : -30px;
+      position   : absolute;
+      margin-left: -45%;
+
+      .lab {
+        background   : #c9c9c9;
+        border-radius: 7px;
+        margin       : 0 5px;
+        text-align   : center;
+        font-family  : RobotoCondensed !important;
+        .lab-icon-text {
+          padding: 5px 15px 0 15px;
+          .sapn-title {
+            font-size: 15px;
+          }
+          .span-title-text {
+            font-size: 10px;
+            color    : #535353;
+          }
+        }
+
+        img {
+          width: 12px;
+        }
+        .span-title-text {
+          font-size: 10px;
+          color    : #535353;
+        }
+        // span {
+        //   font-size: 10px;
+        // }
+      }
+    }
+  }
 }

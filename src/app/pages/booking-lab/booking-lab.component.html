@@ -1,0 +1,123 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img class="headerimg" style="margin: 5px 0;" src="../../../assets/img/login/logo1.png">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content style="--background: #c9c9c9;">
+  <div class="lab-Booking-main-div">
+<div class="lab-booking-card-image">
+  <img src="../../../assets/homepage/number_bg.png">
+  <div class="top-right">
+    <span>4.5</span><img style="position: relative;width:10px;" src="../../../assets/booking _icons/star.png">
+  </div>
+  <div class="top-right2"><img class="booking-star" style="position: relative;width:17px;" src="../../../assets/booking _icons/fav_unselected.png"></div>
+<div class="lab-booking-card-name">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="8" class="first-col-lab">
+      <div class="lab-name-price">
+      <h4 class="lab-name" style="font-size: 16px;">Thyrocare Lab</h4>
+      <h6>B-677, New Ashok nagar,Noida,Uttar Pradesh110096 </h6>
+      </div>
+     
+      </ion-col>
+      <ion-col size="4" class="second-col-lab">
+        <img src="../../../assets/booking _icons/lab-imge.png">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+<div class="lab-fees-testing">
+  <div class="lab lab-fee">
+    <div class="lab-icon-text">
+    <img src="../.././../assets/booking _icons/rs_icon.png">
+    <span class="sapn-title">{{fees}}</span>
+  </div>
+  <span class="span-title-text">FEES</span>
+  </div>
+  <div class="lab lab-fee">
+    <div class="lab-icon-text">
+    <img src="../.././../assets/booking _icons/rs_icon.png"><span class="sapn-title">7</span>
+  </div>
+  <span class="span-title-text">EXPERIANCE</span>
+  </div>
+  <div class="lab lab-fee">
+    <div class="lab-icon-text">
+    <img src="../.././../assets/booking _icons/rs_icon.png"><span class="sapn-title">600</span>
+  </div>
+  <span class="span-title-text">PATIENTS</span>
+  </div>
+</div>
+</div>
+  </div>
+  <ion-card class="lab-about-card" style="background: white;">
+   <div class="lab-div-about">
+    <div class="about">About</div>
+    <div class="about-details">Thyrocarte is India's first fully automated diagnostic laboratory with a focus on
+      providing quality at affordable costs to laboratories and hospitals in India and
+      other countries.
+    </div>
+   </div>
+    <ul class="ul-list">
+      <li>Centralized Laboratory Processing 60,000 Sample daily</li>
+      <li>State of the art diagnostic infrastructure for accuracy and precision </li>
+      <li>ISO 9001:2008 and Cap Cetrified</li>
+    </ul>
+    </ion-card>
+    <ion-card class="lab-booking-testing" style="background: white;">
+      <ion-card style="background: white;margin: 7px;
+      border: 1px solid #bfbaba;">
+
+    
+      <img src="../../../assets/booking _icons/bg.jpg" style="width: 100%;position: absolute;">
+      <ion-list>
+        <ion-item lines="none">
+          <ion-avatar slot="start">
+            <img src="../../../assets/icon/dr1.png">
+          </ion-avatar>
+          <ion-label class="testing-details">
+            <h2 class="test-name">Liver Function Test</h2>
+            <p class="test-count">Tests Included(11)</p>
+          </ion-label>
+          <ion-button slot="end" expand="small" class="lab-test-price"><img style="width: 10px;" src="../../../assets/booking _icons/rs_icon.png">600 </ion-button>
+        </ion-item>
+      </ion-list>
+      <ul class="test-list-data" style="position: relative;">
+        <li>Autommune hepaties</li>
+        <li>Haemochromatosis</li>
+        <li>Hepatitis A</li>
+        <li>Hepatitis B</li>
+        <li>Hepatitis C</li>
+        <li>Fatty liver disease</li>
+        <li>Primary Libiary cholangitis (PBC)</li>
+        <li>Primary sclerosing cholangitis</li>
+      </ul>
+    </ion-card>
+    </ion-card>
+  
+    <div class="chef-segment">
+      <ion-segment value="whom" class="register-segment" [(ngModel)]="type" (ionChange)="segmentChanged($event)"> 
+        <ion-segment-button value="whom" class="whom">
+          <div class="segment-text"> <img src="../../../assets/booking _icons/for-whom.png"><span>FOR WHOM</span></div>
+        </ion-segment-button>
+        <ion-segment-button value="when" class="when">
+          <div class="segment-text"> <img src="../../../assets/booking _icons/when.png"><span>WHEN</span></div>
+        </ion-segment-button>
+        <ion-segment-button value="where" class="where">
+          <div class="segment-text"> <img src="../../../assets/booking _icons/where.png"><span>WHERE</span></div>
+        </ion-segment-button>
+      </ion-segment>
+     </div>
+
+</ion-content>
+<ion-footer collapse="fade">
+  <ion-toolbar>
+    <ion-title style="text-align: center;color: white;">Book Now</ion-title>
+  </ion-toolbar>
+</ion-footer>
+

@@ -2,6 +2,7 @@
   --background: #ededed;
   margin-top: 0;
   box-shadow: none;
+  border-radius: 0;
 }
 
 .searchList {
@@ -9,6 +10,9 @@
 
   .searchItem {
     --background: #21cdc0;
+  }
+  input{
+    padding-left: 10px;
   }
 }
 
@@ -23,20 +27,20 @@
   --background: #ededed;
 
   ion-input {
-    // font-size: 18px;
-    --padding-start: 6%;
+    --padding-start: 2%;
     --background: white;
-    border-radius: 50px;
-    height: 48px;
+    border-radius: 21px;
+    height: 35px;
     color: #0e223e !important;
-    box-shadow: inset 2px 2px 3px #7e7878;
+    box-shadow: inset 1px 2px 2px #a1a1a1;
     z-index: 9999999;
     opacity: 1;
+    font-size: 13px;
   }
 
   .searchIcon {
     margin-left: 5%;
-    font-size: 24px;
+    font-size: 15px;
   }
 }
 
@@ -53,7 +57,7 @@
   z-index: 9999999;
   opacity: 1;
   background: white;
-  padding: 8px;
+  padding: 5px 8px;
   display: inline-flex;
 
   .insidediv {
@@ -65,9 +69,10 @@
     }
 
     .insidesecondcol {
-      font-size: 9px;
-      // margin-top: 2px;
+      font-size: 8px;
       font-family: RobotoLight;
+      margin-top: 2px;
+      padding-left: 7px;
     }
 
     .insidelastcol {
@@ -82,6 +87,7 @@
   --background: #ededed;
   box-shadow: none;
   background: #ededed;
+  border-radius: 0;
   .row {
     margin: 5px 0;
   }
@@ -93,11 +99,11 @@ ion-tab-bar{
   background: #0e223e;
   color: white;
   text-align: center;
-  padding-bottom: 7px;
+  padding-bottom: 12px;
   border-radius: 0;
   margin: 0;
-  box-shadow: 1px 1px 1px 1px #9fa4ab;
-  border: 1px solid #f3eeee;
+  box-shadow: 1px 1px 1px 1px #a1a1a1;
+  // border: 1px solid #f3eeee;
 
   span {
     font-size: 10px;
@@ -146,10 +152,18 @@ ion-tab-bar{
     font-weight: 500;
   }
 
-  .doctordetails {
-    // margin-top: 15px;
+  .doctor-parent-div {
+    position: relative;
+    height: 100%;
   }
-
+  .price-doctor-div{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .doctordetails{
+    display: inline-grid;
+  }
   .icon-detail {
     display: inline-flex;
     margin-left: 5px;
@@ -202,6 +216,7 @@ ion-tab-bar{
     font-size: 13px;
     font-family: RobotoCondensed !important;
     padding-left: 3px;
+    padding-top: 3px;
   }
 
   .price-per {
@@ -247,17 +262,23 @@ ion-tab-bar{
   --background: white;
   font-family: RobotoCondensed !important;
   color: #0e223e;
-  --border-color: #0e223e;
+  // --border-color: #0e223e;
   height: 30px;
   font-size: 12px;
   opacity: 1;
   letter-spacing: -0.2px;
+  --border-radius: 21px;
+
+}
+ion-button{
+  border: 1px solid #0e223e;
+  border-radius: 21px;
 }
 
 .consultbtn {
   width: 100%;
   font-family: RobotoCondensed !important;
-  margin: 0 5px;
+  margin: 0 6px;
   text-transform: capitalize;
   margin-top: 4px;
   --background: #0e223e;

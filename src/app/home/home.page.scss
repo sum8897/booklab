@@ -6,7 +6,6 @@ ion-content {
 }
 
 .tool {
-  --background: #060b46;
   text-align: center;
 }
 
@@ -37,9 +36,14 @@ ion-button {
 .footrImg {
   width: 30px;
 }
-@media (min-width: 320px) and (max-width: 389px) {
+@media (min-width: 320px) and (max-width: 350px) {
   .action-button {
-    margin-top: 205px;
+    margin-top: 175px;
+  }
+}
+@media (min-width: 351px) and (max-width: 389px) {
+  .action-button {
+    margin-top: 190px;
   }
 }
 @media (min-width: 390px) and (max-width: 420px) {

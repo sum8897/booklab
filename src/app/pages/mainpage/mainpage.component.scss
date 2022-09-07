@@ -25,6 +25,7 @@ ion-content {
 }
 
 .border {
+
   border-bottom: 4px solid white;
   border-right: 4px solid white;
   border-left: 4px solid white;
@@ -33,7 +34,10 @@ ion-content {
     height: 97px;
   }
 }
-
+.padding{
+  padding-left: 5.9%;
+  padding-right: 5.9%;
+}
 .appoint11 {
   box-shadow: none;
   background: white;
@@ -49,8 +53,10 @@ ion-content {
 
 .appointmentImg {
   margin: -7%;
-
-  box-shadow: 1px 1px 1px #828d9c;
+  img{
+    box-shadow: none;
+  }
+ // box-shadow: 1px 1px 1px #828d9c;
 }
 
 ion-card {
@@ -68,6 +74,7 @@ ion-card {
 }
 
 .gridlist1 {
+  padding: 0;
   background: #0e223e;
   color: white;
 }
@@ -110,15 +117,15 @@ ion-item {
   margin: 8px 0;
 
   ion-input {
-    // font-size: 18px;
-    --padding-start: 6%;
+    --padding-start: 2%;
     --background: white;
-    border-radius: 50px;
-    height: 48px;
+    border-radius: 21px;
+    height: 35px;
     color: #0e223e !important;
     box-shadow: inset 3px 3px 5px #0e223e;
     z-index: 9999999;
     opacity: 1;
+    font-size: 13px;
   }
 
   .searchIcon {
@@ -132,6 +139,9 @@ ion-item {
 
   .searchItem {
     --background: #21cdc0;
+    .search-specialization{
+      --padding-start: 20px;
+    }
   }
 }
 
@@ -152,8 +162,8 @@ ion-item {
   background: #0e223e;
   color: white;
   border-radius: 50px;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 23px;
   --border-radius: 50%;
 }
 
@@ -202,7 +212,7 @@ small {
 .popupicon {
   position: absolute;
   z-index: 99;
-  bottom: 25%;
+  bottom: 12%;
   opacity: 999;
   /* margin-bottom: 33%; */
   width: 100%;
@@ -213,21 +223,24 @@ small {
     min-width: 93px;
   }
 }
+
 @media screen and (min-width: 400px) {
   .popupicon {
     bottom: 22%;
   }
 }
+
 .health1div {
   width: 100%;
   background: #21cdc0;
   color: #0e223e;
   margin-top: -12%;
-  text-align: center;
-  padding-left: 12px;
-  h6{
-    padding: 15% 0 10% 0;
+  text-align: left;
+  h6 {
     font-weight: 600;
+    margin-left: 12px;
+    padding-top: 25px;
+    padding-bottom: 7px;
   }
 }
 
@@ -264,7 +277,7 @@ small {
 .include {
   margin: 0;
   text-align: left;
-  padding-left: 15px;
+  padding-left: 12px;
   font-family: RobotoBold !important;
   color: #0e223e;
   font-size: 18px;
@@ -292,6 +305,7 @@ small {
   text-transform: capitalize;
   font-size: 10px;
   padding-right: 7px;
+  height: 25px;
 }
 
 .includeP {
@@ -327,9 +341,9 @@ small {
 
 .numbertext {
   margin-top: -67%;
-  color: black;
+  color: #0e223e;
   opacity: 99999;
-  font-weight: 600;
+  font-weight: 900;
   z-index: 1;
 }
 
@@ -374,7 +388,6 @@ small {
 .specialDetails {
   font-size: 8px;
   text-align: center;
-  margin: 0 5px;
   font-family: RobotoBold !important;
   color: black;
 }
@@ -407,11 +420,13 @@ small {
 ion-title {
   margin-left: -7%;
 }
-.counter-all-card{
+
+.counter-all-card {
   background: white;
   --background: white;
   box-shadow: none;
 }
+
 .digitalPharmacy {
   margin: 0;
   background: white;
@@ -439,7 +454,7 @@ ion-title {
       ion-button {
         font-size: 10px;
         font-family: RobotoCondensed !important;
-   
+
         --background: #0e223e;
         --border-radius: 21px;
         text-transform: capitalize;
@@ -593,6 +608,7 @@ ion-input {
   background: white;
   margin: 10px 3%;
   box-shadow: none;
+
   h2 {
     color: #0e223e;
     padding: 5px 0;
@@ -609,6 +625,7 @@ ion-input {
   background: white;
   margin: -10px 4% 3% 4%;
   box-shadow: none;
+
   h2 {
     color: #0e223e;
     padding: 3px 0;
@@ -711,6 +728,7 @@ ion-input {
   margin-bottom: 17px;
   background: white;
   border-radius: 0px;
+
   .orderImg {
     border-radius: 0px;
     text-align: left;

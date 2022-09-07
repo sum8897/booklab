@@ -1,0 +1,112 @@
+
+.lab-about-card{
+    padding-bottom: 10px;
+    .lab-div-about{
+        padding-left: 20px;
+        h6{
+            margin-bottom: 5px;
+            font-size: 11px;
+            color: #0e223e;
+            font-weight: 600;
+        }
+        span{
+            // font-family: RobotoCondensed !important;
+        }
+    }
+
+}
+.lab-booking-testing{
+    background-image: url('../../../assets/homepage/Ultrasound.png');
+    background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  opacity: 9999;
+  ion-list{
+      background: none;
+  }
+  ion-item{
+      --background: none;
+  }
+  .lab-test-price{
+    --background: #169187;
+    color: white;
+    opacity: 999;
+  }
+}
+.booking-whom-both-button{
+    display: inline-flex;
+    width: 100%;
+    margin: 0 10px;
+    .send-button{
+        width: 50%;
+        font-size: 12px;
+        --background: #21cdc0;
+        color: #0e223e;
+        box-shadow: none;
+    }
+    .booking-button{
+        width: 50%;
+        font-size: 12px;
+        margin-right: 20px;
+        --background: #0e223e;
+        color: white;
+        box-shadow: none;
+    }
+}
+.lab-booking-card-form{
+    padding-bottom: 10px;
+    .form-input{
+    background: #c9c9c9;
+    border-radius: 21px;
+    margin: 0 10px;
+    opacity: 999;
+    color: #0e223e;
+    box-shadow: inset 1px 1px 2px #848990;
+    }
+    .form-name-mobile-div{
+    display: inline-flex;
+    width: 100%;
+    }
+}
+.chef-segment {
+    margin: 0;
+}
+.paragraph-detail{
+    padding-left: 20px;
+    font-size: 11px;
+    color: #0e223e;
+    font-weight: 600;
+}
+.email-div{
+    margin: 10px 20px 10px 0;
+}
+.select-gender{
+    --background: #21cdc0;
+    border-radius: 21px;
+    font-size: 10px;
+    margin-right: 10px;
+}
+.register-segment{
+    background: #edefee;
+    color: #0e223e;
+    .when{
+    border: 1px solid #e3e3e3;
+    font-size: 10px;
+    color: #0e223e;
+    letter-spacing: 0px;
+    }
+    .whom{
+      background: white;
+      --indicator-color: none;
+      color: #0e223e;
+      letter-spacing: 0px;
+      border-bottom: 1px solid #e3e3e3;
+    }
+    .where{
+      border: 1px solid #e3e3e3;
+      font-size: 10px;
+      color: #0e223e;
+    letter-spacing: 0px;
+    }
+  }
