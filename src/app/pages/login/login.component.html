@@ -8,18 +8,27 @@
       <img src="../../../assets/img/login/signup_newbg.png">
      </div> -->
     <div class="healthlefttext">
+      <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
       <div class="form-input" id="form">
         <ion-item lines="none">
-          <ion-input type="mail" placeholder="Email Address"></ion-input>
+          <ion-input type="mail" name="email" #email="ngModel" required placeholder="Email Id" ngModel></ion-input>
         </ion-item>
+        <span class="text-danger"
+        *ngIf="(email.touched || contactForm.submitted) && email.errors?.required">
+        Email is required *
+    </span>
       </div>
       <div class="form-input">
         <ion-item lines="none">
-          <ion-input type='text' placeholder="Password" (keypress)="keyPressNumbers($event)"> </ion-input>
-          <!-- <ion-icon [name]="eyename"  slot="end" (click)="passToggle()" class="eyeIcon"></ion-icon> -->
+          <ion-input type='text' #password="ngModel" required placeholder="Password" ngModel > </ion-input>
+          <!-- <ion-icon [name]="eyename"  slot="end" (click)="passToggle()" class="eyeIcon" (keypress)="keyPressNumbers($event)"></ion-icon> -->
         </ion-item>
+        <span class="text-danger"
+        *ngIf="(password.touched || contactForm.submitted) && password.errors?.required">
+        Password is required *
+    </span>
         <p class="forgetText1">Forgot Password</p>
-        <ion-button size="large" class="login-button" (click)="submit()">Login</ion-button>
+        <ion-button size="large" class="login-button" type="submit">Login</ion-button>
       </div>
       <div>
         <ion-row class="roww">
@@ -37,7 +46,7 @@
         <div>
           <ion-row style="margin: -9px 4%;">
             <ion-col>
-              <ion-button class="google" (click)="submit()">
+              <ion-button class="google">
                 <ion-icon name="logo-google"></ion-icon>&nbsp;&nbsp;Login
               </ion-button>
             </ion-col>
@@ -49,6 +58,7 @@
           </ion-row>
         </div>
       </div>
+      </form>
     </div>
   </div>
 </ion-content>

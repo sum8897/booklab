@@ -219,14 +219,14 @@ address: string;
   labs(){
     this.navCtrl.navigateRoot('/lablist')
   }
-  doctorListRes;
+  doctorListRes:any;
   doctorListData:any;
   doctorList(){
     this.user.present('');
     this.auth.getDoctorlistApi().subscribe((data)=>{
+      this.user.dismiss();
       this.doctorListRes=data;
       this.doctorListData=this.doctorListRes.data;
-      this.user.dismiss();
       console.log(this.doctorListData)
     },err=>{
       this.user.dismiss();

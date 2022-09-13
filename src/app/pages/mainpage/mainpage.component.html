@@ -231,7 +231,7 @@
     </ion-card>
     <div style="margin: 0 9px;">
       <ion-slides #slides pager="true" [options]="slideOpts4">
-        <ion-slide *ngFor="let r of appointment">
+        <ion-slide *ngFor="let r of healthData">
           <!-- <ion-card class="orderCard"> -->
           <ion-grid>
             <ion-row style="margin-right: 0px;">
@@ -243,8 +243,8 @@
                   <div class="pricediv">
                     <ion-row>
                       <ion-col>
-                        <h4>Rs850</h4>
-                        <p class="healthprice line-text">RS130</p>
+                        <h4>{{r.health_sell_price}}</h4>
+                        <p class="healthprice line-text">RS{{r.health_market_price}}</p>
                       </ion-col>
                       <ion-col class="helpcheckOff">
                         <h4>50%</h4>
@@ -260,11 +260,11 @@
                   <div>
                     <div class="include">Includes</div>
                     <ion-grid class="helpcheckGrid">
-                      <ion-row *ngFor="let x of pharmacyList" class="helpcheckRow">
+                      <ion-row  class="helpcheckRow">
                         <ion-col size="2">
                           <ion-icon name="ellipse-outline" class="round-icon"></ion-icon>
                         </ion-col>
-                        <ion-col size="10" class="includeP"><small>{{x.name}}</small></ion-col>
+                        <ion-col size="10" class="includeP"><small>asdfg</small></ion-col>
                       </ion-row>
                     </ion-grid>
                     <div class="helpButton">

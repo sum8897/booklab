@@ -80,24 +80,24 @@
     </ion-segment>
 
     <div *ngIf="homepick">
-      <ion-card *ngFor="let hp of labdata" class="list-card">
+      <ion-card *ngFor="let hp of labDataAll" class="list-card">
         <ion-grid>
           <ion-row>
             <ion-col size="5" class="doctorimgCard">
-              <img class="img" src="{{hp.img}}">
+              <img class="img" src="{{hp.lab_image}}">
             </ion-col>
             <ion-col size="7" class="detailsNameCol">
               <div class="lab-list-main">
                 <div class="name-icon">
                   <div class="name-text">
-                    <span class="lab-name">{{hp.name}}</span>
-                    <h6 class="left-2">{{hp.test}}</h6>
+                    <span class="lab-name">{{hp.lab_title}}</span>
+                    <h6 class="left-2">{{hp.lab_title}}</h6>
                   </div>
                   <!-- <ion-icon class="right" name="checkmark-circle-outline"></ion-icon> -->
-                  <ion-checkbox class="right-check" value="hp" (ionChange)="checkedValue(hp,$event)"></ion-checkbox>
+                  <ion-checkbox class="right-check"  value="hp" (ionChange)="checkedValue($event)"></ion-checkbox>
                 </div>
               </div>
-              <div class="price-cross"><img src="../../../assets/icon/rs.png"><del> {{hp.offprice}}</del></div>
+              <div class="price-cross"><img src="../../../assets/icon/rs.png"><del> {{hp.lab_sell_price}}</del></div>
             </ion-col>
           </ion-row>
           <ion-row>
@@ -113,40 +113,40 @@
                 <div class="price-off">
                   <img class="right" src="../../../assets/icon/dr_off.png" />
                   <!-- <ion-icon class="right" name="checkmark-circle-outline" slot="left"></ion-icon> -->
-                  <span class="left">{{hp.dis}}% off</span>
+                  <span class="left">{{hp.discount}}% off</span>
                 </div>
-               <div class="right-price"><img src="../../../assets/icon/rs.png">{{hp.price}}</div>
+               <div class="right-price"><img src="../../../assets/icon/rs.png">{{hp.lab_sell_price}}</div>
                 <!-- <h6 class="right-price"><img src="../../../assets/icon/rs.png"> {{hp.price}}</h6> -->
               </div>
             </ion-col>
           </ion-row>
         </ion-grid>
       </ion-card>
-      <ion-button size="large" class="book-button" (click)="book(hp)">Book now</ion-button>
+      <ion-button *ngIf="booking_button" size="large" class="book-button" (click)="book(hp)">Book now</ion-button>
     </div>
     <div *ngIf="centerpick">
-      <ion-card *ngFor="let cd of centerdata" class="list-card">
+      <ion-card *ngFor="let cd of centerAllData" class="list-card">
         <ion-grid>
           <ion-row>
             <ion-col size="5" class="doctorimgCard">
-              <img class="img" src="{{cd.img}}">
+              <img class="img" src="{{cd.lab_image}}">
             </ion-col>
             <ion-col size="7" class="detailsNameCol">
               <div class="lab-list-main">
                 <div class="name-icon">
                   <div class="name-text">
-                    <span class="lab-name">{{cd.name}}</span>
-                    <h6 class="left-2">{{cd.test}}</h6>
+                    <span class="lab-name">{{cd.lab_title}}</span>
+                    <h6 class="left-2">{{cd.lab_title}}</h6>
                   </div>
-                  <ion-checkbox class="right-check" [value]="cd" (ionChange)="checkedValue(cd,$event)"></ion-checkbox>
+                  <ion-checkbox class="right-check" [value]="cd" (ionChange)="checkedValue($event)"></ion-checkbox>
                 </div>
               </div>
-              <div class="price-cross"><del><img src="../../../assets/icon/rs.png"> {{cd.offprice}}</del></div>
+              <div class="price-cross"><del><img src="../../../assets/icon/rs.png"> {{cd.lab_sell_price}}</del></div>
             </ion-col>
           </ion-row>
           <ion-row>
             <ion-col size="5">
-              <ion-button shape="round" fill="outline" class="viewbtn">
+              <ion-button shape="round" fill="outline" class="viewbtn" >
                 <ion-icon slot="end" name="chevron-down-outline"></ion-icon>View More Profile
               </ion-button>
             </ion-col>
@@ -154,15 +154,15 @@
               <div class="name-text name-icon">
                 <div class="price-off">
                   <img class="right" src="../../../assets/icon/dr_off.png" />
-                  <span class="left">{{cd.dis}}% off</span>
+                  <span class="left">{{cd.discount}}% off</span>
                 </div>
-                <h6 class="right-price"><img src="../../../assets/icon/rs.png"> {{cd.price}}</h6>
+                <h6 class="right-price"><img src="../../../assets/icon/rs.png"> {{cd.lab_sell_price}}</h6>
               </div>
             </ion-col>
           </ion-row>
         </ion-grid>
       </ion-card>
-      <ion-button size="large" class="book-button" (click)="book(cd)">Book now</ion-button>
+      <ion-button *ngIf="booking_button" size="large" class="book-button" (click)="book(cd)">Book now</ion-button>
     </div>
   </ion-card>
 </ion-content>

@@ -4,36 +4,53 @@
     <img class="img" src="../../../assets/img/login/signup_graphic_xhdpi.png">
   </div>
   <div class="login-form ion-padding" id="loginForm" style="padding-left: 0;background: white;">
+
     <div class="healthlefttext">
-      <div class="form-input" id="form">
-        <ion-item lines="none">
-          <ion-input type="text" placeholder="Name"></ion-input>
-        </ion-item>
-      </div>
-      <div class="form-input" id="form">
-        <ion-item lines="none">
-          <ion-input type="mail" placeholder="Email Id"></ion-input>
-        </ion-item>
-      </div>
-      <div class="form-input" id="form">
-        <ion-item lines="none">
-          <ion-input type="call" placeholder="Phone No"></ion-input>
-        </ion-item>
-      </div>
-      <div class="form-input" id="form">
-        <ion-item lines="none">
-          <ion-input type='text' placeholder="Password" #password> </ion-input>
-          <!-- <ion-icon [name]="eyename"  slot="end" (click)="passToggle()" class="eyeIcon"></ion-icon> -->
-        </ion-item>
-      </div>
-      <div>
-        <ion-row class="roww">
-          <ion-button size="large" class="ion-button" (click)="submit()">Register</ion-button>
-          <ion-col class="signupbtn" (click)="logIn()">
-            <p>Already Registered?<b> LOGIN</b></p>
-          </ion-col>
-        </ion-row>
-      </div>
+      <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+        <div class="form-input" id="form">
+          <ion-item lines="none">
+            <ion-input type="text" name="name" #name="ngModel" required placeholder="Name" ngModel></ion-input>
+
+          </ion-item>
+          <span class="text-danger" *ngIf="(name.touched || contactForm.submitted) && name.errors?.required">
+            Name is required *
+          </span>
+        </div>
+        <div class="form-input" id="form">
+          <ion-item lines="none">
+            <ion-input type="mail" name="email" #email="ngModel" required placeholder="Email Id" ngModel></ion-input>
+          </ion-item>
+          <span class="text-danger" *ngIf="(email.touched || contactForm.submitted) && email.errors?.required">
+            Email is required *
+          </span>
+        </div>
+        <div class="form-input" id="form">
+          <ion-item lines="none">
+            <ion-input type="call" name="phone" #phone="ngModel" required placeholder="Phone No" ngModel></ion-input>
+          </ion-item>
+          <span class="text-danger" *ngIf="(phone.touched || contactForm.submitted) && phone.errors?.required">
+            Phone is required *
+          </span>
+        </div>
+        <div class="form-input" id="form">
+          <ion-item lines="none">
+            <ion-input type='text' name="password" #password="ngModel" required placeholder="Password" ngModel>
+            </ion-input>
+            <!-- <ion-icon [name]="eyename"  slot="end" (click)="passToggle()" class="eyeIcon"></ion-icon> -->
+          </ion-item>
+          <span class="text-danger" *ngIf="(password.touched || contactForm.submitted) && password.errors?.required">
+            Password is required *
+          </span>
+        </div>
+        <div>
+          <ion-row class="roww">
+            <ion-button size="large" class="ion-button" type="submit">Register</ion-button>
+            <ion-col class="signupbtn" (click)="logIn()">
+              <p>Already Registered?<b> LOGIN</b></p>
+            </ion-col>
+          </ion-row>
+        </div>
+      </form>
     </div>
   </div>
 </ion-content>

@@ -1,15 +1,21 @@
 import { Injectable } from '@angular/core';
 import { LoadingController, ToastController } from '@ionic/angular';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+  isLoading = false;
   lab_type:any;
   constructor( public toast:ToastController,
-    public loadingController: LoadingController,) { }
+    public loadingController: LoadingController,
+     ) { }
 
-  isLoading = false;
+
+
+
+ 
            
   async present( msg ) {
     this.isLoading = true;
