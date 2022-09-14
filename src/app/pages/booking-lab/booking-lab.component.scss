@@ -4,18 +4,15 @@
         padding-left: 20px;
         margin-top: 15px;
         .about{
-            font-weight: 600;
-            // font-family: RobotoCondensed !important;
-            color: #0e223e;
-    opacity: 999;
-    z-index: 11;
-    font-size: 12px;
+          font-family: RobotoBold !important;
+          margin-bottom: 5px;
+          font-size: 14px;
+          color: #0e223e;
         }
         .about-details{
-            font-weight: 600;
-            // font-family: RobotoCondensed !important;
-            color: #585858;
-            margin-top: 10px;
+          color: #0e223e;
+          font-size: 1.8vh;
+          font-weight: 500;
         }
     }
 }
@@ -47,6 +44,7 @@
       color: #636363;
     opacity: 999;
     margin: 4px 0;
+    font-size: 11px;
     }
 }
 .testing-details{
@@ -93,4 +91,7 @@ li{
     color: #0e223e;
     letter-spacing: 0px;
   }
+}
+ion-card{
+  border-radius: 0;
 }
