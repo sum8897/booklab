@@ -181,7 +181,7 @@ export class MainpageComponent implements OnInit {
   healthData: any;
   includes_data:any;
   healthCheck() {
-    this.user.present('');
+    // this.user.present('');
     this.auth.getHealthHomeListApi().subscribe((data) => {
       this.user.dismiss();
       this.healthRes = data;
