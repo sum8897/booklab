@@ -80,14 +80,14 @@ export class MainpageComponent implements OnInit {
   bannerImageres: any;
   bannerImageData: any;
   bannerImage() {
-    this.user.present('');
+    // this.user.present('');
     this.auth.getBannerImageApi().subscribe((data) => {
-      this.user.dismiss();
+      // this.user.dismiss();
       this.bannerImageres = data;
       // this.bannerImageData = this.bannerImageres.data;
       // console.log(this.bannerImageres);
     }, err => {
-      this.user.dismiss();
+      // this.user.dismiss();
       console.log(err);
     })
   }
