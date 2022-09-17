@@ -11,7 +11,7 @@
 <ion-content style="--background: #c9c9c9;">
   <div class="lab-Booking-main-div">
 <div class="lab-booking-card-image">
-  <img src="../../../assets/homepage/number_bg.png">
+  <img src="../../../assets/booking _icons/bg2.png">
   <div class="top-right">
     <span>4.5</span><img style="position: relative;width:10px;" src="../../../assets/booking _icons/star.png">
   </div>
@@ -28,7 +28,10 @@
      
       </ion-col>
       <ion-col size="4" class="second-col-lab">
-        <img src="../../../assets/icon/dr1.png">
+        <div class="doctor-lab-div">
+           <img src="../../../assets/icon/dr1.png">
+        </div>
+       
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -43,13 +46,13 @@
   </div>
   <div class="lab lab-fee">
     <div class="lab-icon-text">
-    <img src="../.././../assets/booking _icons/rs_icon.png"><span class="sapn-title">7</span>
+    <img src="../.././../assets/booking _icons/experience.png"><span class="sapn-title">7 years</span>
   </div>
   <span class="span-title-text">EXPERIANCE</span>
   </div>
   <div class="lab lab-fee">
     <div class="lab-icon-text">
-    <img src="../.././../assets/booking _icons/rs_icon.png"><span class="sapn-title">600</span>
+    <img src="../.././../assets/booking _icons/patients.png"><span class="sapn-title">2000+</span>
   </div>
   <span class="span-title-text">PATIENTS</span>
   </div>
@@ -64,7 +67,7 @@
     </div>
     <div class="lab-div-about" style="margin-bottom: 15px;">
      <h6>About</h6>
-     <span style="color: #0e223e;font-size: 1.6vh;font-weight: 500;">Dr Agrawal Clinic owned by Dr Amit Agrawal in sector 78 Noida. Dr Agrawal is senior consultant General Physician known for his expertise and skills,deals in all health ailments and emergency management. Clinic is well equipped and approachable.
+     <span style="color: #606061;font-size: 1.6vh;font-weight: 500;">Dr Agrawal Clinic owned by Dr Amit Agrawal in sector 78 Noida. Dr Agrawal is senior consultant General Physician known for his expertise and skills,deals in all health ailments and emergency management. Clinic is well equipped and approachable.
      </span>
     </div>
      </ion-card>
@@ -92,7 +95,7 @@
       <ion-input type="email" id="email" required placeholder="Email" class="form-input" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"></ion-input>
      </div>
       <div class="form-name-mobile-div">
-          <ion-input type="number" required placeholder="age" class="form-input" [(ngModel)]="age" [ngModelOptions]="{standalone: true}"></ion-input>
+          <ion-input type="number" required placeholder="Age" class="form-input" [(ngModel)]="age" [ngModelOptions]="{standalone: true}"></ion-input>
           <ion-item class="select-gender">
             <ion-label>Select Your Gender</ion-label>
             <ion-select okText="Okay" cancelText="Dismiss" [(ngModel)]="gender"  [ngModelOptions]="{standalone: true}">

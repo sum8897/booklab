@@ -86,6 +86,13 @@
     border-radius: 21px;
     font-size: 10px;
     margin-right: 10px;
+    height: 36px;
+    ion-label{
+        margin-top: 0;
+    }
+    ion-select{
+        margin-top: -6px;
+    }
 }
 .register-segment{
     background: #edefee;
@@ -115,4 +122,15 @@
   }
   native-input{
     padding-left: 12px;
+  }
+  .doctor-lab-div{
+    width: 65px;
+    height: 65px;
+    margin: 5px 5px 0 15px;
+  }
+  ion-input{
+      height: 36px;
+      input{
+        padding-left: 10px;
+      }
   }

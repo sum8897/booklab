@@ -238,8 +238,8 @@ ion-tab-button {
     border-top-right-radius   : 21px;
     img{
       box-shadow: none;
-      height: 80px;
-      width: 85px;
+      // height: 80px;
+      // width: 85px;
       border: 1px solid #f2f2f2;
       margin: 5px 6px 0 0;
     }
@@ -327,7 +327,7 @@ ion-tab-button {
       margin-top : -30px;
       position   : absolute;
       margin-left: -45%;
-
+      height: 36px;
       .lab {
         background   : #c9c9c9;
         border-radius: 7px;

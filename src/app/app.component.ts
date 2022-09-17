@@ -137,21 +137,21 @@ async presentAlertConfirm() {
         url   : "/register",
         icon  : "call-outline"
       },
-      {
-        title : "booking Lab",
-        url   : "/booking-lab",
-        icon  : "call-outline"
-      },
-      {
-        title : "By Whom",
-        url   : "/booking-whoom",
-        icon  : "call-outline"
-      },
-      {
-        title : "When",
-        url   : "/booking-when",
-        icon  : "call-outline"
-      },
+      // {
+      //   title : "booking Lab",
+      //   url   : "/booking-lab",
+      //   icon  : "call-outline"
+      // },
+      // {
+      //   title : "By Whom",
+      //   url   : "/booking-whoom",
+      //   icon  : "call-outline"
+      // },
+      // {
+      //   title : "When",
+      //   url   : "/booking-when",
+      //   icon  : "call-outline"
+      // },
     ]
   }
 }

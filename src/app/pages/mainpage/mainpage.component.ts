@@ -75,7 +75,7 @@ export class MainpageComponent implements OnInit {
     this.bannerImage();
     this.specialistDoctor();
     this.labList();
-    this.healthCheck()
+    this.healthCheck();
   }
   bannerImageres: any;
   bannerImageData: any;
@@ -183,13 +183,13 @@ export class MainpageComponent implements OnInit {
   healthCheck() {
     // this.user.present('');
     this.auth.getHealthHomeListApi().subscribe((data) => {
-      this.user.dismiss();
+      // this.user.dismiss();
       this.healthRes = data;
       this.healthData = this.healthRes.data;
       // this.includes_data=this.healthData.include
       // console.log(this.healthData);
     },err => {
-      this.user.dismiss();
+      // this.user.dismiss();
       console.log(err);
     })
   }

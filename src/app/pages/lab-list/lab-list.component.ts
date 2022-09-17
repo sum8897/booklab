@@ -71,23 +71,23 @@ export class LabListComponent implements OnInit {
     console.log(data)
   }
   labdataget() {
-    this.user.present('');
+    // this.user.present('');
     this.auth.gethHomePickUpApi().subscribe((lab_data) => {
-      this.user.dismiss();
+      // this.user.dismiss();
       this.labRes=lab_data;
       this.labDataAll=this.labRes.data;
       // console.log(this.labDataAll);
     }, err => {
-      this.user.dismiss();
+      // this.user.dismiss();
       console.log(err);
     })
   }
   ceneterRes:any;
   centerAllData:any;
   centerVisit() {
-    this.user.present('');
+    // this.user.present('');
     this.auth.getLablistApi().subscribe((data) => {
-      this.user.dismiss();
+      // this.user.dismiss();
       this.ceneterRes=data;
       this.centerAllData=this.ceneterRes.data;
       console.log(this.centerAllData);

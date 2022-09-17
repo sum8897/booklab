@@ -10,7 +10,7 @@
           color: #0e223e;
         }
         .about-details{
-          color: #0e223e;
+          color: #606061;
           font-size: 1.6vh;
           font-weight: 500;
         }
@@ -49,7 +49,7 @@
 }
 .testing-details{
     .test-name{
-    font-size: 12px;
+      font-size: 2.2vh;
     font-weight: 700;
     font-family: RobotoCondensed !important;
     }
@@ -94,4 +94,9 @@ li{
 }
 ion-card{
   border-radius: 0;
+}
+.doctor-lab-div{
+  width: 65px;
+  height: 65px;
+  margin: 5px 5px 0 15px;
 }

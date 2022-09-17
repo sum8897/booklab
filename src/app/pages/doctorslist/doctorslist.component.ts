@@ -4,6 +4,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { UserService } from 'src/app/services/user.service';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeGeocoder, NativeGeocoderResult, NativeGeocoderOptions } from '@ionic-native/native-geocoder/ngx';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-doctorslist',
   templateUrl: './doctorslist.component.html',
@@ -22,7 +23,8 @@ address: string;
               public user:UserService,
               private alertController: AlertController,
               private geolocation: Geolocation,
-              private nativeGeocoder: NativeGeocoder) {
+              private nativeGeocoder: NativeGeocoder,
+              private router: Router) {
                 this.doctorList();
                 this.price="price";
                 this.location="location";
@@ -38,6 +40,15 @@ address: string;
     maxResult:5,
     useLocale: true,
   };
+
+
+
+  bookDoctor(doctor:any){
+    console.log(doctor);
+     this.router.navigateByUrl('/booking-whoom');
+    //  if user logged in , user will be router on booking-When 
+    //  else if user did not logged in , will be route on booking-whoom
+  }
   // use geolocation to get user's device coordinates
   getCurrentCoordinates() {
     this.geolocation.getCurrentPosition().then((resp) => {

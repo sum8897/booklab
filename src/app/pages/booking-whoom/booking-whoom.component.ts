@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
+import { AuthService } from 'src/app/services/auth.service';
 import { UserService } from 'src/app/services/user.service';
 import { BookingLabComponent } from '../booking-lab/booking-lab.component';
 import { BookingWhenComponent } from '../booking-when/booking-when.component';
@@ -17,7 +18,8 @@ export class BookingWhoomComponent implements OnInit {
   fees=600;
   constructor(public modalCtrl: ModalController,
               private router: Router,
-              private user: UserService) {
+              private user: UserService,
+              private auth: AuthService) {
                 this.type="whom";
                 console.log(this.type);
                }
@@ -69,6 +71,28 @@ export class BookingWhoomComponent implements OnInit {
       console.log(this.email);
       console.log(this.age);
       console.log(this.gender);
+
+      let body={
+        'email': this.email,
+        'name' : this.name,
+        'phone': this.phone,
+        'age'  : this.age,
+        'gender':this.gender, 
+        'date': '20-09-2022',
+        'time':'10:30',
+        'type':'doctor',
+        'reference_id': '15'
+
+      }
+      this.user.present('wait...');
+      this.auth.bookingApi(body).subscribe((booking)=>{
+        this.user.dismiss();
+      console.log(booking)
+      },err=>{
+        this.user.dismiss();
+        console.log(err)
+      })
+
     }
 
   }
