@@ -11,17 +11,15 @@ export class AuthService {
 
   url="https://nocodesucessor.com/booklabonline/api/";
   constructor(private http: HttpClient,
-             public user:UserService) { }
+              public user:UserService) { }
 
 
-             registerUser(reg_data:any){
-              // var headers = new HttpHeaders();
-              // headers = headers.append('Content-Type', 'application/x-www-form-urlencoded');
-              let options = {
-                headers: new HttpHeaders().set('content-Type','application/x-www-form-urlencoded'), 
-               
-            };
-              return this.http.post(this.url + 'registration', reg_data, options).pipe(tap(res => {
+             registerUser(reg_data:any):Observable<any>{
+              let headers = new HttpHeaders();
+              headers.append("Accept", 'application/json');
+              headers.append('Content-Type', 'application/json' );
+             console.log(reg_data)
+              return this.http.post(this.url + 'registration', reg_data, { headers : headers }).pipe(tap(res => {
               }))
             }
 

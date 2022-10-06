@@ -1,3 +1,4 @@
+import { HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
@@ -20,23 +21,32 @@ export class RegisterComponent implements OnInit {
   onSubmit(contactForm: any) {
     console.log(contactForm.value);
     let reg_data = {
-      'email': contactForm.value.email,
-      'name': contactForm.value.name,
-      'phone': contactForm.value.phone,
-      'password': contactForm.value.password
+      email: contactForm.value.email,
+      name: contactForm.value.name,
+      phone: contactForm.value.phone,
+      password: contactForm.value.password
     }
-    // this.formData = new FormData();
-    // this.formData.append('email',contactForm.value.email);
-    // this.formData.append('name',contactForm.value.name);
-    // this.formData.append('phone',contactForm.value.phone);
-    // this.formData.append('password',contactForm.value.password);
+    console.log(typeof(reg_data))
     this.user.present('');
-    this.auth.registerUser(reg_data).subscribe((data) => {
+    this.auth.registerUser(JSON.stringify(reg_data)).subscribe((data) => {
       this.user.dismiss();
       this.regRes = data;
       this.regData = this.regRes.message;
       this.user.showToast(this.regData);
+      console.log(data);
+      if(localStorage.getItem('bookingClick')=='bookingClick'){
+        this.navCtrl.navigateForward(['booking-whoom'])
+      }
+      else{
+        this.navCtrl.navigateForward(['mainpage']);
+      }
     }, err => {
+      if(localStorage.getItem('bookingClick')=='bookingClick'){
+        this.navCtrl.navigateForward(['booking-whoom'])
+      }
+      else{
+        this.navCtrl.navigateForward(['mainpage']);
+      }
       this.user.dismiss();
       alert(err.error)
     })

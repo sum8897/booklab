@@ -141,9 +141,10 @@ ion-tab-bar{
 
   .doctName {
     font-family: RobotoBold !important;
-    margin: 0 0 3px 20px;
-    color: #0e223e;
     font-size: 16px;
+    margin-left: 18px;
+    text-transform: capitalize;
+    color: #0e223e;
   }
 
   small {

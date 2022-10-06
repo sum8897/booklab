@@ -11,7 +11,7 @@
       <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
       <div class="form-input" id="form">
         <ion-item lines="none">
-          <ion-input type="mail" name="email" #email="ngModel" required placeholder="Email Id" ngModel></ion-input>
+          <ion-input type="mail" name="email" #email="ngModel" required placeholder="Email Id" ngModel [ngModelOptions]="{standalone: true}"></ion-input>
         </ion-item>
         <span class="text-danger"
         *ngIf="(email.touched || contactForm.submitted) && email.errors?.required">
@@ -20,7 +20,7 @@
       </div>
       <div class="form-input">
         <ion-item lines="none">
-          <ion-input type='text' #password="ngModel" required placeholder="Password" ngModel > </ion-input>
+          <ion-input type='text' #password="ngModel" required placeholder="Password" ngModel [ngModelOptions]="{standalone: true}"> </ion-input>
           <!-- <ion-icon [name]="eyename"  slot="end" (click)="passToggle()" class="eyeIcon" (keypress)="keyPressNumbers($event)"></ion-icon> -->
         </ion-item>
         <span class="text-danger"

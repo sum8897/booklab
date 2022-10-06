@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ModalController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
 import { UserService } from 'src/app/services/user.service';
 import { BookingWhenComponent } from '../booking-when/booking-when.component';
@@ -20,7 +20,8 @@ export class BookingLabComponent implements OnInit {
   constructor(public modalCtrl: ModalController,
               private router: Router,
               private auth: AuthService,
-              private user: UserService) {
+              private user: UserService,
+              ) {
                 this.type="where";
                 console.log(this.type);
               }

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ModalController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
 import { UserService } from 'src/app/services/user.service';
 import { BookingLabComponent } from '../booking-lab/booking-lab.component';
@@ -19,7 +19,8 @@ export class BookingWhoomComponent implements OnInit {
   constructor(public modalCtrl: ModalController,
               private router: Router,
               private user: UserService,
-              private auth: AuthService) {
+              private auth: AuthService,
+              private navCtrl: NavController) {
                 this.type="whom";
                 console.log(this.type);
                }
@@ -61,7 +62,6 @@ export class BookingWhoomComponent implements OnInit {
   gender:any;
   formData:any;
   submit(){
-    
     if(this.name==undefined || this.phone==undefined || this.email==undefined || this.age==undefined || this.gender==undefined){
       alert('Please fill All Input Fileds')
     }else{
@@ -87,7 +87,13 @@ export class BookingWhoomComponent implements OnInit {
       this.user.present('wait...');
       this.auth.bookingApi(body).subscribe((booking)=>{
         this.user.dismiss();
-      console.log(booking)
+      console.log(booking);
+      if(localStorage.getItem('register')=='register'){
+        alert('cussed')
+      }else{
+        this.navCtrl.navigateBack(['register']);
+        localStorage.setItem('bookingClick','bookingClick')
+      }
       },err=>{
         this.user.dismiss();
         console.log(err)
