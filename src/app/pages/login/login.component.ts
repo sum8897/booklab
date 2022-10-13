@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
      
     }, err => {
       this.user.dismiss();
-      this.user.showToast(err);
+      this.user.showToast(JSON.stringify(err));
     })
   }
   passToggle() {

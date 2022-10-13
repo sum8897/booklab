@@ -187,7 +187,7 @@ export class MainpageComponent implements OnInit {
       this.healthRes = data;
       this.healthData = this.healthRes.data;
       // this.includes_data=this.healthData.include
-      // console.log(this.healthData);
+      console.log(this.healthData);
     },err => {
       // this.user.dismiss();
       console.log(err);

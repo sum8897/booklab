@@ -7,10 +7,10 @@
     <!-- <div class="healthcard">
       <img src="../../../assets/img/login/signup_newbg.png">
      </div> -->
-    <div class="healthlefttext">
-      <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
-      <div class="form-input" id="form">
-        <ion-item lines="none">
+    <div class="healthlefttext" style="background: white;">
+      <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" style="background: white;">
+      <div class="form-input" id="form" style="background: white;">
+        <ion-item lines="none" style="background: white;">
           <ion-input type="mail" name="email" #email="ngModel" required placeholder="Email Id" ngModel [ngModelOptions]="{standalone: true}"></ion-input>
         </ion-item>
         <span class="text-danger"
@@ -18,8 +18,8 @@
         Email is required *
     </span>
       </div>
-      <div class="form-input">
-        <ion-item lines="none">
+      <div class="form-input" style="background: white;">
+        <ion-item lines="none" style="background: white;">
           <ion-input type='text' #password="ngModel" required placeholder="Password" ngModel [ngModelOptions]="{standalone: true}"> </ion-input>
           <!-- <ion-icon [name]="eyename"  slot="end" (click)="passToggle()" class="eyeIcon" (keypress)="keyPressNumbers($event)"></ion-icon> -->
         </ion-item>

@@ -261,10 +261,10 @@
                     <div class="include">Includes</div>
                     <ion-grid class="helpcheckGrid">
                       <ion-row  class="helpcheckRow">
-                        <ion-col size="2">
+                        <!-- <ion-col size="2">
                           <ion-icon name="ellipse-outline" class="round-icon"></ion-icon>
-                        </ion-col>
-                        <ion-col size="10" class="includeP"><small>asdfg</small></ion-col>
+                        </ion-col> -->
+                        <ion-col size="12" class="includeP" *ngFor="let i of r.include"><ion-icon name="ellipse-outline" class="round-icon"></ion-icon><small style="padding-left: 7px;">{{i}}</small></ion-col>
                       </ion-row>
                     </ion-grid>
                     <div class="helpButton">
